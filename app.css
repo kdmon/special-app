@@ -1,0 +1,174 @@
+
+/* Main app css */
+
+
+.centered {
+  text-align: center !important;
+  margin: 0px;
+}
+
+.ui-btn-active {
+  background-color: #3aa !important;
+  border: none;
+}
+
+.activetab {
+  background-color: #3aa !important;
+  border: none !important;
+  border-left: 1px solid #000 !important;
+  border-top: 1px solid #000 !important;
+  text-shadow: none !important;
+}
+
+.inactivetab {
+  background-color: #055 !important;
+  border: none !important;
+  border-left: 1px solid #000 !important;
+  border-top: 1px solid #000 !important;
+  text-shadow: none !important;
+}
+
+.submenu a {
+  background: #3aa !important;
+}
+
+label {
+  text-align: center;
+}
+
+
+
+
+/* Footable classes */
+
+
+.footable {
+  border-spacing: 1px 0px;
+}
+
+.footable-detail-show .fa-plus-square-o {
+  display: none;
+}
+
+:not(.footable-detail-show) .fa-minus-square-o {
+  display: none;
+}
+
+.footable-detail-show .fa-minus-square-o {
+  display: inline;
+}
+
+.footable-row-detail-value {
+  font-weight: normal;
+  box-shadow: 0px 0px 5px #bbb;
+  padding: 5px;
+  margin: 0.5em;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.footable-row-detail-cell {
+  background: #ddd;
+  vertical-align: middle;
+}
+
+.footable td {
+  font-weight: bold;
+  color: #000;
+  border: none;
+  padding: 5px;
+  box-shadow: 0px 0px 2px #000;
+  vertical-align: middle;
+}
+
+.footable th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 5px #000;
+}
+
+.footable th,
+.footable tr {
+  background: #3aa;
+  text-shadow: none;
+  color: #fff;
+}
+
+.footable tr {
+  background: #fff;
+}
+
+.footable-sortable {
+  cursor: pointer;
+}
+.footable-sorted {
+  
+}
+
+.footable-sorted-desc {
+  
+}
+
+.footable-fixed {
+  top: 42px;
+  position: fixed;
+  border: none;
+  z-index: 999;
+}
+
+
+
+/* Table colours */
+
+.footable .bloodcomponent {
+  background: #fdd;
+}
+
+.footable .drugs {
+  background: #fff;
+}
+
+.footable .history {
+  background: #ffd;
+}
+
+.footable .neonatology {
+  background: #ddf;
+}
+
+.footable .transplant {
+  background: #ddd;
+}
+
+.greencell,
+.redcell,
+.ambercell {
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #555;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #fff;
+  margin: 0px;
+  border: 1px solid #aaa;
+  min-height: 5em;
+}
+
+.greencell {
+  background: #2b2;
+}
+
+.ambercell {
+  background: #ef0;
+  text-shadow: 1px 1px 1px #fff;
+  color: #000;
+}
+
+.redcell {
+  background: #b00;
+}
+
+.required {
+  background: #FEE;
+}
