@@ -58,6 +58,24 @@ label {
   display: inline;
 }
 
+.footable-sorted .fa-sort, .footable-sorted-desc .fa-sort-asc {
+  display: none;
+}
+
+:not(.footable-detail-show) .fa-minus-square-o {
+  display: none;
+}
+
+
+.footable thead {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .footable-row-detail-value {
   font-weight: normal;
   box-shadow: 0px 0px 5px #bbb;
