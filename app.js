@@ -1,5 +1,4 @@
 /* jQuery extension to footable for sticky headers*/
-      
 (function($) {
   $.fn.stickyHeader = function() {
     return this.each(function() {
@@ -7,36 +6,31 @@
       var originalHeader = $(this).find("thead tr");
       var fixedHeader;
       var timer;
-      
+
       function makeHeader() {
         clearTimeout(timer);
-        timer = setTimeout(function() {
-          
           var offset = $(window).scrollTop(),
-          tableOffsetTop = originalTable.offset().top;
+            tableOffsetTop = originalTable.offset().top;
           tableOffsetBottom = tableOffsetTop + originalTable.height() - originalHeader.height();
-          
           // outside range, remove the fixed header
           if (offset < tableOffsetTop || offset > tableOffsetBottom) {
-            
-            if ($(".fixed").length > 0) {
+            if ($(".footable-fixed").length > 0) {
               console.log("hiding header");
-              $(".fixed").remove();
+              $(".footable-fixed").remove();
             }
           }
-          
           // otherwise recreate header
           else {
-            console.log("recreating header")
-            if (fixedHeader) fixedHeader.remove();
-            fixedHeader = originalHeader.clone(1);
-            fixedHeader.addClass("fixed").insertBefore(originalHeader);
-            fixedHeader.find("th").each(function(index) {
+            timer = setTimeout(function() {
+              console.log("recreating header");
+              if (fixedHeader) fixedHeader.remove();
+              fixedHeader = originalHeader.clone(1);
+              fixedHeader.addClass("footable-fixed").insertBefore(originalHeader);
+              fixedHeader.find("th").each(function(index) {
               $(this).css("width", originalHeader.find("th").eq(index).width() + "px");
             });
-          }
-            
-        }, 200);
+          }, 50);
+        }
       }
       $(window).resize(makeHeader);
       $(window).scroll(makeHeader);
@@ -45,20 +39,18 @@
   };
 })(jQuery);
 
-
 /* Main app */
 
 $(function() {
-
-  /* IE polyfill */
   
-  if (typeof console === "undefined"){
-    console={};
-    console.log = function(){
-        return;
-    }
+  /* IE polyfill */
+  if (typeof console === "undefined") {
+    console = {};
+    console.log = function() {
+      return;
+    };
   }
-
+  
   /* jQuery Mobile panel setup */
   
   $("body>[data-role='panel']").panel().trigger('create');
@@ -74,4 +66,3 @@ $(function() {
     }, 300);
   });
 });
-
