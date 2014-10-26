@@ -1,7 +1,44 @@
 
 /* Main app css */
 
+/* Restrict max page width to look better on desktops,
+   yet use resolution of ipad (1024 wide). */
 
+.ui-header, .ui-footer, .ui-content {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+/* Make text more readable on high resolution devices */
+
+.ui-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.mainlogo {
+  width: 200px; 
+  margin:auto;
+  background: #3aa;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  text-shadow: none;
+}
+.infobox {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0.5em;
+}
+.explanation {
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
+}
+.glow {
+  text-shadow: 1px 1px 10px #fff;
+}
 .centered {
   text-align: center !important;
   margin: 0px;
