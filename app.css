@@ -1,6 +1,10 @@
 
 /* Main app css */
 
+body {
+  font-size: 1em;
+}
+
 /* Restrict max page width to look better on desktops,
    yet use resolution of ipad (1024 wide). */
 
@@ -9,15 +13,39 @@
     margin: 0 auto !important;
 }
 
-/* Make text more readable on high resolution devices */
-
 .ui-content {
     max-width: 800px;
     margin: auto;
 }
 
+
+/* Allow line wrapping on buttons and list items */
+
+.infobox {
+  white-space: normal;
+  text-align: left;
+  font-weight: normal !important;
+}
+
+.ui-li .ui-btn-text a.ui-link-inherit{
+    white-space: normal;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title{
+    white-space: normal;
+}
+
+.ui-btn-inner {
+    white-space: normal;
+}
+
+.button-icon {
+  float: right;
+  padding: 0.5em;
+}
+
 .mainlogo {
-  width: 200px; 
+  width: 200px;
   margin:auto;
   background: #3aa;
   padding: 25px;
@@ -31,6 +59,7 @@
   border-radius: 5px;
   border: 1px solid #aaa;
   padding: 0.5em;
+  min-height: 2em;
 }
 .explanation {
   border-bottom: 1px dotted #000;
@@ -68,11 +97,6 @@
 .submenu a {
   background: #3aa !important;
 }
-
-label {
-  text-align: center;
-}
-
 
 
 
@@ -227,3 +251,19 @@ label {
 .required {
   background: #FEE;
 }
+
+
+
+/* Make text more readable on high resolution devices */
+
+@media (min-width: 780px) {
+  body {
+    font-size: 1.3em;
+  }
+      
+  .mainlogo {
+    width: 250px; 
+    height: 220px; 
+  }
+}
+
