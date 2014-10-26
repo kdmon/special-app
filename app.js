@@ -65,4 +65,8 @@ $(function() {
       });
     }, 300);
   });
+  
+  $(".explanation").on("click", function () {
+    alert ($(this).attr("title"));
+  });
 });
