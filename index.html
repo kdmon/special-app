@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
-    <title>Responsive HTML tables</title>
+    <title>Special Blood Components</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
@@ -12,12 +12,26 @@
 
   <body>
     <div data-role="page" id="home">
-      <div data-role="header" style="background: #177;" data-theme="b" data-position="fixed" data-tap-toggle="false"> <a href="#" data-rel="back" data-icon="info">About</a>
-        <h3>Home</h3> <a href="#searchpanel" data-iconpos="right" data-icon="search">Find</a>
-      </div>
+      
       <div role="main" class="ui-content">
-        <h2 style="width: 40%; min-width: 200px; margin:auto; background: #3aa; padding: 25px; border-radius: 10px; text-align: center; color: #fff; text-shadow: none;"><i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
+        <h2 class="mainlogo"><i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
           <br/>Special Blood Components</h2>
+        
+        <p class="infobox" style="min-height: 2em;">
+           <i style="float:right; padding: 0.1em;" class="fa fa-book fa-2x"></i>
+           Look up the indications for irradiated and <span class="explanation" title="Cytomegalovirus">CMV</span> negative blood components.
+        </p>
+        
+        <div style="float:left;"><i class="fa fa-mortar-board fa-4x"></i></div>
+        <p class="infobox">Learn about and test your knowledge of special blood components.</p>
+        
+        <p>The app is designed for:</p>
+        <ul>
+          <li>Doctors who prescribe and request blood transfusions.</li>
+          <li>Biomedical scientists who process blood requests.</li>
+          <li>Nurses and midwives who administer or prescribe transfusions.</li>
+          <li>Medical trainees who may be required to undertake any of the above.</li>
+        </ul>
       </div>
       <div data-role="footer" style="background: #277;" data-position="fixed" data-tap-toggle="false">
         <h3 style="padding: 2px; color: #fff; text-shadow: none;"><i class="fa fa-tint" style="color: #fff; text-shadow: 1px 1px 10px #fff;"></i> Special Blood Components</h3>
@@ -160,11 +174,11 @@
         <h3 style="margin:0px;  box-shadow: 0px 0px 5px #000; background: #288; clear: both; padding: 5px; color: #fff; text-shadow: none;"><i class="fa fa-tint" style="color: #fff; text-shadow: 1px 1px 10px #fff;"></i> Special Blood Components</h3>
         <div data-role="navbar">
           <ul>
-            <li><a href="#home" class="inactivetab"><i class="fa fa-home fa-2x"></i><br/>Home</a>
+            <li><a href="#home" class="inactivetab"><i class="fa fa-tint fa-2x glow"></i><br/>Home</a>
             </li>
-            <li><a href="#learn" class="inactivetab"><i class="fa fa-graduation-cap fa-2x"></i><br/>Learn</a>
+            <li><a href="#learn" class="inactivetab"><i class="fa fa-graduation-cap fa-2x glow"></i><br/>Learn</a>
             </li>
-            <li><a href="#indications" class="activetab"><i class="fa fa-book fa-2x"></i><br/>Indications</a>
+            <li><a href="#indications" class="activetab"><i class="fa fa-book fa-2x glow"></i><br/>Indications</a>
             </li>
           </ul>
         </div>
@@ -192,7 +206,6 @@
         <option value="uld">Universal leucodepletion</option>
       </select> <a href="#" data-rel="close" data-icon="delete" data-role="button">Close</a>
     </div>
-    
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
       $(document).on("mobileinit", function() {
@@ -202,6 +215,6 @@
     <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
     <script src="footable.js" type="text/javascript"></script>
     <script src="app.js"></script>
-    
   </body>
+
 </html>
