@@ -9,7 +9,7 @@ body {
    yet use resolution of ipad (1024 wide). */
 
 .ui-header, .ui-footer, .ui-content {
-    max-width: 1000px !important;
+    max-width: 1025px !important;
     margin: 0 auto !important;
 }
 
@@ -55,12 +55,21 @@ body {
   text-shadow: none;
 }
 .headerlogo {
+  clear: both;
   margin: 0 !important;
   box-shadow: none;
   clear: both;
   padding: 2 !important;
   color: #fff;
   text-shadow: none;
+  font-weight: normal;
+  text-align: left !important;
+  padding-left: 0.5em !important;
+}
+.homelink {
+  text-decoration: none;
+  color: #fff !important; 
+  text-align: left;
 }
 .infobox {
   background: #fff;
@@ -96,9 +105,8 @@ body {
 
 .navtab {
   border: none !important;
-  border-left: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
   text-shadow: none !important;
+  margin: 1px !important;
 }
 
 .ui-footer {
@@ -272,6 +280,17 @@ body {
     font-size: 1.3em;
   }
       
+  .searchicon {
+    font-size: 22px !important;
+  }
+  
+  .infobox {
+    width: 45%;
+    height: 6em;
+    display: inline-block;
+    font-size: 1.1em;
+  }
+  
   .mainlogo {
     width: 250px; 
     height: 220px; 
