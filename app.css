@@ -54,6 +54,14 @@ body {
   color: #fff;
   text-shadow: none;
 }
+.headerlogo {
+  margin: 0 !important;
+  box-shadow: none;
+  clear: both;
+  padding: 2 !important;
+  color: #fff;
+  text-shadow: none;
+}
 .infobox {
   background: #fff;
   border-radius: 5px;
@@ -78,20 +86,23 @@ body {
   border: none;
 }
 
-.activetab {
+.active {
   background-color: #3aa !important;
+}
+
+.inactive {
+  background-color: #055 !important;
+}
+
+.navtab {
   border: none !important;
   border-left: 1px solid #000 !important;
   border-top: 1px solid #000 !important;
   text-shadow: none !important;
 }
 
-.inactivetab {
-  background-color: #055 !important;
-  border: none !important;
-  border-left: 1px solid #000 !important;
-  border-top: 1px solid #000 !important;
-  text-shadow: none !important;
+.ui-footer {
+  background: #288;
 }
 
 .submenu a {
