@@ -59,7 +59,7 @@ $(function() {
   
   $(document).on("pageinit", "#indications", function() {
     setTimeout(function() {
-      $('.footable').stickyHeader().footable({
+      $('.footable').footable({
         toggleHTMLElement: '<span style="margin: 1em; float:left;"><i class="fa fa-plus-square-o fa-3x footable-toggle footable-expand"></i> <i class="fa fa-minus-square-o fa-3x footable-toggle footable-contract"></i></span>',
         toggleSelector: " > tbody > tr > td > span.footable-toggle"
       });
