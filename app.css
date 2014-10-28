@@ -150,7 +150,7 @@
 .overlay {
   display: block;
   background: black;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.9);
   left: 0px;
   top: 0px;
   height: 100%;
@@ -170,7 +170,7 @@
 
 .textbox {
   background: #fff;
-  padding: 0.3em;
+  padding: 0.5em;
   overflow-y: scroll;
   max-height: 250px;
   margin: 0.2em;
