@@ -16,28 +16,54 @@
   </head>
 
   <body>
-    <div data-role="page" id="terms">
-      <h2 class="mainlogo"><i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
-        <br/>Special Blood Components</h2>
-        <a href="#home" data-role="button">I agree <i class="fa fa-lg">&#xf00C;</i></a>
-    </div>
     
+    <div id="conditions" class="overlay">
+    	
+    	<div class="overlay-container inactive">
+        <h3 class="headerlogo"><i class="fa fa-tint glow"></i> Special Blood Components Terms of Use
+        </h3><hr/>
+    		<div class="textbox">
+      		
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+      		<p>This is a list of the t and c.</p>
+    		</div>
+  	    <a href="#" onclick="$('#conditions').hide();" class="active ui-btn ui-shadow ui-corner-all ui-btn-b">Ok, I accept</a>
+  		</div>
+  	</div>
+  	
+  	
     <div data-role="page" id="home">
       
       <div data-role="header" class="inactive">
         
-        <div class="submenu inactive">
-          <a href="#" class="ui-state-disabled" data-role="button" data-theme="b" style="margin:5px; " data-rel="back"><i class="fa fa-chevron-left"></i> Back</a>
-          <a href="#" class="ui-state-disabled"  data-role="button" data-theme="b" style="margin:5px; " data-rel="back">Next <i class="fa fa-chevron-right"></i></a>
-          <a href="#searchpanel" data-role="button" data-theme="b" style="margin:5px; margin-bottom:0px; float: right;">Find <i class="fa fa-search"></i></a>
-        </div>
         <h3 class="headerlogo active"><i class="fa fa-tint glow"></i> Special Blood Components
         </h3>
+        <div class="submenu inactive">
+          <a href="#searchpanel" data-role="button" data-theme="b" style="margin:5px; margin-bottom:0px; float: right;">Find <i class="fa fa-search"></i></a>
+          <a href="#" class="ui-state-disabled" data-role="button" data-theme="b" style="margin:5px; " data-rel="back"><i class="fa fa-chevron-left"></i> Back</a>
+          <a href="#" class="ui-state-disabled"  data-role="button" data-theme="b" style="margin:5px; " data-rel="back">Next <i class="fa fa-chevron-right"></i></a>
+        </div>
       </div>
 
       <div role="main" class="ui-content">
       
-        
+      		<h2 class="mainlogo">
+      		  <i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
+            <br/>Special Blood Components
+          </h2>
+
         <a data-role="button" href="#learn" class="infobox">
            <i class="fa fa-fw fa-mortar-board fa-2x button-icon"></i>
            <strong>Learn</strong><br/>
@@ -47,7 +73,7 @@
         <a data-role="button" href="#indications" class="infobox">
            <i class="fa fa-fw fa-book fa-2x button-icon"></i>
            <strong>Indications</strong><br/>
-           Which patients require irradiated and <span class="explanation" title="Cytomegalovirus">CMV</span> negative blood components?
+           Who require irradiated and <span class="explanation" title="Cytomegalovirus">CMV</span> negative blood components?
         </a>
         
         <a data-role="button" href="#searchpanel" class="infobox">
@@ -79,13 +105,13 @@
     <div data-role="page" id="indications">
       <div data-role="header" class="inactive">
         
-        <div class="submenu inactive">
-          <a href="#" data-role="button" data-theme="b" style="margin:5px; " data-rel="back"><i class="fa fa-chevron-left"></i> Back</a>
-          <a href="#" class="ui-state-disabled"  data-role="button" data-theme="b" style="margin:5px; " data-rel="back">Next <i class="fa fa-chevron-right"></i></a>
-          <a href="#searchpanel" data-role="button" data-theme="b" style="margin:5px; margin-bottom:0px; float: right;">Find <i class="fa fa-search"></i></a>
-        </div>
         <h3 class="headerlogo active"><i class="fa fa-book glow"></i> Indications for irradiated and CMV negative blood components
         </h3>
+        <div class="submenu inactive">
+          <a href="#searchpanel" data-role="button" data-theme="b" style="margin:5px; margin-bottom:0px; float: right;">Find <i class="fa fa-search"></i></a>
+          <a href="#" data-role="button" data-theme="b" style="margin:5px; " data-rel="back"><i class="fa fa-chevron-left"></i> Back</a>
+          <a href="#" class="ui-state-disabled"  data-role="button" data-theme="b" style="margin:5px; " data-rel="back">Next <i class="fa fa-chevron-right"></i></a>
+        </div>
       </div>
       <div role="main" class="ui-content">
         
@@ -238,8 +264,11 @@
         <option value="uld">Universal leucodepletion</option>
       </select> <a href="#" data-rel="close" data-icon="delete" data-role="button">Close</a>
     </div>
+    
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script>
+    
+      
       $(document).on("mobileinit", function() {
         $.mobile.defaultPageTransition = 'none';
         $.mobile.gradeA = function() {
