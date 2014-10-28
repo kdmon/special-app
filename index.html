@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <title>Special Blood Components</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +17,10 @@
     <div data-role="page" id="terms">
       <h2 class="mainlogo"><i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
         <br/>Special Blood Components</h2>
-        <a href="#home" data-role="button">I agree</a>
+        <a href="#home" data-role="button">I agree <i class="fa fa-lg">&#xf00C;</i></a>
     </div>
     
     <div data-role="page" id="home">
-      
       
       <div data-role="header" class="inactive">
         
@@ -35,19 +37,19 @@
       
         
         <a data-role="button" href="#learn" class="infobox">
-           <i class="fa fa-mortar-board fa-2x button-icon"></i>
+           <i class="fa fa-fw fa-mortar-board fa-2x button-icon"></i>
            <strong>Learn</strong><br/>
            Improve your knowledge of special blood components.
         </a>
         
         <a data-role="button" href="#indications" class="infobox">
-           <i class="fa fa-book fa-2x button-icon"></i>
+           <i class="fa fa-fw fa-book fa-2x button-icon"></i>
            <strong>Indications</strong><br/>
            Which patients require irradiated and <span class="explanation" title="Cytomegalovirus">CMV</span> negative blood components?
         </a>
         
         <a data-role="button" href="#searchpanel" class="infobox">
-           <i class="fa fa-search fa-2x button-icon"></i>
+           <i class="fa fa-fw fa-search fa-2x button-icon"></i>
            <strong>Search the app</strong><br/>
            Enter a search term or look up a word in the index.
         </a>
@@ -237,6 +239,13 @@
     <script>
       $(document).on("mobileinit", function() {
         $.mobile.defaultPageTransition = 'none';
+        $.mobile.gradeA = function() {
+          
+          // return ( ( $.support.mediaquery && $.support.cssPseudoElement ) || $.mobile.browser.oldIE && $.mobile.browser.oldIE >= 8 ) && ( $.support.boundingRect || $.fn.jquery.match(/1\.[0-7+]\.[0-9+]?/) !== null );
+          
+          // hack to force ie7 support again
+          return true;
+        };
       });
     </script>
     <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
