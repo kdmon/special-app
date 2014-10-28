@@ -28,7 +28,8 @@ $(function() {
     alert ($(this).attr("title"));
   });
   
-    setTimeout(function() {
-      $("#terms").slideDown();
-    }, 500);
+  window.onload = function () {
+      $("#terms").slideDown('slow');
+  }
+  
 });
