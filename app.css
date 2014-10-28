@@ -1,9 +1,8 @@
 
 /* Main app css */
 
-body {
-  font-size: 1em;
-}
+
+
 
 /* Allow line wrapping on buttons and list items */
 
@@ -101,6 +100,8 @@ body {
   border: none !important;
   text-shadow: none !important;
   margin: 1px !important;
+  border-radius: 5px;
+  padding-bottom: 1.5em;
 }
 
 .ui-navbar {
@@ -109,7 +110,8 @@ body {
 }
 
 .ui-footer {
-  background: #288;
+  background: #fff;
+  border: none;
 }
 
 .submenu a {
@@ -160,7 +162,7 @@ body {
 /* Make text more readable on high resolution devices */
 
 @media (min-width: 780px) {
-  body {
+  .ui-page {
     font-size: 1.3em;
   }
       
@@ -173,6 +175,7 @@ body {
     height: 6em;
     display: inline-block;
     font-size: 1.1em;
+    margin-left: 2%;
   }
   
   .mainlogo {
