@@ -147,9 +147,9 @@
   background: #FEE;
 }
 
-
-
 .overlay {
+  display: block;
+  background: black;
   background: rgba(0,0,0,0.8);
   left: 0px;
   top: 0px;
@@ -157,10 +157,10 @@
   width: 100%;
   position: fixed;
   z-index: 9999;
-  display: block;
 }
 
 .overlay-container {
+  display: none;
   padding: 0.5em;
   margin: 3em auto;
   border-radius: 5px;
@@ -170,9 +170,11 @@
 
 .textbox {
   background: #fff;
-  padding: 1em;
+  padding: 0.3em;
   overflow-y: scroll;
   max-height: 250px;
+  margin: 0.2em;
+  border-radius: 5px;
 }
 
 .mainlogo {
