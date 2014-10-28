@@ -27,4 +27,8 @@ $(function() {
   $(".explanation").on("click", function () {
     alert ($(this).attr("title"));
   });
+  
+    setTimeout(function() {
+      $("#terms").slideDown();
+    }, 500);
 });
