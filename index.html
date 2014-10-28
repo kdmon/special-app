@@ -19,14 +19,30 @@
     
     <div class="overlay">
     	
-    	<div class="overlay-container active" id="terms">
+    	<div class="overlay-container" id="terms">
         <h3 class="headerlogo"><i class="fa fa-tint glow"></i> Special Blood Components Terms of Use
         </h3>
     		<div class="textbox">
+        <p>
+    		 By pressing accept, you acknowledge that you have read and agree 
+    		 to these terms of use.
+    		</p>
     		<h4>Introduction</h4>
         <p>
           Special Blood Components ("the app") was created during a PhD research project 
           at the University of Edinburgh and is available for evaluation only.
+        </p>
+        
+        <h4>
+          Disclaimer
+        </h4>
+        
+        <p>
+          The developers and contributors cannot be held liable for any harm 
+	        resulting from the use of the app. There may be inaccuracies in the content.
+	        Guidance may not be appropriate in all patient situations. Local hospital 
+	        policies may differ. The app is not intended to be a substitute for
+          local hospital guidelines, professional medical judgement, advice, diagnosis, or treatment.
         </p>
         
         <h4>
@@ -50,34 +66,24 @@
           The app is developed for a research project seeking to evaluate and improve the design
           of clinical apps. The use of the app is therefore monitored. The following data is recorded:
         </p>
-          <ul> 
-            <li>Which pages you visit and for how long.</li>
-            <li>Information about your computing device (operating system, screen resolution, browser, IP address).</li>
-            <li>Your approximate geographical location (country, city).</li>
-            <li>Keywords that you input in the app's search functionality.</li>
-          </ul>
-	      <p>
+        
+        <ul> 
+          <li>Which pages you visit and for how long.</li>
+          <li>Information about your computing device (operating system, screen resolution, browser, IP address).</li>
+          <li>Your approximate geographical location (country, city).</li>
+          <li>Keywords that you input in the app's search functionality.</li>
+        </ul>
+        
+	      <p style="display:none">
           If you choose to provide additional feedback (using the 'leave feedback' button), we 
           may correlate your browsing behaviour with your feedback answers to help
           us better understand the strengths and weaknesses of the app design. To do this we 
           store a browser cookie on your device.
-        </p>
-        <p>
-            We do not collect personally identifying information unless you choose to
-            disclose this through the online feedback form.
+          We do not collect personally identifying information unless you choose to
+          disclose this through the online feedback form.
         </p>
         
-        <h4>
-          No warranty
-        </h4>
-        
-        <p>
-          The developers and contributors cannot be held liable for any harm 
-	        resulting from the use of the app. There may be inaccuracies in the content.
-	        Guidance may not be appropriate in all patient situations. Local hospital 
-	        policies may differ. The app is not intended to be a substitute for
-          local hospital guidelines, professional medical judgement, advice, diagnosis, or treatment.
-        </p>
+        <h4>No warranty</h4>
         
         <p>
           THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -89,11 +95,7 @@
           SOFTWARE.
         </p>
     		</div>
-  	    <p class="ui-page-theme-b active">
-    		  By pressing accept, you acknowledge that you have read and agree 
-    		  to the terms of use.
-    		</p>
-    		<a href="#" onclick="$('.overlay').slideUp();" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Ok, I accept</a>
+    		<a href="#" onclick="$('.overlay').slideUp();" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Accept and continue</a>
   		</div>
   	</div>
   	
@@ -112,11 +114,11 @@
       </div>
 
       <div role="main" class="ui-content">
-      
-      		<h2 class="mainlogo">
-      		  <i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
-            <br/>Special Blood Components
-          </h2>
+    
+    		<h2 style="display:none" class="mainlogo">
+    		  <i class="fa fa-tint fa-5x" style="color: #fff; text-shadow: 1px 1px 40px #fff;"></i>
+          <br/>Special Blood Components
+        </h2>
 
         <a data-role="button" href="#learn" class="infobox">
            <i class="fa fa-fw fa-mortar-board fa-2x button-icon"></i>
