@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="app.css">
+    <link href="http://themergency.com/footable-demo/css/footable-0.1.css" rel="stylesheet" type="text/css" />
+    <link href="http://themergency.com/footable-demo/css/footable.sortable-0.1.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -87,19 +89,20 @@
       </div>
       <div role="main" class="ui-content">
         
-        <input id="filter" type="search" />
-        <button data-inline="true" data-icon="plus" onclick="$('#indicationsearch').toggle();$(this).toggleClass('ui-icon-minus').toggleClass('ui-icon-plus');">Advanced search</button>
-        <div id="indicationsearch" style="display: none"> <a href="#" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
+        <button data-inline="true" data-icon="search" onclick="$('#indicationsearch').toggle();$(this).toggleClass('ui-icon-minus').toggleClass('ui-icon-search');">Search the indications table</button>
+        <div id="indicationsearch" style="display: none">
+          <input id="filter" type="search" />
+          <a href="#" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
           <a href="#" onclick="$('table').trigger('footable_clear_filter');" data-inline="true" data-role="button">Clear filter</a>
         </div>
         <table class="footable" id="indicationstable" data-filter="#filter">
           <thead>
             <tr>
-              <th data-class="expand">Indication <i class="fa fa-sort"></i>
+              <th data-class="expand">Indication
               </th>
-              <th data-hide="phone" data-type="numeric">Irradiation <i class="fa fa-sort"></i>
+              <th data-hide="phone" data-type="numeric">Irradiation
               </th>
-              <th data-hide="phone" data-type="numeric">CMV-negative <i class="fa fa-sort"></i>
+              <th data-hide="phone" data-type="numeric">CMV-negative
               </th>
               <th data-hide="all"></th>
             </tr>
