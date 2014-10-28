@@ -105,10 +105,16 @@
 }
 
 .submenu {
-  overflow: auto;
+  display: block;
+  text-align: right;
 }
 .submenu a {
   background: #3aa !important;
+  margin: 5px;
+}
+
+.float-left {
+  float: left;
 }
 
 
@@ -152,10 +158,10 @@
 
 .overlay {
   display: block;
-  background: black;
+  background: #005050;
   background: rgba(0,75,75,0.9);
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -189,6 +195,11 @@
   text-align: center;
   color: #fff;
   text-shadow: none;
+}
+
+.mainlogo i {
+  color: #fff;
+  text-shadow: 1px 1px 40px #fff;
 }
 
 
