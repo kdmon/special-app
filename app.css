@@ -5,20 +5,6 @@ body {
   font-size: 1em;
 }
 
-/* Restrict max page width to look better on desktops,
-   yet use resolution of ipad (1024 wide). */
-
-.ui-header, .ui-footer, .ui-content {
-    max-width: 1025px !important;
-    margin: 0 auto !important;
-}
-
-.ui-content {
-    max-width: 800px;
-    margin: auto;
-}
-
-
 /* Allow line wrapping on buttons and list items */
 
 .infobox {
@@ -103,10 +89,23 @@ body {
   background-color: #055 !important;
 }
 
+.ui-block-a, .ui-block-c {
+  width: 33% !important;
+}
+
+.ui-block-b {
+  width: 33% !important;
+}
+
 .navtab {
   border: none !important;
   text-shadow: none !important;
   margin: 1px !important;
+}
+
+.ui-navbar {
+  width: 99%;
+  margin-left: 1%;
 }
 
 .ui-footer {
