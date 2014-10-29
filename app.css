@@ -120,6 +120,22 @@
 
 /* Indications classes */
 
+.required {
+  background: #fcc;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.maybe-required {
+  background: #ff7;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.not-required {
+  text-align: center !important;
+}
+
 
 
 .greencell,
@@ -149,10 +165,6 @@
 
 .redcell {
   background: #b00;
-}
-
-.required {
-  background: #FEE;
 }
 
 .overlay {
