@@ -1146,13 +1146,12 @@
         </h3>
         <div class="submenu inactive">
           <a href="#" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#" data-role="button" class="ui-state-disabled float-left" data-rel="back">Next <i class="fa fa-ln">&#xf054;</i></a>
           <a href="#searchpanel" data-role="button">Find <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
       <div role="main" class="ui-content">
         
-        <button data-inline="true" data-icon="search" onclick="$('#indicationsearch').toggle();$(this).toggleClass('ui-icon-minus').toggleClass('ui-icon-search');">Search the indications table</button>
+        <button data-inline="true" onclick="$('#indicationsearch').toggle();">Search the indications table <i class="fa fa-ln">&#xf002;</i></button>
         <div id="indicationsearch" style="display: none">
           <input id="filter" type="search" />
           <a href="#" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
@@ -1171,100 +1170,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="bloodcomponent">
-              <td>1. Blood from a relative of the patient.</td>
-              <td data-value="3">
-                <p class="redcell"> <i class="fa fa-warning fa-2x red"></i>
-                  <br/>Irradiation required.</p>
-              </td>
-              <td data-value="1">
-                <p class="greencell">CMV-negative not required, unless neonate, pregnant woman or granulocyte transfusion.</p>
-              </td>
-              <td>"All transfusions from <a href="#rels" data-rel="popup" style="color: inherit; text-decoration: underline; text-decoration-style: dotted; font-weight: inherit;">first- or second-degree relatives <i class="fa fa-info-circle"></i></a> should be irradiated, even if the patient is immunocompetent (1B)."
-                <div data-role="popup" id="rels">
-                  <p>This is a completely basic popup, no options set.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="bloodcomponent">
-              <td>2. Granulocytes.</td>
-              <td data-value="3">
-                <p class="redcell"><i class="fa fa-warning fa-2x"></i>
-                  <br/>Irradiation required.</p>
-              </td>
-              <td data-value="2">
-                <p class="ambercell"><i class="fa fa-warning fa-2x"></i>
-                  <br/>CMV-negative required for CMV-negative patients.</p>
-              </td>
-              <td>
-                <p>1. "All granulocyte transfusions should be irradiated for recipients of any age, and they should be transfused soon as possible after irradiation. (1C)." BCSH2010</p>
-                <p>2. "As granulocytes cannot be leucodepleted and is usually given to immunocompromised patients, it is essential that the product be irradiated prior to transfusion to avoid graft-versus-host disease." UKBTS2012</p>
-                <p>3. "Granulocyte components should continue to be provided as CMV seronegative for CMV seronegative patients." SABTO2012</p>
-                <p>4. "CMV PCR monitoring should be considered for all patients (even CMV negative/negative patients) to allow early detection of any possible CMV infection (whether transfusion-transmitted or otherwise acquired)." SABTO2012</p>
-              </td>
-            </tr>
-            <tr class="bloodcomponent">
-              <td>3. Human Leucocyte Antigen (HLA)-selected components.</td>
-              <td class="centered" data-value="3"><i class="fa fa-warning fa-3x red"></i>
-              </td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i> 
-              </td>
-              <td>"All human leucocyte antigen (HLA)-selected components should be irradiated, even if the patient is immunocompetent (2C)." BCSH2010</td>
-            </tr>
-            <tr class="bloodcomponent">
-              <td>4. Fresh frozen plasma, cryoprecipitate or plasma derivative.</td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i> 
-              </td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i> 
-              </td>
-              <td>It is not necessary to irradiate fresh frozen plasma, cryoprecipitate or fractionated plasma. CMV infection is associated with cellular blood components, such as red cells, platelets and granulocytes. Non-cellular components, such as fresh frozen plasma, cryoprecipitate and other plasma-derived blood components, do not need to be provided as CMV negative.</td>
-            </tr>
-            <tr class="bloodcomponent">
-              <td>5. Red cells or platelets.</td>
-              <td class="centered" data-value="2"><i class="fa fa-question-circle fa-3x amber"></i>
-              </td>
-              <td class="centered" data-value="2"><i class="fa fa-question-circle fa-3x amber"></i>
-              </td>
-              <td>Red cells and platelets contain lymphocytes (white cells) that can cause transfusion-associated Graft versus Host Disease (TA-GvHD). Cryopreserved red cells after deglycerolization do not require irradiation because they are washed free of leucocytes. Irradiated platelets and red cells are only indicated when there is an elevated risk of TA-GvHD.</td>
-            </tr>
-            <tr class="drugs">
-              <td>6. Purine analogue drugs.</td>
-              <td class="centered" data-value="3"><i class="fa fa-warning fa-3x red"></i>
-              </td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i>
-              </td>
-              <td>Red cells and platelets contain lymphocytes (white cells) that can cause transfusion-associated Graft versus Host Disease (TA-GvHD). Cryopreserved red cells after deglycerolization do not require irradiation because they are washed free of leucocytes. Irradiated platelets and red cells are only indicated for at-risk patients.</td>
-            </tr>
-            <tr class="drugs">
-              <td>7. Campath (Alemtuzumab).</td>
-              <td class="centered" data-value="3"><i class="fa fa-warning fa-3x red"></i>
-              </td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i>
-              </td>
-              <td>Red cells and platelets contain lymphocytes (white cells) that can cause transfusion-associated Graft versus Host Disease (TA-GvHD). Cryopreserved red cells after deglycerolization do not require irradiation because they are washed free of leucocytes. Irradiated platelets and red cells are only indicated for at-risk patients.</td>
-            </tr>
-            <tr class="drugs">
-              <td>8. Anti-thymocyte globulin (ATG).</td>
-              <td class="centered" data-value="3"><i class="fa fa-warning fa-3x red"></i>
-              </td>
-              <td class="centered" data-value="1"><i class="fa fa-square-o fa-3x green"></i>
-              </td>
-              <td>Red cells and platelets contain lymphocytes (white cells) that can cause transfusion-associated Graft versus Host Disease (TA-GvHD). Cryopreserved red cells after deglycerolization do not require irradiation because they are washed free of leucocytes. Irradiated platelets and red cells are only indicated for at-risk patients.</td>
-            </tr>
           </tbody>
         </table>
-        <hr/>
-        <h2>Legend</h2>
-        <h3><i class="fa fa-tint"></i> Blood components</h3>
-        <h3><i class="fa fa-toggle-on"></i> Immunesuppressive drugs</h3>
-        <h3><i class="fa fa-calendar-o"></i> Medical history</h3>
-        <h3><i class="fa fa-child"></i> Neonatology and obstetrics</h3>
-        <h3><i class="fa fa-eyedropper"></i> Stem cell and bone marrow transplant</h3>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        
       </div>
       <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
        <div data-role="navbar">
