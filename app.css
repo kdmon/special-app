@@ -3,7 +3,6 @@
 
 
 
-
 /* Allow line wrapping on buttons and list items */
 
 .infobox {
@@ -171,7 +170,7 @@
 .overlay-container {
   display: none;
   padding: 0.5em;
-  margin: 3em auto;
+  margin: 1em auto;
   border-radius: 5px;
   width: 90%;
   max-width: 500px;
