@@ -16,6 +16,10 @@
   min-height: 2em;
 }
 
+.ui-btn {
+  padding: 0.5em;
+}
+
 .ui-li .ui-btn-text a.ui-link-inherit{
     white-space: normal;
 }
