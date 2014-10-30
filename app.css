@@ -9,6 +9,11 @@
   white-space: normal;
   text-align: left;
   font-weight: normal !important;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  min-height: 2em;
 }
 
 .ui-li .ui-btn-text a.ui-link-inherit{
@@ -44,13 +49,6 @@
   text-decoration: none;
   color: #fff !important; 
   text-align: left;
-}
-.infobox {
-  background: #fff;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-  padding: 0.5em;
-  min-height: 2em;
 }
 .explanation {
   border-bottom: 1px dotted #000;
@@ -142,6 +140,7 @@
 
 .not-required {
   text-align: center !important;
+  font-size: 0.7em;
 }
 
 
@@ -233,10 +232,10 @@
   }
   
   .infobox {
+    min-height: 4em;
+    overflow: auto;
     width: 45%;
-    height: 6em;
     display: inline-block;
-    font-size: 1.1em;
     margin-left: 1%;
   }
   
