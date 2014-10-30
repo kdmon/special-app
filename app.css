@@ -127,18 +127,19 @@
 /* Indications classes */
 
 .required {
-  background: #faa;
+  background: #fdd;
   text-align: center !important;
   font-weight: bold;
 }
 
 .maybe-required {
-  background: #ff7;
+  background: #ffd;
   text-align: center !important;
   font-weight: bold;
 }
 
 .not-required {
+  background: #eee;
   text-align: center !important;
   font-size: 0.7em;
 }
