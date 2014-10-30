@@ -133,22 +133,34 @@
         <a data-role="button" href="#learn" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf19d;</i>
            <strong>Learn</strong><br/>
-           Improve your knowledge of special blood components.
+           About irradiated and CMV-negative blood components.
         </a>
         
         <a data-role="button" href="#indications" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf02d;</i>
            <strong>Indications</strong><br/>
-           Who require irradiated and <span class="explanation" title="Cytomegalovirus">CMV</span> negative blood components?
+           Which patients require special blood components?
         </a>
         
-        <a data-role="button" href="#searchpanel" class="infobox">
+        <a data-role="button" href="#glossary" class="infobox">
+           <i class="fa fa-fw fa-2x button-icon">&#xf02e;</i>
+           <strong>Glossary</strong><br/>
+           Look up a word in the index.
+        </a>
+        
+        <a data-role="button" href="#searchpanel" class="hidden">
            <i class="fa fa-fw fa-2x button-icon">&#xf002;</i>
            <strong>Search the app</strong><br/>
-           Enter a search term or look up a word in the index.
+           Find all occurances of a term across the app.
         </a>
         
-        <a data-role="button" href="#about" class="infobox">
+        <a data-role="button" href="#references" class="infobox">
+           <i class="fa fa-fw fa-2x button-icon">&#xf0c6;</i>
+           <strong>References</strong><br/>
+           Browse evidence cited in the app.
+        </a>
+        
+        <a data-role="button" href="#about" class="hidden">
            <i class="fa fa-2x button-icon">&#xf05a;</i>
            <strong>About the app</strong><br/>
            Find out more details about this app.
@@ -185,27 +197,17 @@
 
       <div role="main" class="ui-content">
       
-        <p><strong>In this section, you will learn about the correct use of irradiated and CMV-negative blood components.</strong></p> 
+        <p><strong>In this section, you can learn more about special requirements.</strong></p> 
         
         <h3>Learning objectives</h3>
         
-        <p>After reviewing the information in this section, you will be able to:</p>
+        <p>After reviewing the information in this section, you will understand:</p>
         <ul>
-          <li>Describe the</li>
-          <li><p>Understand how and when TA-GvHD occurs, its risk factors and mechanism.</p></li>
-          <li><p>Understand how and when TA-GvHD occurs, its risk factors and mechanism.</p></li>
+          <li><p>How and when <span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span> occurs, what the main risk factors and mechanisms are.</p></li>
+          <li><p>Why <span class="explanation" title="Irradiation inactivates donor lymphocytes that cause TA-GvHD.">gamma or x-ray irradiation</span> is the accepted way of preventing TA-GvHD.</p></li>
+          <li><p>That transfusions can transmit <span class="explanation" title="Transfusion Associated Graft versus Host Disease">CMV</span> and when CMV-negative components can be required.</p></li>
+          <li><p>How mistakes involving special requirements can be prevented by following <span class="explanation" title="Serious Hazards of Transfusion, a UK Haemovigilance Scheme">SHOT</span> recommendations.</p></li>
         </ul>
-        
-        
-        <h3>Key learning points</h3>
-        <p>You have completed the section. Here is a summary of the main points:</p>
-        <ul>
-          <li><p>Transfusion associated graft versus host disease (TA-GvHD) is a rare fatal complication of transfusion that is preventable by irradiating components.</p></li>
-          <li><p>Transfusion of Cytomegalovirus (CMV) positive blood can cause life long disability in vulnerable patients (e.g. neonates and fetuses) who should receive components tested negative to CMV (CMV-negative).</p></li>
-          <li><p></p></li>
-          <li><p></p></li>
-        </ul>
-        
         
       </div>
       <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
@@ -250,6 +252,15 @@
           <li>Learning resources</li>
           <li>References</li>
         </ul>
+        
+        <h3>Key learning points</h3>
+        <p>You have completed the section. Summary of the key learning points:</p>
+        <ul>
+          <li><p>Transfusion associated graft versus host disease (TA-GvHD) is a rare fatal complication of transfusion that is preventable by irradiating components.</p></li>
+          <li><p>Transfusion of Cytomegalovirus (CMV) positive blood can cause life long disability in vulnerable patients (e.g. neonates and fetuses) who should receive components tested negative to CMV (CMV-negative).</p></li>
+        </ul>
+        
+        
         <h3>
           1.1 Patient safety
         </h3>
@@ -1188,7 +1199,7 @@
       </div>
     </div>
     
-    <div data-title="Special Blood Components" data-role="panel" id="searchpanel" data-position="right" data-display="overlay" data-theme="a">
+    <div data-title="Special Blood Components" data-role="panel" id="searchpanel" data-position="right" data-display="overlay" data-animate="false" data-theme="a">
       <h3 style="margin: 0px;" class="centered">Search the app</h3>
       <label for="searchfield">Enter a search term or look up a word in the index:</label>
       <input data-theme="a" type="search" name="searchfield" id="searchfield" value="">
