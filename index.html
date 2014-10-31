@@ -133,7 +133,7 @@
         <a data-role="button" href="#learn" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf19d;</i>
            <strong>Learn</strong><br/>
-           About irradiated and CMV-negative blood components.
+           Why should blood components be irradiated or CMV-negative?
         </a>
         
         <a data-role="button" href="#indications" class="infobox">
@@ -189,6 +189,7 @@
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learning Objectives
         </h3>
         <div class="submenu inactive">
+          <a href="#learningmenu" data-role="button" class="float-left"><i class="fa fa-ln">&#xf0c9;</i> Menu</a>
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#learn1" data-role="button" class="float-left">Next <i class="fa fa-ln">&#xf054;</i></a>
           <a href="#searchpanel" data-role="button">Find <i class="fa fa-ln">&#xf002;</i></a>
@@ -197,19 +198,22 @@
 
       <div role="main" class="ui-content">
       
+        <h2>1. Learning outline</h2>
+        
+          <p>After studying this section, you will understand:</p>
         
         <h3>1. Learning objectives</h3>
         
         <p>After studying this section, you will understand:</p>
         <ul>
-          <li><p>The prevalence, risk factors and main mechanisms behind <span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span>.</p></li>
+          <li><p>The prevalence, risk factors and mechanisms behind <span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span>.</p></li>
           <li><p>Why <span class="explanation" title="Irradiation inactivates donor lymphocytes that cause TA-GvHD.">gamma or x-ray irradiation</span> is the accepted way of preventing TA-GvHD.</p></li>
           <li><p>How and when transfusions can transmit <span class="explanation" title="Cytomegalovirus">CMV</span> infection.</p></li>
-          <li><p>Which patients require CMV-negative blood components.</p></li>
           <li><p>How mistakes involving special requirements can be reduced.</p></li>
         </ul>
        
-        <hr/>
+       
+        <a href="#learningmenu" data-role="button" data-theme="b" data-inline="true" class="active"><i class="fa fa-ln">&#xf0c9;</i> Menu</a>
         <a href="#home" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
         <a href="#learn1" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
        
@@ -1194,19 +1198,25 @@
         </div>
       </div>
       <div role="main" class="ui-content">
+        <button class="active" id="open-indication-search" data-theme="b" onclick="$('#indicationsearch').toggle(); $(this).toggle(); $('#close-indication-search').toggle();"><i class="fa fa-ln">&#xf002;</i> Search the indications table</button>
         
-        <button data-inline="true" onclick="$('#indicationsearch').toggle();">Search the indications table <i class="fa fa-ln">&#xf002;</i></button>
-        <div id="indicationsearch" style="display: none">
-          <input id="filter" type="search" />
-          <a href="#" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
-          <a href="#" onclick="$('table').trigger('footable_clear_filter');" data-inline="true" data-role="button">Clear filter</a>
+          <div id="indicationsearch" class="hidden" style="background: #fff; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
+            <a href="#" style="float: right;" data-theme="b" data-inline="true" data-role="button" class="active hidden" id="close-indication-search" onclick="$('#indicationsearch').toggle(); $(this).toggle(); $('#open-indication-search').toggle(); $('table').trigger('footable_clear_filter');"><i class="fa fa-ln">&#xf00d;</i></a>
+            <p><strong>Enter a search term:</strong></p>
+            <input class="active" data-theme="b" id="filter" type="text" />
+            <a href="#" data-theme="b" class="hidden active" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
+
+            <a href="#" data-theme="b" data-inline="true" data-role="button" class="hidden active" onclick=""><i class="fa fa-ln">&#xf002;</i> Search</a>
         </div>
+
+        <p>Determine if special blood components are required using the indications table. Press an indication to show more details.</p>
+        
         <table class="footable" id="indicationstable" data-filter="#filter">
           <thead>
             <tr>
-              <th data-sort-ignore="true">
-              </th>
               <th data-class="expand" class="centered">Indication
+              </th>
+              <th>
               </th>
               <th data-hide="phone" class="centered" data-type="numeric">Irradiation
               </th>
@@ -1220,7 +1230,7 @@
           <tbody>
           </tbody>
         </table>
-        
+        <a href="#" data-role="button" data-theme="b" onclick="$(window).scrollTop(0);" class="active">Back to top <i class="fa fa-ln">&#xf0d8;</i></a>
       </div>
       <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
        <div data-role="navbar">
@@ -1257,6 +1267,12 @@
         <option value="special">Special blood component</option>
         <option value="uld">Universal leucodepletion</option>
       </select> <a href="#" data-rel="close" data-icon="delete" data-role="button">Close</a>
+    </div>
+    
+    <div data-title="Special Blood Components" data-role="panel" id="learningmenu" data-position="left" data-display="overlay" data-animate="false" data-theme="a">
+      <h3 style="margin: 0px;" class="centered">Learning outline</h3>
+      <a href="#learn" data-role="button">1.1 Learning objectives</a>
+      <a href="#learn1" data-role="button">1.2 Introduction</a>
     </div>
     
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
