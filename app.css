@@ -140,6 +140,7 @@
   background: #ffd;
   text-align: center !important;
   font-weight: bold;
+  font-style: italic;
 }
 
 .not-required {
@@ -224,6 +225,19 @@
   text-shadow: 1px 1px 40px #fff;
 }
 
+.traffic-light {
+  width: 48px;
+  height: 48px;
+}
+
+td, .indication-title {
+  clear:both;
+}
+.indication-title .traffic-light {
+  width: 48px;
+  height: 48px;
+  float: right;
+}
 
 /* Make text more readable on high resolution devices */
 
