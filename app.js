@@ -470,7 +470,7 @@ $(function() {
       // Verbatim quotes from guidelines
       var irrtext = '';
       var cmvtext = '';
-      
+      var flagclass = 'green-traffic-light';
       
       var flag = '<img src="green.png" alt="Green light" class="traffic-light"/>';
       
@@ -478,22 +478,22 @@ $(function() {
         case 'irradiated-cmv':
           irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
           cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
-          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
+          flagclass = 'red-traffic-light';
         break;
         case 'irradiated':
           irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
           cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative is not required.</h4></td>';
-          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
+          flagclass = 'red-traffic-light';
         break;
         case 'cmv':
           irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated is not required.</h4></td>';
           cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
-          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
+          flagclass = 'red-traffic-light';
         break;
         case 'maybe':
           irrcode = '<td data-value="0" class="maybe-required"><h4>Irradiation could be required.</h4></td>';
           cmvcode = '<td data-value="0" class="maybe-required"><h4>CMV-negative could be required.</h4></td>';
-          flag = '<img src="yellow.png" alt="Amber light" class="traffic-light"/>';
+          flagclass = 'amber-traffic-light';
         break;
       }
       
@@ -511,8 +511,7 @@ $(function() {
 
       });
       
-      
-      var titlecode = '<td data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
+      var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
       
       var details = '<td><br/>';
       if (irrsummary) details += '<u>Irradiation summary</u>' + irrsummary;
@@ -522,14 +521,23 @@ $(function() {
       if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
       details += '</td>';
       
-      var flagcell = '<td class="traffic-light-container">' + flag + '</td>'
+      var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
       
-      $("#indicationstable tbody").append('<tr>' + flagcell+titlecode+irrcode+cmvcode+details + '</tr>');
+      var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
+      
+      $("#indicationstable tbody").append('<tr>' + titlecode + flagcell + irrcode + cmvcode + details + '</tr>');
       
     });
     
     setTimeout(function() {
       $('.footable').footable();
+      
+      $(document).on("pageshow", "#indications", function() {
+        $('table').trigger('footable_resize');
+        //var tableref = $('.footable').data('footable');
+        //tableref.trigger(footable_resize);
+      });
+      
     }, 300);
   });
   $(".explanation").on("click", function() {
