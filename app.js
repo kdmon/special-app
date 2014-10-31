@@ -460,8 +460,8 @@ $(function() {
     
     $.each(components.entries, function(i, item) {
       
-      var irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated not required.</h4></td>';
-      var cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative not required.</h4></td>';
+      var irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated is not required.</h4></td>';
+      var cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative is not required.</h4></td>';
       
       // Brief summaries
       var irrsummary= '';
@@ -476,23 +476,23 @@ $(function() {
       
       switch (item.type) {
         case 'irradiated-cmv':
-          irrcode = '<td data-value="1" class="required"><h4>Irradiation required.</h4></td>';
-          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative required.</h4></td>';
+          irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
           flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'irradiated':
-          irrcode = '<td data-value="1" class="required"><h4>Irradiation required.</h4></td>';
-          cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative not required.</h4></td>';
+          irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
+          cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative is not required.</h4></td>';
           flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'cmv':
-          irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated not required.</h4></td>';
-          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative required.</h4></td>';
+          irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated is not required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
           flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'maybe':
-          irrcode = '<td data-value="0" class="maybe-required"><h4>Irradiation may be required.</h4></td>';
-          cmvcode = '<td data-value="0" class="maybe-required"><h4>CMV-negative may be required.</h4></td>';
+          irrcode = '<td data-value="0" class="maybe-required"><h4>Irradiation could be required.</h4></td>';
+          cmvcode = '<td data-value="0" class="maybe-required"><h4>CMV-negative could be required.</h4></td>';
           flag = '<img src="yellow.png" alt="Amber light" class="traffic-light"/>';
         break;
       }
@@ -512,7 +512,7 @@ $(function() {
       });
       
       
-      var titlecode = '<td data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '</td>';
+      var titlecode = '<td data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
       
       var details = '<td><br/>';
       if (irrsummary) details += '<u>Irradiation summary</u>' + irrsummary;
