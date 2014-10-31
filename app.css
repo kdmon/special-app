@@ -75,8 +75,8 @@
 
 .inactive {
   background-color: #055 !important;
-  color: #fff;
-  text-shadow: none;
+  color: #fff !important;
+  text-shadow: none !important;
 }
 
 .ui-block-a, .ui-block-c {
@@ -121,10 +121,6 @@
 .centered {
   text-align: center !important;
   margin: 0px;
-}
-
-.hidden {
-  display: none;
 }
 
 .footable tr {
@@ -296,3 +292,7 @@
   
 }
 
+
+.hidden {
+  display: none;
+}
