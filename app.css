@@ -249,6 +249,10 @@
   .searchicon {
     font-size: 22px !important;
   }
+    
+  .footable tr {
+    font-size: 1.4em;
+  }
   
   .infobox {
     min-height: 4em;
