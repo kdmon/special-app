@@ -264,7 +264,7 @@ $(function() {
         "reference": "sabto2012"
       }]
     }, {
-      "title": "Transfusions during pregnancy",
+      "title": "Pregnancy",
       "key": "pregnancy",
       "type": "cmv",
       "category": "neonatology",
@@ -279,7 +279,7 @@ $(function() {
         "reference": "sabto2012"
       }]
     }, {
-      "title": "Neonatal alloimmune thrombocytopenia",
+      "title": "Neonatal alloimmune thrombocytopenia (NAIT)",
       "id": "neonate",
       "definition": "\"A condition in newborns caused by immunity of the mother to platelet alloantigens on the fetal platelets. The platelets, coated with maternal antibodies, are destroyed and removed by the fetal mononuclear phagocyte system. Affected infants may have intracranial haemorrhages\" <a href=\"javascript:showSource('mesh2013')\" class=\"reference\">MESH 2013<\/a>.",
       "type": "irradiated-cmv",
@@ -351,7 +351,7 @@ $(function() {
         "reference": "sabto2012"
       }]
     }, {
-      "title": "Routine infant 'top-up'",
+      "title": "Infant routine 'top-up'",
       "definition": "An infant is defined as a child between 1 and 23 months of age <a href=\"javascript:showSource('mesh2013')\" class=\"reference\">MESH 2013<\/a>.",
       "key": "top-up",
       "type": "maybe",
@@ -511,11 +511,11 @@ $(function() {
 
       });
       
-      var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
+      //var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
+      var titlecode = '<td class="indication-container">' + item.title  + '.</td>';
       
       var details = '<td><br/>';
-      if (irrsummary) details += '<u>Irradiation summary</u>' + irrsummary;
-      if (cmvsummary) details += '<u>CMV-negative summary</u>' + cmvsummary;
+      if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
       
       if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
       if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
@@ -523,9 +523,19 @@ $(function() {
       
       var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
       
+      var icons = {
+        component : '&#xf043;',
+        condition : '&#xf133;',
+        drug: '&#xf0d0;',
+        neonatology : '&#xf182;',
+        transplant: '&#xf1fb;'
+      };
+      
+      var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
+      
       var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
       
-      $("#indicationstable tbody").append('<tr>' + titlecode + flagcell + irrcode + cmvcode + details + '</tr>');
+      $("#indicationstable tbody").append('<tr>' + flagcell + categoryicon + titlecode + irrcode + cmvcode + details + '</tr>');
       
     });
     
