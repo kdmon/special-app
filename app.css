@@ -69,10 +69,14 @@
 
 .active {
   background-color: #3aa !important;
+  color: #fff;
+  text-shadow: none;
 }
 
 .inactive {
   background-color: #055 !important;
+  color: #fff;
+  text-shadow: none;
 }
 
 .ui-block-a, .ui-block-c {
@@ -97,7 +101,7 @@
 }
 
 .ui-footer {
-  background: #fff;
+  background: #000;
   border: none;
 }
 
@@ -127,20 +131,26 @@
   font-size: 1.2em;
 }
 
+.footable td {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
 
 /* Indications classes */
 
 .required {
   background: #fdd;
   text-align: center !important;
-  font-weight: bold;
 }
 
 .maybe-required {
   background: #ffd;
   text-align: center !important;
-  font-weight: bold;
-  font-style: italic;
+}
+
+.maybe-required h4 {
+  font-weight: normal;
 }
 
 .not-required {
@@ -148,8 +158,6 @@
   text-align: center !important;
   font-size: 0.7em;
 }
-
-
 .greencell,
 .redcell,
 .ambercell {
@@ -225,19 +233,43 @@
   text-shadow: 1px 1px 40px #fff;
 }
 
-.traffic-light {
+
+.green-traffic-light {
+  background: url("green.png");
+}
+
+.red-traffic-light {
   height: 48px;
 }
 
+.amber-traffic-light {
+  background: url("yellow.png");
+}
+
+.red-traffic-light {
+  background: url("red.png");
+}
+
 .traffic-light-container {
-  height: 48px;
-  text-align: center !important;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 78px;
+  border-right: none;
+}
+
+.indication-container {
+  border-left: none !important;
 }
 
 .footable td h4 {
   margin: 0;
 }
 
+.footable th {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 /* Make text more readable on high resolution devices */
 
