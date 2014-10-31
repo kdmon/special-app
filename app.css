@@ -144,7 +144,7 @@
 }
 
 .not-required {
-  background: #eee;
+  background: #dfd;
   text-align: center !important;
   font-size: 0.7em;
 }
@@ -226,18 +226,18 @@
 }
 
 .traffic-light {
-  width: 48px;
   height: 48px;
 }
 
-td, .indication-title {
-  clear:both;
-}
-.indication-title .traffic-light {
-  width: 48px;
+.traffic-light-container {
   height: 48px;
-  float: right;
+  text-align: center !important;
 }
+
+.footable td h4 {
+  margin: 0;
+}
+
 
 /* Make text more readable on high resolution devices */
 
