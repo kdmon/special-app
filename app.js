@@ -459,44 +459,72 @@ $(function() {
   $(document).on("pageinit", "#indications", function() {
     
     $.each(components.entries, function(i, item) {
-      var titlecode = '<td data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title + '</td>';
       
-      var irrcode = '<td data-value="-1" class="not-required">Irradiated not required.</td>';
-      var cmvcode = '<td data-value="-1" class="not-required">CMV-negative not required.</td>';
+      var irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated not required.</h4></td>';
+      var cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative not required.</h4></td>';
       
+      // Brief summaries
+      var irrsummary= '';
+      var cmvsummary = '';
+            
+      // Verbatim quotes from guidelines
       var irrtext = '';
       var cmvtext = '';
       
+      
+      var flag = '<img src="green.png" alt="Green light" class="traffic-light"/>';
+      
       switch (item.type) {
         case 'irradiated-cmv':
-          irrcode = '<td data-value="1" class="required">Irradiation required.</td>';
-          cmvcode = '<td data-value="1" class="required">CMV-negative required.</td>';
+          irrcode = '<td data-value="1" class="required"><h4>Irradiation required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative required.</h4></td>';
+          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'irradiated':
-          irrcode = '<td data-value="1" class="required">Irradiation required.</td>';
-          cmvcode = '<td data-value="-1" class="not-required">CMV-negative not required.</td>';
+          irrcode = '<td data-value="1" class="required"><h4>Irradiation required.</h4></td>';
+          cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative not required.</h4></td>';
+          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'cmv':
-          irrcode = '<td data-value="-1" class="not-required">Irradiated not required.</td>';
-          cmvcode = '<td data-value="1" class="required">CMV-negative required.</td>';
+          irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated not required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative required.</h4></td>';
+          flag = '<img src="red.png" alt="Red light" class="traffic-light"/>';
         break;
         case 'maybe':
-          irrcode = '<td data-value="0" class="maybe-required">Irradiation may be required.</td>';
-          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative may be required.</td>';
+          irrcode = '<td data-value="0" class="maybe-required"><h4>Irradiation may be required.</h4></td>';
+          cmvcode = '<td data-value="0" class="maybe-required"><h4>CMV-negative may be required.</h4></td>';
+          flag = '<img src="yellow.png" alt="Amber light" class="traffic-light"/>';
         break;
       }
       
       $.each(item.recommendation, function(r, recommendation) {
-        if (recommendation.type == 'irradiated') irrtext += '<p>' + recommendation.verbatim + '</p>';
-        if (recommendation.type == 'cmv') cmvtext += '<p>'+ recommendation.verbatim+ '</p>';
+        
+        if (recommendation.type == 'irradiated') {
+          if (recommendation.text) irrsummary += '<p>' + recommendation.text + '</p>';
+          if (recommendation.verbatim) irrtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
+        }
+        
+        if (recommendation.type == 'cmv') {
+          if (recommendation.text) cmvsummary += '<p>' + recommendation.text + '</p>';
+          if (recommendation.verbatim) cmvtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
+        }
+
       });
       
-      var details = '<td>';
-      if (irrtext) details += '<h4>Irradiation guidance</h4>' + irrtext;
-      if (cmvtext) details += '<h4>CMV-negative guidance</h4>' + cmvtext;
+      
+      var titlecode = '<td data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '</td>';
+      
+      var details = '<td><br/>';
+      if (irrsummary) details += '<u>Irradiation summary</u>' + irrsummary;
+      if (cmvsummary) details += '<u>CMV-negative summary</u>' + cmvsummary;
+      
+      if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
+      if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
       details += '</td>';
       
-      $("#indicationstable tbody").append('<tr>' + titlecode+irrcode+cmvcode+details + '</tr>');
+      var flagcell = '<td class="traffic-light-container">' + flag + '</td>'
+      
+      $("#indicationstable tbody").append('<tr>' + flagcell+titlecode+irrcode+cmvcode+details + '</tr>');
       
     });
     
