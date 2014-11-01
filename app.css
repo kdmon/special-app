@@ -16,7 +16,7 @@
   min-height: 2em;
 }
 
-.fa-select, .ui-selectmenu-list li a {
+.fa-select, .ui-selectmenu-list li a, .ui-title {
   font-family: 'FontAwesome', Arial !important;
 }
 
