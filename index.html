@@ -1203,8 +1203,9 @@
         <p>Determine if special blood components are required using the indications table. Press an indication to show more details.</p>
          
           <div id="indications-filter">
-            <select class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
-              <option>&#xf0b0; Filter table by category</option>
+            <button data-inline="true" onclick="$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#close-indication-search').toggle();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
+            <select data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
+              <option>&#xf0b0; Filter table</option>
               <option>All indications</option>
               <option>&#xf043; Blood Components</option>
               <option>&#xf0c3; Immunosuppressive Drugs</option>
@@ -1212,13 +1213,12 @@
               <option>&#xf1ae; Neonatology & Obstetrics</option>
               <option>&#xf0ec; Stem Cell & Bone Marrow Transplant</option>
             </select>
-            <button class="active" data-theme="b" onclick="$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#close-indication-search').toggle();"><i class="fa fa-ln">&#xf002;</i> Search the indications table</button>
         </div>
       
-        <div id="indicationsearch" class="hidden" style="background: #fff; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
-          <a href="#" style="float: right;" data-theme="b" data-inline="true" data-role="button" class="active hidden" id="close-indication-search" onclick="$('#indicationsearch').toggle(); $(this).toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');"><i class="fa fa-ln">&#xf00d;</i></a>
+        <div id="indicationsearch" class="hidden" style="background: #FFE; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
+          <a href="#" style="float: right;" data-inline="true" data-role="button" class="hidden" id="close-indication-search" onclick="$('#indicationsearch').toggle(); $(this).toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Clear <i class="fa fa-ln">&#xf00d;</i></a>
           <p><strong>Enter a search term:</strong></p>
-          <input class="active" data-theme="b" id="filter" type="text" />
+          <input id="filter" type="text" />
           <a href="#" data-theme="b" class="hidden active" onclick="$('table').trigger('footable_filter', {filter: 'granulocyte'});" data-inline="true" data-role="button">Gran</a>
 
           <a href="#" data-theme="b" data-inline="true" data-role="button" class="hidden active" onclick=""><i class="fa fa-ln">&#xf002;</i> Search</a>
