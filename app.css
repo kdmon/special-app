@@ -16,12 +16,12 @@
   min-height: 2em;
 }
 
-.fa-select, .ui-selectmenu-list li a, .ui-title {
-  font-family: 'FontAwesome', Arial !important;
+.fa-select, .ui-selectmenu-list li a, .ui-popup .ui-header .ui-title {
+  font-family: 'FontAwesome', sans-serif;
 }
 
-.ui-btn {
-  padding: 0.5em;
+.fa-select {
+  width: 150px !important;
 }
 
 .ui-li .ui-btn-text a.ui-link-inherit{
@@ -89,14 +89,6 @@
 
 .ui-block-b {
   width: 33% !important;
-}
-
-.navtab {
-  border: none !important;
-  text-shadow: none !important;
-  margin: 1px !important;
-  border-radius: 5px;
-  padding-bottom: 1.5em;
 }
 
 .ui-navbar {
@@ -273,11 +265,22 @@
 
 /* Make text more readable on high resolution devices */
 
-@media (min-width: 780px) {
-  .ui-page {
-    font-size: 1.3em;
+  a {
+    font-size: 1em !important;
   }
       
+      
+  
+  input {
+    font-size: 1.3em !important;
+  }
+      
+      
+@media (min-width: 780px) {
+  .ui-page {
+    font-size: 1.1em !important;
+  }
+  
   .searchicon {
     font-size: 22px !important;
   }
@@ -294,8 +297,28 @@
     margin-left: 1%;
   }
   
+  
+  
+  input {
+    font-size: 1.4em !important;
+  }
+      
+  
 }
 
+  .ui-li-divider, li .ui-btn {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+  }
+
+.navtab {
+  border: none !important;
+  text-shadow: none !important;
+  margin: 1px !important;
+  border-radius: 5px;
+  padding-bottom: 1.5em;
+  font-size: 0.8em !important;
+}
 
 .hidden {
   display: none;
