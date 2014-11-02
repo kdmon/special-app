@@ -171,11 +171,11 @@
       <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
         <div data-role="navbar">
           <ul>
-            <li><a href="#home" class="navtab active"><i class="fa fa-2x glow">&#xf043;</i><br/>Home</a>
+            <li><a href="#home" class="navtab active"><i class="fa fa-2x glow">&#xf043;</i> Home</a>
             </li>
-            <li><a href="#learn" class="navtab inactive"><i class="fa fa-2x">&#xf19d;</i><br/>Learn</a>
+            <li><a href="#learn" class="navtab inactive"><i class="fa fa-2x">&#xf19d;</i> Learn</a>
             </li>
-            <li><a href="#indications" class="navtab inactive"><i class="fa fa-2x">&#xf0f1;</i><br/>Indications</a>
+            <li><a href="#indications" class="navtab inactive"><i class="fa fa-2x">&#xf0f1;</i> Indications</a>
             </li>
           </ul>
         </div>
@@ -190,10 +190,10 @@
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learning Objectives
         </h3>
         <div class="submenu inactive">
-          <a href="#learningmenu" data-role="button" class="float-left"><i class="fa fa-ln">&#xf0c9;</i> Menu</a>
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
+          <a href="#learningmenu" data-role="button" class="float-left"> <i class="fa fa-ln">&#xf0c9;</i> Menu</a>
           <a href="#learn1" data-role="button" class="float-left">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#searchpanel" data-role="button">Find <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
@@ -231,8 +231,8 @@
           <li><p>How mistakes involving special requirements can be reduced.</p></li>
         </ul>
        
-        <a href="#learningmenu" data-role="button" data-theme="b" data-inline="true" class="active"><i class="fa fa-ln">&#xf0c9;</i> Menu</a>
         <a href="#home" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
+        <a href="#learningmenu" data-role="button" data-theme="b" data-inline="true" class="active"><i class="fa fa-ln">&#xf0c9;</i></a>
         <a href="#learn1" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
        
       </div>
@@ -423,8 +423,8 @@
           provided to at-risk patients, as these SHOT cases illustrate:
         </p>
         
-        <div data-role="collapsible-set" data-theme="f" data-content-theme="f">
-          <div data-role="collapsible" data-collapsed-icon="alert">
+        <div data-role="collapsible-set" data-iconpos="right" data-theme="b" data-content-theme="a">
+          <div data-role="collapsible">
             <h3>
               Poor knowledge of the indications
             </h3>
@@ -435,7 +435,7 @@
               p.26</a>
             </p>
           </div>
-          <div data-role="collapsible" data-collapsed-icon="alert">
+          <div data-role="collapsible" >
             <h3>
               Request form not filled out correctly
             </h3>
@@ -448,7 +448,7 @@
               p.46</a>
             </p>
           </div>
-          <div data-role="collapsible" data-collapsed-icon="alert">
+          <div data-role="collapsible" >
             <h3>
               Failure to check medical record
             </h3>
@@ -460,7 +460,7 @@
               p.32</a>
             </p>
           </div>
-          <div data-role="collapsible" data-collapsed-icon="alert">
+          <div data-role="collapsible" >
             <h3>
               Shared patient care
             </h3>
@@ -474,7 +474,7 @@
               2010, p.41</a>
             </p>
           </div>
-          <div data-role="collapsible" data-collapsed-icon="alert">
+          <div data-role="collapsible" >
             <h3>
               Wrong blood component transfused
             </h3>
@@ -492,7 +492,7 @@
               p.31</a>
             </p>
           </div>
-          <div data-role="collapsible" data-collapsed-icon="alert">
+          <div data-role="collapsible" >
             <h3>
               Incorrect use of warning flags
             </h3>
@@ -1223,7 +1223,7 @@
           <div id="indications-filter">
             <button data-inline="true" onclick="$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#close-indication-search').toggle();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
             <select data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
-              <option>&#xf0b0; Filter table</option>
+              <option>&#xf0b0; Filter</option>
               <option>All indications</option>
               <option>&#xf043; Blood Components</option>
               <option>&#xf0c3; Immunosuppressive Drugs</option>
