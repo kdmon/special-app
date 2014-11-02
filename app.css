@@ -1,325 +1,348 @@
 
 /* Main app css */
 
-
-
 /* Allow line wrapping on buttons and list items */
 
 .infobox {
-  white-space: normal;
-  text-align: left;
-  font-weight: normal !important;
-  background: #fff;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-  padding: 0.5em;
-  min-height: 2em;
+ white-space: normal;
+ text-align: left;
+ font-weight: normal !important;
+ background: #fff;
+ border-radius: 5px;
+ border: 1px solid #aaa;
+ padding: 0.5em;
+ min-height: 2em;
 }
 
-.fa-select, .ui-selectmenu-list li a, .ui-popup .ui-header .ui-title {
-  font-family: 'FontAwesome', sans-serif;
+.fa-select,
+.ui-selectmenu-list li a,
+.ui-popup .ui-header .ui-title {
+ font-family: 'FontAwesome', sans-serif;
 }
 
-.fa-select {
-  width: 150px !important;
+.ui-li .ui-btn-text a.ui-link-inherit {
+ white-space: normal;
 }
 
-.ui-li .ui-btn-text a.ui-link-inherit{
-    white-space: normal;
-}
-
-.ui-header .ui-title, .ui-footer .ui-title{
-    white-space: normal;
+.ui-header .ui-title,
+.ui-footer .ui-title {
+ white-space: normal;
 }
 
 .ui-btn-inner {
-    white-space: normal;
+ white-space: normal;
 }
 
 .button-icon {
-  float: right;
-  padding: 0.5em;
+ float: right;
+ padding: 0.5em;
 }
 
 .headerlogo {
-  clear: both;
-  margin: 0 !important;
-  box-shadow: none;
-  clear: both;
-  padding: 2 !important;
-  color: #fff;
-  text-shadow: none;
-  font-weight: normal;
-  text-align: left !important;
-  padding-left: 0.5em !important;
+ clear: both;
+ margin: 0 !important;
+ box-shadow: none;
+ clear: both;
+ padding: 2 !important;
+ color: #fff;
+ text-shadow: none;
+ font-weight: normal;
+ text-align: left !important;
+ padding-left: 0.5em !important;
 }
+
 .homelink {
-  text-decoration: none;
-  color: #fff !important; 
-  text-align: left;
+ text-decoration: none;
+ color: #fff !important;
+ text-align: left;
 }
+
 .explanation {
-  border-bottom: 1px dotted #000;
-  cursor: pointer;
+ border-bottom: 1px dotted #000;
+ cursor: pointer;
 }
+
 .glow {
-  text-shadow: 1px 1px 10px #fff;
+ text-shadow: 1px 1px 10px #fff;
 }
 
 .ui-btn-active {
-  background-color: #3aa !important;
-  border: none;
+ background-color: #3aa !important;
+ border: none;
 }
 
 .active {
-  background-color: #3aa !important;
-  color: #fff;
-  text-shadow: none;
+ background-color: #3aa !important;
+ color: #fff;
+ text-shadow: none;
 }
 
 .inactive {
-  background-color: #055 !important;
-  color: #fff !important;
-  text-shadow: none !important;
+ background-color: #055 !important;
+ color: #fff !important;
+ text-shadow: none !important;
 }
 
-.ui-block-a, .ui-block-c {
-  width: 33% !important;
+.ui-block-a,
+.ui-block-c {
+ width: 33% !important;
 }
 
 .ui-block-b {
-  width: 33% !important;
+ width: 33% !important;
 }
 
 .ui-navbar {
-  width: 99%;
-  margin-left: 1%;
+ width: 99%;
+ margin-left: 1%;
 }
 
 .ui-footer {
-  background: #000;
-  border: none;
+ background: #000;
+ border: none;
 }
 
 .submenu {
-  display: block;
-  text-align: right;
+ display: block;
+ text-align: right;
 }
+
 .submenu a {
-  background: #3aa !important;
-  margin: 5px;
+ background: #3aa !important;
+ margin: 5px;
+}
+
+.submenu .ui-btn {
+ padding: 0.4em;
+ margin: 0.1em;
 }
 
 .float-left {
-  float: left;
+ float: left;
 }
 
 .centered {
-  text-align: center !important;
-  margin: 0px;
+ text-align: center !important;
+ margin: 0px;
 }
 
 .footable tr {
-  font-size: 1.2em;
+ font-size: 1.2em;
 }
 
 .footable td {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+ padding-top: 0px !important;
+ padding-bottom: 0px !important;
 }
-
 
 /* Indications classes */
 
 .required {
-  background: #fdd;
-  text-align: center !important;
+ background: #fdd;
+ text-align: center !important;
 }
 
 .maybe-required {
-  background: #ffd;
-  text-align: center !important;
+ background: #ffd;
+ text-align: center !important;
 }
 
 .maybe-required h4 {
-  font-weight: normal;
+ font-weight: normal;
 }
 
 .not-required {
-  background: #dfd;
-  text-align: center !important;
-  font-size: 0.7em;
+ background: #dfd;
+ text-align: center !important;
+ font-size: 0.7em;
 }
+
 .greencell,
 .redcell,
 .ambercell {
-  font-weight: normal;
-  text-shadow: 1px 1px 1px #555;
-  color: white;
-  text-align: center;
-  padding: 2px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 10px #fff;
-  margin: 0px;
-  border: 1px solid #aaa;
-  min-height: 5em;
+ font-weight: normal;
+ text-shadow: 1px 1px 1px #555;
+ color: white;
+ text-align: center;
+ padding: 2px;
+ border-radius: 5px;
+ box-shadow: 1px 1px 10px #fff;
+ margin: 0px;
+ border: 1px solid #aaa;
+ min-height: 5em;
 }
 
 .greencell {
-  background: #2b2;
+ background: #2b2;
 }
 
 .ambercell {
-  background: #ef0;
-  text-shadow: 1px 1px 1px #fff;
-  color: #000;
+ background: #ef0;
+ text-shadow: 1px 1px 1px #fff;
+ color: #000;
 }
 
 .redcell {
-  background: #b00;
+ background: #b00;
 }
 
 .overlay {
-  display: block;
-  background: #005050;
-  background: rgba(0,75,75,0.9);
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
+ display: block;
+ background: #005050;
+ background: rgba(0, 75, 75, 0.9);
+ left: 0;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ position: fixed;
+ z-index: 9999;
 }
 
 .overlay-container {
-  display: none;
-  padding: 0.5em;
-  margin: 1em auto;
-  border-radius: 5px;
-  width: 90%;
-  max-width: 500px;
+ display: none;
+ padding: 0.5em;
+ margin: 1em auto;
+ border-radius: 5px;
+ width: 90%;
+ max-width: 500px;
 }
 
 .textbox {
-  background: #fff;
-  padding: 0.5em;
-  overflow-y: scroll;
-  max-height: 250px;
-  margin: 0.2em;
-  border-radius: 5px;
+ background: #fff;
+ padding: 0.5em;
+ overflow-y: scroll;
+ max-height: 250px;
+ margin: 0.2em;
+ border-radius: 5px;
 }
 
 .mainlogo {
-  margin: 0 auto;
-  width: 200px;
-  background: #3aa;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  text-shadow: none;
+ margin: 0 auto;
+ width: 200px;
+ background: #3aa;
+ padding: 25px;
+ border-radius: 10px;
+ text-align: center;
+ color: #fff;
+ text-shadow: none;
 }
 
 .mainlogo i {
-  color: #fff;
-  text-shadow: 1px 1px 40px #fff;
+ color: #fff;
+ text-shadow: 1px 1px 40px #fff;
 }
 
-
 .green-traffic-light {
-  background: url("green.png");
+ background: url("green.png");
 }
 
 .red-traffic-light {
-  height: 48px;
+ height: 48px;
 }
 
 .amber-traffic-light {
-  background: url("yellow.png");
+ background: url("yellow.png");
 }
 
 .red-traffic-light {
-  background: url("red.png");
+ background: url("red.png");
 }
 
 .traffic-light-container {
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 78px;
-  border-right: none;
+ background-repeat: no-repeat;
+ width: 30px;
+ height: 78px;
+ border-right: none;
 }
 
 .indication-container {
-  border-left: none !important;
+ border-left: none !important;
 }
 
 .footable td h4 {
-  margin: 0;
+ margin: 0;
 }
 
 .footable th {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
 }
 
 /* Make text more readable on high resolution devices */
 
-  a {
-    font-size: 1em !important;
-  }
-      
-      
-  
-  input {
-    font-size: 1.3em !important;
-  }
-      
-      
-@media (min-width: 780px) {
-  .ui-page {
-    font-size: 1.1em !important;
-  }
-  
-  .searchicon {
-    font-size: 22px !important;
-  }
-    
-  .footable tr {
-    font-size: 1.4em;
-  }
-  
-  .infobox {
-    min-height: 4em;
-    overflow: auto;
-    width: 45%;
-    display: inline-block;
-    margin-left: 1%;
-  }
-  
-  
-  
-  input {
-    font-size: 1.4em !important;
-  }
-      
-  
+a {
+ font-size: 1em !important;
 }
 
-  .ui-li-divider, li .ui-btn {
-    padding-top: 1em !important;
-    padding-bottom: 1em !important;
-  }
+input {
+ font-size: 1.3em !important;
+}
 
 .navtab {
-  border: none !important;
-  text-shadow: none !important;
-  margin: 1px !important;
-  border-radius: 5px;
-  padding-bottom: 1.5em;
-  font-size: 0.8em !important;
+ border: none !important;
+ text-shadow: none !important;
+ margin: 1px !important;
+ border-radius: 5px;
+ padding: 0;
+ padding-bottom: 1.5em;
+ font-size: 0.8em !important;
 }
 
+.navtab i {
+ display: block;
+}
+
+.ui-li-divider,
+li .ui-btn,
+.submenu .ui-btn {
+ padding: 0.5em !important;
+}
+
+@media (min-width: 780px) {
+ .ui-page {
+  font-size: 1.1em !important;
+ }
+
+ .searchicon {
+  font-size: 22px !important;
+ }
+
+ .footable tr {
+  font-size: 1.4em;
+ }
+
+ .infobox {
+  min-height: 4em;
+  overflow: auto;
+  width: 45%;
+  display: inline-block;
+  margin-left: 1%;
+ }
+
+ input {
+  font-size: 1.4em !important;
+ }
+
+ .navtab {
+  font-size: 1em !important;
+ }
+
+ .navtab i {
+  display: inline;
+  margin-right: 0.3em;
+  vertical-align: middle;
+ }
+   
+  .ui-li-divider,
+  li .ui-btn,
+  .submenu .ui-btn {
+   padding: 0.8em !important;
+  }
+
+}
+
+
 .hidden {
-  display: none;
+ display: none;
 }
