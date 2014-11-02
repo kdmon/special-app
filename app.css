@@ -16,7 +16,8 @@
 
 .fa-select,
 .ui-selectmenu-list li a,
-.ui-popup .ui-header .ui-title {
+.ui-dialog-contain .ui-header .ui-title,
+.ui-popup .ui-header .ui-title  {
  font-family: 'FontAwesome', sans-serif;
 }
 
@@ -271,7 +272,7 @@
 
 /* Make text more readable on high resolution devices */
 
-a {
+a, button {
  font-size: 1em !important;
 }
 
@@ -296,7 +297,8 @@ input {
 .ui-li-divider,
 li .ui-btn,
 .submenu .ui-btn {
- padding: 0.5em !important;
+ padding-top: 0.5em !important;
+ padding-bottom: 0.5em !important;
 }
 
 @media (min-width: 780px) {
@@ -312,13 +314,6 @@ li .ui-btn,
   font-size: 1.4em;
  }
 
- .infobox {
-  min-height: 4em;
-  overflow: auto;
-  width: 45%;
-  display: inline-block;
-  margin-left: 1%;
- }
 
  input {
   font-size: 1.4em !important;
@@ -337,11 +332,30 @@ li .ui-btn,
   .ui-li-divider,
   li .ui-btn,
   .submenu .ui-btn {
-   padding: 0.8em !important;
+   padding-top: 0.8em !important;
+   padding-bottom: 0.8em !important;
   }
+  
+  .submenu .ui-btn {
+     margin: 0.4em !important;
+   }
+  
+ .infobox {
+  min-height: 4em;
+  overflow: auto;
+  width: 45%;
+  display: inline-block;
+  margin-left: 1%;
+  padding: 0.5em !important;
+ }
 
 }
 
+/* Allow long button texts, e.g. list items, to wrap */
+
+.ui-btn {
+  white-space: normal !important;
+}
 
 .hidden {
  display: none;
