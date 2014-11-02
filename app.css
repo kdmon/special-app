@@ -41,6 +41,7 @@
 
 .headerlogo {
  clear: both;
+ border: 0 !important;
  margin: 0 !important;
  box-shadow: none;
  clear: both;
@@ -286,7 +287,6 @@ input {
  margin: 1px !important;
  border-radius: 5px;
  padding: 0;
- padding-bottom: 1.5em;
  font-size: 0.8em !important;
 }
 
@@ -295,10 +295,14 @@ input {
 }
 
 .ui-li-divider,
-li .ui-btn,
 .submenu .ui-btn {
  padding-top: 0.5em !important;
  padding-bottom: 0.5em !important;
+}
+
+li .ui-btn {
+ padding-top: 0.5em !important;
+ padding-bottom: 1.3em !important;
 }
 
 @media (min-width: 780px) {
@@ -352,6 +356,11 @@ li .ui-btn,
 }
 
 /* Allow long button texts, e.g. list items, to wrap */
+
+.navtab .ui-btn {
+ padding-bottom: 1.5em !important;
+ margin-bottom: 1.5em !important;
+}
 
 .ui-btn {
   white-space: normal !important;
