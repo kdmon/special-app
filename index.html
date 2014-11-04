@@ -134,7 +134,7 @@
         <a data-role="button" href="#learn" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf19d;</i>
            <strong>Learn</strong><br/>
-           Why are blood components leucodepleted, irradiated and screened for CMV?
+           Why are blood components irradiated, leucodepleted and screened for CMV?
         </a>
         
         <a data-role="button" href="#indications" class="infobox">
@@ -187,24 +187,39 @@
       
       <div data-role="header" class="inactive" data-theme="b">
         
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learning Outline and Objectives
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.1 Learning Outline and Objectives
         </h3>
         <div class="submenu inactive">
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#learningmenu" data-role="button" class="float-left"> <i class="fa fa-ln">&#xf0c9;</i> Menu</a>
-          <a href="#learn1" data-role="button" class="float-left">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">Find <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#" data-role="button" data-inline="true" data-theme="b" class="active" onclick="$('.toc').toggle('slow');"><i class="fa fa-ln">&#xf0c9;</i></a>
+          <a href="#ta-gvhd" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
+          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
       <div role="main" class="ui-content">
-      
+
+        <a href="#" data-role="button" data-inline="true" data-theme="b" class="active" onclick="$('.toc').toggle('slow');"><i class="fa fa-ln">&#xf0c9;</i> Toggle table of contents</a>
+          
+        <div class="toc hidden">
+          <p>Press a topic in the table of contents to jump to that section</p>
+          <ul data-role="listview" data-inset="true" data-dividertheme="b">
+            <li data-role="list-divider">Table of contents</li>
+            <li><a href="#learn">1.1 Learning objectives</a></li>
+            <li><a href="#ta-gvhd">1.2 Transfusion-associated Graft versus Host Disease</a></li>
+            <li><a href="#tt-cmv">1.3 Transfusion-transmitted Cytomegalovirus infection</a></li>
+            <li><a href="#error">1.4 Errors in provision of special requirements</a></li>
+            <li><a href="#summary">1.5 Summary</a></li>
+            <li><a href="#reference">1.6 Further reading</a></li>
+          </ul>
+        </div>
+
         <h2>1. Learning Outline</h2>
         
           <p>
             This section explains how the risk of TA-GvHD and TT-CMV infection
-            is managed through the provision of irradiated and CMV-negative 
-            blood components to at risk patients.
+            is managed through the use of irradiated, leucodepleted and
+            CMV-negative blood components.
           </p>
         
         <h3>1.1 Learning objectives</h3>
@@ -214,30 +229,16 @@
           <li><p><span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span> is a rare lethal complication of transfusion.</p></li>
           <li><p><span class="explanation" title="Irradiation inactivates donor lymphocytes that cause TA-GvHD.">Gamma or x-ray irradiation</span> is the accepted way of preventing TA-GvHD.</p></li>
           <li><p>Transfusion can transmit <span class="explanation" title="Cytomegalovirus">CMV</span> infection, leading to serious conditions in foetuses, neonates and immunodeficient patients.</p></li>
-          <li><p>Leucodepletion reduces the risk of CMV infection and CMV-negative blood is only indicated for high risk patients.</p></li>
-          <li><p>Mistakes frequently lead to patients not receiving irradiated or CMV-negative blood components.</p></li>
+          <li><p>Leucodepletion reduces the risk of CMV infection, but CMV-negative blood is indicated for vulnerable patients.</p></li>
+          <li><p>Mistakes can frequently lead to patients not receiving irradiated or CMV-negative blood components.</p></li>
         </ul>
        
-        
-        <a href="#home" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
-        <a href="#learn1" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
-       
-        <a href="#" data-role="button" data-theme="b" class="active" onclick="$('#toc').toggle();"><i class="fa fa-ln">&#xf0c9;</i> Toggle table of contents</a>
-        <div id="toc" class="hidden">
-          <ul data-role="listview" data-inset="true" data-dividertheme="b">
-            <li data-role="list-divider">Table of contents</li>
-            <li><a href="#learn">1.1 Learning objectives</a></li>
-            <li><a href="#blood-components-leucodepletion">1.2 Blood components and universal leucodepletion</a></li>
-            <li><a href="#ta-gvhd">1.3 Transfusion-associated Graft versus Host Disease</a></li>
-            <li><a href="#tt-cmv">1.4 Transfusion-transmitted Cytomegalovirus infection</a></li>
-            <li><a href="#error">1.5 Errors in provision of special requirements</a></li>
-            <li><a href="#summary">1.6 Summary</a></li>
-            <li><a href="#reference">1.7 Further reading</a></li>
-            <li><a href="#quiz" class="ui-disabled">1.8 Quiz (disabled)</a></li>
-          </ul>
-      
-        <p>Jump to a topic in the table of contents or press 'Next' to go to the next section.</p>
-        </div>
+        <hr/>
+        <p>Next: 1.2 Transfusion Associated Graft versus Host Disease</p>
+
+        <a href="#home" style="float:left;" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
+        <a href="#" style="float:right;" data-inline="true" data-role="button" data-theme="b" onclick="$(window).scrollTop(0);" class="active">Up <i class="fa fa-ln">&#xf0d8;</i></a>
+        <a href="#ta-gvhd" style="float:right;" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
         
       </div>
       <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
@@ -254,6 +255,78 @@
       </div>
     </div>
     
+    
+    
+    <div data-role="page" id="ta-gvhd" data-title="Learn about Special Blood Components">
+      
+      <div data-role="header" class="inactive" data-theme="b">
+        
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.2 Transfusion-Associated Graft versus Host Disease (TA-GvHD)
+        </h3>
+        <div class="submenu inactive">
+          <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
+          <a href="#ta-gvhd" data-role="button" class="float-left">Next <i class="fa fa-ln">&#xf054;</i></a>
+          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+        </div>
+      </div>
+
+      <div role="main" class="ui-content">
+            
+        <h2>1.2 Graft versus Host Disease (Transfusion Associated)</h2>
+        
+          <p>
+            This section explains how the risk of TA-GvHD and TT-CMV infection
+            is managed through the use of irradiated, leucodepleted and
+            CMV-negative blood components.
+          </p>
+        
+        <h3>1.1 Learning objectives</h3>
+        
+        <p>After studying this section, you will understand that:</p>
+        <ul>
+          <li><p><span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span> is a rare lethal complication of transfusion.</p></li>
+          <li><p><span class="explanation" title="Irradiation inactivates donor lymphocytes that cause TA-GvHD.">Gamma or x-ray irradiation</span> is the accepted way of preventing TA-GvHD.</p></li>
+          <li><p>Transfusion can transmit <span class="explanation" title="Cytomegalovirus">CMV</span> infection, leading to serious conditions in foetuses, neonates and immunodeficient patients.</p></li>
+          <li><p>Leucodepletion reduces the risk of CMV infection, but CMV-negative blood is indicated for vulnerable patients.</p></li>
+          <li><p>Mistakes can frequently lead to patients not receiving irradiated or CMV-negative blood components.</p></li>
+        </ul>
+       
+        
+        <a href="#" data-role="button" data-inline="true" data-theme="b" class="active" onclick="$('.toc').toggle();"><i class="fa fa-ln">&#xf0c9;</i> Toggle table of contents</a>
+        <div class="toc hidden">
+          <p>Press a topic in the table of contents to jump to that section</p>
+          <ul data-role="listview" data-inset="true" data-dividertheme="b">
+            <li data-role="list-divider">Table of contents</li>
+            <li><a href="#learn">1.1 Learning objectives</a></li>
+            <li><a href="#ta-gvhd">1.2 Transfusion-associated Graft versus Host Disease</a></li>
+            <li><a href="#tt-cmv">1.3 Transfusion-transmitted Cytomegalovirus infection</a></li>
+            <li><a href="#error">1.4 Errors in provision of special requirements</a></li>
+            <li><a href="#summary">1.5 Summary</a></li>
+            <li><a href="#reference">1.6 Further reading</a></li>
+          </ul>
+        </div>
+
+
+        <hr/>
+
+        <a href="#home" style="float:left;" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
+        <a href="#" style="float:right;" data-inline="true" data-role="button" data-theme="b" onclick="$(window).scrollTop(0);" class="active">Up <i class="fa fa-ln">&#xf0d8;</i></a>
+        <a href="#ta-gvhd" style="float:right;" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
+        
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" class="navtab inactive"><i class="fa fa-2x">&#xf015;</i> Home</a>
+            </li>
+            <li><a href="#learn" class="navtab active"><i class="fa fa-2x glow">&#xf19d;</i> Learn</a>
+            </li>
+            <li><a href="#indications" class="navtab inactive"><i class="fa fa-2x">&#xf0f1;</i> Indications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     
     
     <div data-role="page" id="learn1" data-title="Learn about Special Blood Components">
