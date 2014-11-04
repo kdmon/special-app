@@ -14,6 +14,14 @@
  min-height: 2em;
 }
 
+.small-image {
+  width: 100%;
+}
+
+.big-image {
+  width: 1024px;
+}
+
 .fa-select,
 .ui-selectmenu-list li a,
 .ui-dialog-contain .ui-header .ui-title,
