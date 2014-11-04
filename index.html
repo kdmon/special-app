@@ -119,50 +119,52 @@
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf043;</i> Special Blood Components Home
         </h3>
-        <div class="submenu inactive">
-          <a href="#about" data-role="button" class="float-left"><i class="fa fa-ln">&#xf05a;</i> About the app</a>
-          <a href="#searchdialog" data-rel="dialog" data-transition="slidedown" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+        <div class="submenu inactive hidden">
+          <p style="margin: 0;">
+          v.0.2. Updated 5/11/2015
+            <a href="#searchdialog" data-rel="dialog" data-transition="slidedown" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          </p>
         </div>
       </div>
 
       <div role="main" class="ui-content">
     
-    		<h2 style="display:none" class="mainlogo">
+    		<h2 class="mainlogo hidden">
     		  <i class="fa fa-5x glow">&#xf043;</i>
           <br/>Special Blood Components
         </h2>
 
-        <a data-role="button" href="#learn" class="infobox">
-           <i class="fa fa-fw fa-2x button-icon">&#xf19d;</i>
-           <strong>Rationale</strong><br/>
-           Why are blood components irradiated, leucodepleted and screened for CMV?
-        </a>
-        
         <a data-role="button" href="#indications" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf0f1;</i>
            <strong>Indications</strong><br/>
            Which patients require irradiated or CMV-negative blood components?
         </a>
         
-        <a data-role="button" href="#glossary" class="infobox">
-           <i class="fa fa-fw fa-2x button-icon">&#xf02e;</i>
-           <strong>Glossary</strong><br/>
-           Look up a word in the index.
+        <a data-role="button" href="#learn" class="infobox">
+           <i class="fa fa-fw fa-2x button-icon">&#xf19d;</i>
+           <strong>Rationale</strong><br/>
+           Why provide irradiated or CMV-negative blood to patients with special requirements?
         </a>
         
-        <a data-role="button" href="#searchpanel" class="hidden">
+        <a data-role="button" href="#searchpanel" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf002;</i>
            <strong>Search the app</strong><br/>
            Find all occurances of a term across the app.
         </a>
         
-        <a data-role="button" href="#references" class="infobox">
+        <a data-role="button" href="#glossary" class="infobox hidden">
+           <i class="fa fa-fw fa-2x button-icon">&#xf02e;</i>
+           <strong>Glossary</strong><br/>
+           Look up a word in the index.
+        </a>
+        
+        <a data-role="button" href="#references" class="hidden infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf02d;</i>
            <strong>References</strong><br/>
            Browse evidence cited in the app.
         </a>
         
-        <a data-role="button" href="#about" class="hidden">
+        <a data-role="button" href="#about"  class="infobox">
            <i class="fa fa-2x button-icon">&#xf05a;</i>
            <strong>About the app</strong><br/>
            Find out more details about this app.
@@ -201,13 +203,17 @@
       
         <h2>Rationale</h2>
       
-        <h3>1.1 Learning objectives</h3>
       
         <p>
           This section explains how the risk of TA-GvHD and TT-CMV infection
           is managed through the use of irradiated, leucodepleted and
-          CMV-negative blood components. After studying this section, 
-          you should know that:
+          CMV-negative blood components.
+            
+        </p>
+        
+        <h3>1.1 Learning objectives</h3>
+        
+        <p>Reviewing the information in this section will provide a better understanding of the following topics:
         </p>
         <ul>
           <li><p><span class="explanation" title="Transfusion Associated Graft versus Host Disease">TA-GvHD</span> is a rare lethal complication of transfusion.</p></li>
@@ -282,21 +288,19 @@
           lymphocytes.
         </p>
         
-        <h3>Disease mechanism</h3>
+        <h3>Pathogenesis</h3>
         
         <p>
           Normally a recipient's immune system identifies transfused donor
           leucocytes as foreign and destroys them. In TA-GvHD this response
-          is either not triggered because the immune system fails to identify the
-          foreign cells or it is ineffective due to existing severe immunodeficiency.
+          is not triggered because the immune system fails to identify the
+          foreign cells or it is ineffective due to severe immunodeficiency.
         </p>
-        
-        <h3>Outcome</h3>
-        
+
         <p>
-          The transfused donor lymphocytes then engraft, causing TA-GvHD. The patient
-          develop skin rash, diarrhoea, abnormal liver function, bone marrow failure
-          and death from infection two-three weeks after the transfusion (HTM 2007, p.41).
+          Unless destroyed, the transfused donor lymphocytes engraft, causing skin rash,
+          diarrhoea, abnormal liver function, bone marrow failure and death from 
+          infection two-three weeks after the transfusion (HTM 2007, p.41).
         </p>
         
         <h3>Risk factors and prevention</h3>
@@ -311,8 +315,13 @@
           <li><p>The degree of immunological (HLA) disparity between donor and patient.</p></li>
         </ul>
         
+        <h3>Leucodepletion reduces the number of lymphocytes</h3>
         
-        <h3>Irradiation</h3>
+        
+        <h3>Irradiation inactivates the lymphocytes</h3>
+        
+        
+        <h3>Summary of the indications for irradiation</h3>
         
         Only cellular blood components contain lymphocytes. Fresh Frozen Plasma
         (FFP) 
@@ -405,7 +414,7 @@
           <p>
   
             CMV infection often go unnoticed in immunocompetent patients, but it can be fatal
-            or cause lifelong disability in foetuses, neonates and immunocompromised patients.
+            or cause lifelong disability in fetuses, neonates and immunocompromised patients.
             Neonatal mortality from CMV infection is 10-30% (higher in preterms) and the virus
             accounts for 12% of all sensorineural hearing loss and 10% of cerebral palsy (Sabto p.4).
 
@@ -416,7 +425,7 @@
         
           <p>
             Cellular blood components (red cells, platelets and granulocytes) can contain CMV infected
-            monocytes which transmit the virus during transfusion. Infection is prevented by avoiding 
+            monocytes which may transmit the virus when transfused. Infection is prevented by avoiding 
             unnecessary transfusions, removing white cells from red cells and platelets 
             (leucodepletion) prior to transfusion, and using blood from donors who
             screen negative for CMV antibody (CMV-negative).
@@ -433,7 +442,7 @@
           For this reason at risk patients should receive blood from CMV-negative donors.
         </p>
 
-        <h3>CMV-negative blood</h3>
+        <h3>Indications for CMV-negative blood</h3>
 
         <p>Blood from donors who screen negative for CMV antibody is indicated for (Sabto p.6):</p>
 
