@@ -298,7 +298,7 @@ $(function() {
         "reference": "sabto2012"
       }]
     }, {
-      "title": "Pregnancy",
+      "title": "Pregnancy, elective transfusions",
       "key": "pregnancy",
       "type": "cmv",
       "category": "neonatology",
@@ -494,8 +494,8 @@ $(function() {
     
     $.each(components.entries, function(i, item) {
       
-      var irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated is not required.</h4></td>';
-      var cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative is not required.</h4></td>';
+      var irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
+      var cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
       
       // Brief summaries
       var irrsummary= '';
@@ -510,23 +510,23 @@ $(function() {
       
       switch (item.type) {
         case 'irradiated-cmv':
-          irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
-          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
+          irrcode = '<td data-value="1" class="required">Irradiation is required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</h4></td>';
           flagclass = 'red-traffic-light';
         break;
         case 'irradiated':
-          irrcode = '<td data-value="1" class="required"><h4>Irradiation is required.</h4></td>';
-          cmvcode = '<td data-value="-1" class="not-required"><h4>CMV-negative is not required.</h4></td>';
+          irrcode = '<td data-value="1" class="required">Irradiation is required.</td>';
+          cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
           flagclass = 'red-traffic-light';
         break;
         case 'cmv':
-          irrcode = '<td data-value="-1" class="not-required"><h4>Irradiated is not required.</h4></td>';
-          cmvcode = '<td data-value="1" class="required"><h4>CMV-negative is required.</h4></td>';
+          irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
+          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</td>';
           flagclass = 'red-traffic-light';
         break;
         case 'maybe':
-          irrcode = '<td data-value="0" class="maybe-required"><h4>Irradiation could be required.</h4></td>';
-          cmvcode = '<td data-value="0" class="maybe-required"><h4>CMV-negative could be required.</h4></td>';
+          irrcode = '<td data-value="0" class="maybe-required">Irradiation could be required.</td>';
+          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative could be required.</td>';
           flagclass = 'amber-traffic-light';
         break;
       }
@@ -574,7 +574,9 @@ $(function() {
       if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
       if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
 
-      details += '<p>Category: <i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + '</p>';
+      details += '<p><i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + ' category</p>';
+      
+      details += '<p style="font-size: 0.8em">Keywords: ' + item.tags + '</p>';
       
       details += '</td>';
       
@@ -602,10 +604,7 @@ $(function() {
   });
   
   $("#filterlist").on("change", function(val){
-    console.log ($("#filterlist").val());
-    //$("#filter").val($("#filterlist").val());
-    $('table').trigger('footable_filter', {filter: $("#filterlist").val()});
-    //$('table').trigger('footable_clear_filter');
+    $('#indicationstable').hide().trigger('footable_filter', {filter: $("#filterlist").val()}).fadeTo(700, 1);
   })
   window.onload = function() {
     $("#terms").slideDown('slow');
