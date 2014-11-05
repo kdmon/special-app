@@ -668,7 +668,23 @@ var app = (function(global) {
   
   // searchable clone?!?!
   
-  $(".ui-content p").clone().appendTo("#searchlist");
+  //var doms = $(".ui-content p").clone();
+  
+  //var pages = $(".ui-content p").parents('[data-role="page"]'); //closest('dom [data-role="page"]').attr("id");
+  
+  //console.log (pages);
+  
+  
+  $(".ui-content p").each(function() {
+    var original = $(this);
+    var parent = $(this).parents('[data-role="page"]').attr("id");
+    var title = $(this).parents('[data-role="page"]').attr("data-title");
+    $(this).clone().prepend("<h4>" + title + ":</h4>").on("click", function () {
+      $.mobile.changePage('#' + parent);
+      $('html, body').animate({scrollTop: $(original).offset().top});
+      $(original).css('background', '#FFC');
+      setTimeout(function() {$(original).css('background', 'none');},15000);
+    }).appendTo("#searchlist")});
   
   return global;
   
