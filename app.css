@@ -22,6 +22,12 @@
   width: 1024px;
 }
 
+.figure {
+  border: 1px #aaa solid;
+  margin: 1em;
+  padding: 0.5em;
+}
+
 .fa-select,
 .ui-selectmenu-list li a,
 .ui-dialog-contain .ui-header .ui-title,
@@ -67,9 +73,11 @@
  text-align: left;
 }
 
-.explanation {
- border-bottom: 1px dotted #000;
- cursor: pointer;
+.explanation, .glossary {
+  font-size: 0.8em;
+  vertical-align: top;
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
 }
 
 .glow {
@@ -150,6 +158,7 @@
 .required {
  background: #fdd;
  text-align: center !important;
+ font-weight: bold;
 }
 
 .maybe-required {
