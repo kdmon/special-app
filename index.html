@@ -190,7 +190,7 @@
       
       <div data-role="header" class="inactive" data-theme="b">
         
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learn
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learning objectives
         </h3>
         <div class="submenu inactive">
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
@@ -201,7 +201,7 @@
 
       <div role="main" class="ui-content">
       
-        <h3>Learning objectives</h3>
+        <h2>Learning objectives</h2>
         
         <p>
           This section explains the rationale behind the use of irradiated, leucodepleted and
@@ -223,6 +223,7 @@
        
         <div class="toc">
           <ul data-role="listview" data-inset="true" data-dividertheme="b">
+            <li data-theme="b"><a class="active" href="#learn">Learning objectives</a></li>
             <li><a href="#ta-gvhd">Transfusion-Associated Graft versus Host Disease (TA-GvHD)</a></li>
             <li><a href="#tt-cmv">Transfusion-Transmitted Cytomegalovirus infection (TT-CMV)</a></li>
             <li><a href="#error">Errors in provision of special requirements</a></li>
@@ -524,26 +525,26 @@
           <p>
   
             Cytomegalovirus (CMV) is a herpes virus that cause a mainly asymptomatic infection in
-            healthy people. About half the UK population is CMV positive (Sabto p.2) and many blood
+            healthy people. About half the UK population is CMV positive and many blood
             donors carry the virus. The virus can occur freely in the blood stream during active
-            infection and it remains latent in monocytes after infection (Sabto p. 2).
+            infection and remains latent in monocytes after infection <span class="explanation" title="sabto2012">(SaBTO 2012, p.2)</span>.
 
           </p>
         
-        <a href="#" data-role="button" data-inline="true" onclick="$('#cmv-figure').toggle('slow')">Micrograph image of CMV</a>
+        <a href="#" data-role="button" data-inline="true" onclick="$('#cmv-figure').toggle('slow')">Figure: Image of CMV</a>
         
-        <div class="hidden" id="cmv-figure">
+        <div class="figure hidden" id="cmv-figure">
           
-          <p>Click image to change size.</p>
           
           <div style="overflow-x: scroll;">
             <img onclick="$(this).toggleClass('big-image').toggleClass('small-image')" class="small-image" src="cmv-tem.jpg"/>
           </div>
           
-          <p style="line-height: 1.1em;">
+          <p>
             200x transmission electron micrograph (TEM). Cytomegalovirus is present
             as intranuclear inclusion bodies ('owl eyes'). Image credit: The CDC 
-            Public Health Image Library, 1986. Image in the public domain.
+            Public Health Image Library, 1986. Image in the public domain. Click 
+            image to resize.
           </p>
         </div>
         
@@ -554,29 +555,31 @@
             CMV infection often go unnoticed in immunocompetent patients, but it can be fatal
             or cause lifelong disability in fetuses, neonates and immunocompromised patients.
             Neonatal mortality from CMV infection is 10-30% (higher in preterms) and the virus
-            accounts for 12% of all sensorineural hearing loss and 10% of cerebral palsy (Sabto p.4).
+            accounts for 12% of all sensorineural hearing loss and 10% of cerebral palsy
+            <span class="explanation" title="sabto2012">(SaBTO 2012, p.4)</span>.
 
           </p>
           
           
         <h3>Prevention</h3>
         
-          <p>
-            Cellular blood components (red cells, platelets and granulocytes) may contain CMV infected
-            monocytes which can transmit the virus if transfused. Infection is prevented by avoiding 
-            unnecessary transfusions, removing white cells from red cells and platelets 
-            through leucodepletion and using blood from donors who screen negative for CMV antibody.
-          </p>
+        <p>
+          Cellular blood components (red cells, platelets and granulocytes) may contain monocytes
+          with latent CMV and can transmit the virus if transfused. Infection is prevented by avoiding 
+          unnecessary transfusions, removing white cells from red cells and platelets 
+          through leucodepletion and using blood from donors who screen negative for CMV antibody.
+        </p>
 
         <h3>Leucodepletion</h3>
 
         <p>
           Leucodepletion is the removal of white cells, usually by filtration, from red cells and
           platelets. This process is particularly effective in removing monocytes, white cells where 
-          CMV may be latent (sabto p.2). Since 1999 all platelets and red cells produced in the UK are 
-          leucodepleted. Universal leucodepletion has significantly reduced the risk of 
-          transfusion-transmitted CMV infection, but the risk is not completely eliminated (Sabto).
-          For this reason patients at high risk should receive blood from CMV-negative donors.
+          CMV may be latent <span class="explanation" title="sabto2012">(SaBTO 2012, p.2)</span>.
+          Since 1999 all platelets and red cells produced in the UK are leucodepleted. Universal
+          leucodepletion has significantly reduced the risk of transfusion-transmitted CMV infection,
+          but the risk is not completely eliminated and at risk patients should receive blood
+          from CMV-negative donors <span class="explanation" title="sabto2012">(SaBTO 2012)</span>.
         </p>
 
         <h3>Who should receive CMV-negative blood?</h3>
@@ -1008,88 +1011,87 @@
         <h3>
           1.6 References
         </h3>
-    
-        <p id="sabto2012">
-          Advisory Committee on the Safety of Blood, Tissues and Organs (SaBTO)
-          (2012) Position statement on cytomegalovirus tested blood components.
-          <a href="https://www.gov.uk/government/publications/sabto-report-of-the-cytomegalovirus-steering-group" target="_blank">Open</a>
-        </p>
-        
-        <p  id="shot2012">
-          Bolton-Maggs, P (Ed) and Cohen, H (2012) on behalf of the Serious Hazards
-          of Transfusion (SHOT) Steering Group. The 2011 Annual SHOT Report.
-          <a href="http://www.shotuk.org/shot-reports/shot-annual-report-summary-2011/" target="_blank">Open</a>
-        </p>
-            
-        <p id="shot2013">
-          Bolton-Maggs P (Ed), Poles D, Watt A, Thomas D and Cohen H (2013) on behalf
-          of the Serious Hazards of Transfusion (SHOT) Steering Group. The 2012
-          Annual SHOT Report.<a href="http://www.shotuk.org/shot-reports/report-summary-and-supplement-2012/" target="_blank">Open</a>
-        </p>
-        
-            
-        <p id="htm2007">
-          McClelland DBL (ed) (2007) Handbook of Transfusion Medicine, 4th Ed.
-          Published in the UK by The Stationary Office. <a href="http://www.transfusionguidelines.org.uk/index.aspx?Publication=HTM" target="_blank">Open</a>
-        </p>
-            
-        <p id="obu2010">
-          McClelland DBL, Pirie E, Franklin IM (2010) for the EU Optimal Use of Blood
-          Project Partners. The Optimal Blood Use Manual. Published by Scottish
-          National Blood Transfusion Service. 
-            <a href="http://www.optimalblooduse.eu" target="_blank">Open</a>
-        </p>
-        
-        <p id="mesh2013">
-          Medical Subject Headings (2013) published by the U.S. National Library of
-          Medicine, National Institutes of Health. 
-            <a href="http://www.nlm.nih.gov/mesh/2013/mesh_browser/" target="_blank">Open</a>
-        </p>
-        
-        <p id="nhsgenetics">
-          NHS National Genetics and Genomics Education Centre,
-          glossary item "First-degree relative".
-            <a href="http://www.geneticseducation.nhs.uk/genetics-glossary/181-first-degree-relative" target="_blank">Open</a>
-        </p>
-        
-        <p id="shot2008">
-          Taylor C, Cohen H, Jones H, et al (2008), on behalf of the Serious Hazards
-          of Transfusion (SHOT) Steering Group. The 2007 Annual SHOT Report.
+        <div style="margin-left: 1em;">
+          <p id="sabto2012">
+            Advisory Committee on the Safety of Blood, Tissues and Organs (SaBTO)
+            (2012) Position statement on cytomegalovirus tested blood components.
+            <a href="https://www.gov.uk/government/publications/sabto-report-of-the-cytomegalovirus-steering-group" target="_blank">Open</a>
+          </p>
           
-          <a href="http://www.shotuk.org/shot-reports/reports-and-summaries-2007/" target="_blank">Open</a>
-        </p>
-        
-        <p  id="shot2009">
-          Taylor C (Ed.), Cohen H, Mold D, Jones H, et al (2009), on behalf of the
-          Serious Hazards of Transfusion (SHOT) Steering Group. The 2008 Annual SHOT
-          Report. <a href="http://www.shotuk.org/shot-reports/reports-and-summaries-2008/" target="_blank">Open</a>
-        </p>
+          <p  id="shot2012">
+            Bolton-Maggs, P (Ed) and Cohen, H (2012) on behalf of the Serious Hazards
+            of Transfusion (SHOT) Steering Group. The 2011 Annual SHOT Report.
+            <a href="http://www.shotuk.org/shot-reports/shot-annual-report-summary-2011/" target="_blank">Open</a>
+          </p>
+              
+          <p id="shot2013">
+            Bolton-Maggs P (Ed), Poles D, Watt A, Thomas D and Cohen H (2013) on behalf
+            of the Serious Hazards of Transfusion (SHOT) Steering Group. The 2012
+            Annual SHOT Report.<a href="http://www.shotuk.org/shot-reports/report-summary-and-supplement-2012/" target="_blank">Open</a>
+          </p>
+          
+          <p id="ukbts2012">
+            Joint UKBTS / HPA Professional Advisory Committee (2012) Position Statement
+            on Granulocyte Therapy. Revised by Edwin Massey, Simon Stanworth and
+            Rebecca Cardigan at the request of the Standing Advisory Committee on Blood
+            Components. <a href="http://www.transfusionguidelines.org.uk/index.aspx?Publication=DL&amp;pageid=1336" target="_blank">Open</a>
+          </p>
+  
+          <p id="htm2007">
+            McClelland DBL (ed) (2007) Handbook of Transfusion Medicine, 4th Ed.
+            Published in the UK by The Stationary Office. <a href="http://www.transfusionguidelines.org.uk/index.aspx?Publication=HTM" target="_blank">Open</a>
+          </p>
+              
+          <p id="obu2010">
+            McClelland DBL, Pirie E, Franklin IM (2010) for the EU Optimal Use of Blood
+            Project Partners. The Optimal Blood Use Manual. Published by Scottish
+            National Blood Transfusion Service. 
+              <a href="http://www.optimalblooduse.eu" target="_blank">Open</a>
+          </p>
+          
+          <p id="mesh2013">
+            Medical Subject Headings (2013) published by the U.S. National Library of
+            Medicine, National Institutes of Health. 
+              <a href="http://www.nlm.nih.gov/mesh/2013/mesh_browser/" target="_blank">Open</a>
+          </p>
+          
+          <p id="nhsgenetics">
+            NHS National Genetics and Genomics Education Centre,
+            glossary item "First-degree relative".
+              <a href="http://www.geneticseducation.nhs.uk/genetics-glossary/181-first-degree-relative" target="_blank">Open</a>
+          </p>
+          
+          <p id="shot2008">
+            Taylor C, Cohen H, Jones H, et al (2008), on behalf of the Serious Hazards
+            of Transfusion (SHOT) Steering Group. The 2007 Annual SHOT Report.
             
-        <p  id="shot2010">
-          Taylor C (Ed.), Cohen H, Mold D, Jones H, et al (2010), on behalf of the
-          Serious Hazards of Transfusion (SHOT) Steering Group. The 2009 Annual SHOT
-          Report. <a href="http://www.shotuk.org/shot-reports/report-and-summary-2009/" target="_blank">Open</a>
-        </p>
+            <a href="http://www.shotuk.org/shot-reports/reports-and-summaries-2007/" target="_blank">Open</a>
+          </p>
+          
+          <p  id="shot2009">
+            Taylor C (Ed.), Cohen H, Mold D, Jones H, et al (2009), on behalf of the
+            Serious Hazards of Transfusion (SHOT) Steering Group. The 2008 Annual SHOT
+            Report. <a href="http://www.shotuk.org/shot-reports/reports-and-summaries-2008/" target="_blank">Open</a>
+          </p>
+              
+          <p  id="shot2010">
+            Taylor C (Ed.), Cohen H, Mold D, Jones H, et al (2010), on behalf of the
+            Serious Hazards of Transfusion (SHOT) Steering Group. The 2009 Annual SHOT
+            Report. <a href="http://www.shotuk.org/shot-reports/report-and-summary-2009/" target="_blank">Open</a>
+          </p>
+          
+          <p id="bcsh2010">
+            Treleaven, J., Gennery, A., Marsh, J., Norfolk, D., Page, L., Parker, A.,
+            Saran, F., Thurston, J. and Webb, D. (2011), Guidelines on the use of
+            irradiated blood components prepared by the British Committee for Standards
+            in Haematology blood transfusion task force. British Journal of
+            Haematology, 152: 35-51. doi: 10.1111/j.1365-2141.2010.08444.x
+            <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2010.08444.x/full" target="_blank">Open</a>
+          </p>
+          
+        </div>
         
-        <p id="bcsh2010">
-          Treleaven, J., Gennery, A., Marsh, J., Norfolk, D., Page, L., Parker, A.,
-          Saran, F., Thurston, J. and Webb, D. (2011), Guidelines on the use of
-          irradiated blood components prepared by the British Committee for Standards
-          in Haematology blood transfusion task force. British Journal of
-          Haematology, 152: 35-51. doi: 10.1111/j.1365-2141.2010.08444.x
-          <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2141.2010.08444.x/full" target="_blank">Open</a>
-        </p>
-        
-        <p id="ukbts2012">
-          Joint UKBTS / HPA Professional Advisory Committee (2012) Position Statement
-          on Granulocyte Therapy. Revised by Edwin Massey, Simon Stanworth and
-          Rebecca Cardigan at the request of the Standing Advisory Committee on Blood
-          Components. <a href="http://www.transfusionguidelines.org.uk/index.aspx?Publication=DL&amp;pageid=1336" target="_blank">Open</a>
-        </p>
-            
-        <p>
-          Press to expand an entry. All documents open in a new window.
-        </p>
+        <p>All links open in a new window. </p>
         
         
         <h3>Navigation</h3>
