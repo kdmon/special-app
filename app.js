@@ -617,7 +617,6 @@ var app = (function(global) {
       }, 300);
     });
     
-    
     $(".evidence").on("click", function() {
       var ref = $(this).attr("title");
       if (ref) {
@@ -628,11 +627,48 @@ var app = (function(global) {
       }
     });
     
+    
+    
+    /*
+    $(".jump").on("click", function() {
+      var ref = $(this).attr("title");
+      var page = ref.split(" ")[0];
+      var domid = ref.split(" ")[0];
+      if (ref) {
+        $.mobile.changePage('#' + page);
+        $('html, body').animate({scrollTop: $('#'+domid).offset().top});
+        $('#'+domid).css('background', '#FFC');
+        setTimeout(function() {$('#'+domid).css('background', 'none');},15000);
+      }
+    });
+    
+    function jump (elem) {
+      console.log (elem);
+    }
+    
+    */
+    
     $("#filterlist").on("change", function(val){
       $('#indicationstable').hide().trigger('footable_filter', {filter: $("#filterlist").val()}).fadeTo(700, 1);
     });
+      
     
-  }
+    $("#searchlist").on("filterablefilter", function (event, ui) {
+      
+      var keyword = $("#quicksearch-input").val();
+      
+      $("#searchlist p .highlight").replaceWith(function() {
+        return $(this).contents();
+      }).end().each(function() {this.normalize();});
+      
+      if (keyword.length > 0) $("#searchlist p").highlight(keyword, 'highlight');
+    });
+    
+  };
+  
+  // searchable clone?!?!
+  
+  $(".ui-content p").clone().appendTo("#searchlist");
   
   return global;
   
@@ -640,10 +676,41 @@ var app = (function(global) {
 
 
   
+  
 window.onload = function() {
   $("#terms").slideDown('slow');
 };
 
+
+
 $(document).on("mobileinit", function() {
   app.init();
 });
+
+
+jQuery.fn.highlight = function(str, className) {
+  var regex = new RegExp(str, "gi");
+  return this.each(function() {
+    $(this).contents().filter(function() {
+      return this.nodeType == 3;
+    }).replaceWith(function() {
+      return (this.nodeValue || "").replace(regex, function(match) {
+        return "<span class=\"" + className + "\">" + match + "</span>";
+      });
+    });
+  });
+};
+
+/*
+
+jQuery.fn.highlight = function (str, className) {
+    var regex = new RegExp(str, "gi");
+    return this.each(function () {
+        this.innerHTML = this.innerHTML.replace(regex, function(matched) {
+            return "<span class=\"" + className + "\">" + matched + "</span>";
+        });
+    });
+};
+*/
+
+
