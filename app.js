@@ -618,19 +618,13 @@ var app = (function(global) {
     });
     
     
-    $(".explanation").on("click", function() {
+    $(".evidence").on("click", function() {
       var ref = $(this).attr("title");
       if (ref) {
         $.mobile.changePage('#reference');
         $('html, body').animate({scrollTop: $('#'+ref).offset().top});
         $('#'+ref).css('background', '#FFC');
-        setTimeout(function() {$('#'+ref).css('background', 'none');},500);
-        setTimeout(function() {$('#'+ref).css('background', '#FFC');},1000);
-        setTimeout(function() {$('#'+ref).css('background', 'none');},1500);
-        setTimeout(function() {$('#'+ref).css('background', '#FFC');},2000);
-        setTimeout(function() {$('#'+ref).css('background', 'none');},2500);
-        setTimeout(function() {$('#'+ref).css('background', '#FFC');},3000);
-        setTimeout(function() {$('#'+ref).css('background', 'none');},5000);
+        setTimeout(function() {$('#'+ref).css('background', 'none');},15000);
       }
     });
     
