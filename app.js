@@ -617,8 +617,21 @@ var app = (function(global) {
       }, 300);
     });
     
+    
     $(".explanation").on("click", function() {
-      alert($(this).attr("title"));
+      var ref = $(this).attr("title");
+      if (ref) {
+        $.mobile.changePage('#reference');
+        $('html, body').animate({scrollTop: $('#'+ref).offset().top});
+        $('#'+ref).css('background', '#FFC');
+        setTimeout(function() {$('#'+ref).css('background', 'none');},500);
+        setTimeout(function() {$('#'+ref).css('background', '#FFC');},1000);
+        setTimeout(function() {$('#'+ref).css('background', 'none');},1500);
+        setTimeout(function() {$('#'+ref).css('background', '#FFC');},2000);
+        setTimeout(function() {$('#'+ref).css('background', 'none');},2500);
+        setTimeout(function() {$('#'+ref).css('background', '#FFC');},3000);
+        setTimeout(function() {$('#'+ref).css('background', 'none');},5000);
+      }
     });
     
     $("#filterlist").on("change", function(val){
