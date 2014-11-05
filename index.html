@@ -1600,7 +1600,7 @@
         <p>Determine if special blood components are required using the table. Press an indication to show details.</p>
        
         <div id="indications-filter">
-          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#close-indication-search').toggle();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
+          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
           <select id="filterlist" data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
             <option value="">&#xf0b0; Filter</option>
             <option value="">All indications</option>
@@ -1613,8 +1613,10 @@
         </div>
     
         <div id="indicationsearch" class="hidden" style="background: #FFE; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
-          <a href="#" style="float: right;" data-inline="true" data-role="button" class="hidden" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $(this).toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Clear <i class="fa fa-ln">&#xf00d;</i></a>
-          <p><strong>Enter a search term:</strong></p>
+          <a href="#" style="display: inline-block; margin: 0; float:right;" data-role="button" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Close <i class="fa fa-ln">&#xf00d;</i></a>
+          <p style="">
+            <strong>Enter a search term. Results will show instantly.</strong>
+          </p>
           <input id="filter" type="text" />
         </div>
 
