@@ -1597,10 +1597,10 @@
       
       <div role="main" class="ui-content">
 
-        <p>Determine if special blood components are required using the table. Press an indication to show details.</p>
+        <p>Press an indication to show details.</p>
        
         <div id="indications-filter">
-          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
+          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#filter-text').focus();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
           <select id="filterlist" data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
             <option value="">&#xf0b0; Filter</option>
             <option value="">All indications</option>
@@ -1617,10 +1617,10 @@
           <p style="">
             <strong>Enter a search term. Results will show instantly.</strong>
           </p>
-          <input id="filter" type="text" />
+          <input id="filter-text" style="line-height: 1em;" type="text" />
         </div>
 
-        <table class="footable" id="indicationstable" data-filter="#filter">
+        <table class="footable" id="indicationstable" data-filter="#filter-text">
           <thead>
             <tr>
               <th data-class="expand" class="centered">Indication
