@@ -4,6 +4,7 @@
 /* Allow line wrapping on buttons and list items */
 
 .infobox {
+ font-size: 1em !important;
  white-space: normal;
  text-align: left;
  font-weight: normal !important;
@@ -26,6 +27,7 @@
   border: 1px #aaa solid;
   margin: 1em;
   padding: 0.5em;
+  line-height: 1em;
 }
 
 .fa-select,
@@ -73,7 +75,7 @@
  text-align: left;
 }
 
-.explanation, .glossary {
+.evidence, .glossary {
   font-size: 0.8em;
   vertical-align: top;
   border-bottom: 1px dotted #000;
@@ -322,6 +324,16 @@ li .ui-btn {
  padding-bottom: 1.3em !important;
 }
 
+/* iPad portrait */
+
+@media (min-width: 600px) {
+.infobox {
+ font-size: 1.2em !important;
+ }
+}
+
+/* Desktop */
+
 @media (min-width: 780px) {
  .ui-page {
   font-size: 1.1em !important;
@@ -362,12 +374,13 @@ li .ui-btn {
    }
   
  .infobox {
-  min-height: 4em;
+  min-height: 5em;
   overflow: auto;
   width: 45%;
   display: inline-block;
   margin-left: 1%;
   padding: 0.5em !important;
+  font-size: 1.4em !important;
  }
 
 }
