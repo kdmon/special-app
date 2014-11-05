@@ -3,6 +3,10 @@
 
 /* Allow line wrapping on buttons and list items */
 
+.highlight {
+  background-color: #FFA;
+}
+
 .infobox {
  font-size: 1em !important;
  white-space: normal;
