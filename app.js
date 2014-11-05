@@ -1,3 +1,37 @@
+/* Overwrite footable filter function */
+
+/*
+window.footable.options.filter.filterFunction = function(index) {
+  var $t = $(this),
+    $table = $t.parents('table:first'),
+    filter = $table.data('current-filter').toUpperCase(),
+    columns = $t.find('td');
+
+  var regEx = new RegExp("\\b" + filter + "\\b");
+  var result = false;
+  for (i = 0; i < columns.length; i++) {
+    var text = $(columns[i]).text();
+    result = regEx.test(text.toUpperCase());
+    if (result === true)
+      break;
+
+    if (!$table.data('filter-text-only')) {
+       text = $(columns[i]).data("value");
+       if (text)
+         result = regEx.test(text.toString().toUpperCase());
+    }
+
+    if (result === true)
+      break;
+  }
+
+  return result;
+};
+
+*/
+
+
+
 /* Main app */
 $(function() {
   /* IE polyfill */
@@ -514,28 +548,40 @@ $(function() {
       //var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
       var titlecode = '<td class="indication-container">' + item.title  + '.</td>';
       
-      var details = '<td><br/>';
-      if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
-      
-      if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
-      if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
-      details += '</td>';
-      
       var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
       
       var icons = {
         component : '&#xf043;',
-        condition : '&#xf133;',
-        drug: '&#xf0d0;',
-        neonatology : '&#xf182;',
-        transplant: '&#xf1fb;'
+        condition : '&#xf0f6;',
+        drug: '&#xf0c3;',
+        neonatology : '&#xf1ae;',
+        transplant: '&#xf0ec;'
+      };
+      
+      var labels = {
+        component : 'Blood Component',
+        condition : 'Medical History and Conditions',
+        drug: 'Immunosuppressive Drugs',
+        neonatology : 'Neonatology and Obstetrics',
+        transplant: 'Stem Cell and Bone Marrow'
       };
       
       var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
       
+      var details = '<td data-value="' + icons[item.category].substr(1,7) +'"><br/>';
+      
+      if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
+      if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
+      if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
+
+      details += '<p>Category: <i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + '</p>';
+      
+      details += '</td>';
+      
+      
       var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
       
-      $("#indicationstable tbody").append('<tr>' + flagcell + categoryicon + titlecode + irrcode + cmvcode + details + '</tr>');
+      $("#indicationstable tbody").append('<tr>'  + titlecode + flagcell + irrcode + cmvcode + details + '</tr>');
       
     });
     
@@ -548,11 +594,19 @@ $(function() {
         //tableref.trigger(footable_resize);
       });
       
+
     }, 300);
   });
   $(".explanation").on("click", function() {
     alert($(this).attr("title"));
   });
+  
+  $("#filterlist").on("change", function(val){
+    console.log ($("#filterlist").val());
+    //$("#filter").val($("#filterlist").val());
+    $('table').trigger('footable_filter', {filter: $("#filterlist").val()});
+    //$('table').trigger('footable_clear_filter');
+  })
   window.onload = function() {
     $("#terms").slideDown('slow');
   }
