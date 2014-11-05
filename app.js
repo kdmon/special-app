@@ -42,7 +42,6 @@ if (typeof console === "undefined") {
 }
 
 
-
 /* Main app */
 
 var app = (function(global) {
@@ -659,7 +658,9 @@ var app = (function(global) {
       
       $("#searchlist p .highlight").replaceWith(function() {
         return $(this).contents();
-      }).end().each(function() {this.normalize();});
+      });
+      
+      $("#searchlist p").each(function() {this.normalize();});
       
       if (keyword.length > 0) $("#searchlist p").highlight(keyword, 'highlight');
     });
@@ -675,7 +676,7 @@ var app = (function(global) {
   //console.log (pages);
   
   
-  $(".ui-content p").each(function() {
+  $(".ui-content p, td").each(function() {
     var original = $(this);
     var parent = $(this).parents('[data-role="page"]').attr("id");
     var title = $(this).parents('[data-role="page"]').attr("data-title");
