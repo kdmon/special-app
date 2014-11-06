@@ -216,7 +216,7 @@ var app = (function(global) {
       }]
     }, {
       "title": "Severe T lymphocyte immunodeficiency",
-      "definition": "There are a long list of rare primary congenital or secondary acquired immunodeficiencies which may be an indication for irradiation: SCID, Di George syndrome, Wiskott Aldrich syndrome, reticular dysgnesis, ADA deficiency, chronic mucosal candidiasis, MHC class 1 or 2 deficiency. Seek expert immunologist advice.",
+      "definition": "Many rare primary congenital or secondary acquired immunodeficiencies are indications for irradiation, including SCID, Di George syndrome, Wiskott Aldrich syndrome, reticular dysgnesis, ADA deficiency, chronic mucosal candidiasis, MHC class 1 or 2 deficiency. Seek expert immunologist advice.",
       "key": "immunodeficiency",
       "type": "irradiated",
       "category": "condition",
@@ -578,7 +578,7 @@ var app = (function(global) {
       var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
       
 
-      var details = '<td data-value="' + icons[item.category].substr(1,7) +'">';
+      var details = '<td data-searchable="2" data-value="' + icons[item.category].substr(1,7) +'">';
       
       if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
       if (irrtext) details += irrtext;
@@ -676,7 +676,7 @@ var app = (function(global) {
     
     // QuickFind
     
-    $('[data-searchable="1"], [data-searchable="2"], [data-searchable="3"] p').each(function() {
+    $('[data-searchable="1"], [data-searchable="2"] p, [data-searchable="3"] p, [data-searchable="3"] h4, [data-searchable="3"] h3, [data-searchable="3"] h2, [data-searchable="3"] h1').each(function() {
       var original = $(this);
       var parent = $(this).parents('[data-role="page"]').attr("id");
       var title = $(this).parents('[data-role="page"]').attr("data-title");
@@ -687,7 +687,7 @@ var app = (function(global) {
       if($(this).parent("tr").find("td").length > 0) {
         var row = $(this).parents('tr');
         var label = $(this).parent("tr").find("td:first").text();
-        elem = $('<p class="indication"><strong>Direct indication match</strong><br/><span class="filterme">' + label + '</span></p>');
+        elem = $('<p class="indication">Direct indication match for <i style="float:right;" class="fa fa-3x">&#xf0f1;</i><br/><strong><span class="filterme">' + label + '</span></strong></p>');
         
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
@@ -707,7 +707,7 @@ var app = (function(global) {
         var detailrow = $(this).parents('tr');
         var section = $(this).parents("tr").find("td:first").text();
         
-        elem = $('<p class="indication-details"><strong>' + section + '</strong><br/><span class="filterme">' + details + '</span></p>');
+        elem = $('<p class="indication-details"><strong>Matching indications details for <em>' + section + '</em></strong><i style="float:right;" class="fa fa-2x">&#xf0f1;</i><br/><span class="filterme">' + details + '</span></p>');
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
@@ -726,7 +726,7 @@ var app = (function(global) {
         
         var other = $(this).html();
         
-        elem = $('<p><strong>Matching page ' + title +'</strong><br/><span class="filterme">' + other + '</span></p>');
+        elem = $('<p>Matching <strong>' + title +'</strong>: <i style="float:right;" class="fa fa-2x">&#xf19d;</i><br/><span class="filterme">' + other + '</span></p>');
     
       
         $(elem).on("click", function () {
