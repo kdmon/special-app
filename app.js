@@ -504,115 +504,113 @@ var app = (function(global) {
     
     
     // generate indications table
+    
+    $.each(components.entries, function(i, item) {
       
-      $.each(components.entries, function(i, item) {
+      var irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
+      var cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
+      
+      // Brief summaries
+      var irrsummary= '';
+      var cmvsummary = '';
+            
+      // Verbatim quotes from guidelines
+      var irrtext = '';
+      var cmvtext = '';
+      var flagclass = 'green-traffic-light';
+      
+      var flag = '<img src="green.png" alt="Green light" class="traffic-light"/>';
+      
+      switch (item.type) {
+        case 'irradiated-cmv':
+          irrcode = '<td data-value="1" class="required">Irradiation is required.</h4></td>';
+          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</h4></td>';
+          flagclass = 'red-traffic-light';
+        break;
+        case 'irradiated':
+          irrcode = '<td data-value="1" class="required">Irradiation is required.</td>';
+          cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
+          flagclass = 'red-traffic-light';
+        break;
+        case 'cmv':
+          irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
+          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</td>';
+          flagclass = 'red-traffic-light';
+        break;
+        case 'maybe':
+          irrcode = '<td data-value="0" class="maybe-required">Irradiation could be required.</td>';
+          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative could be required.</td>';
+          flagclass = 'amber-traffic-light';
+        break;
+      }
+      
+      $.each(item.recommendation, function(r, recommendation) {
         
-        var irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
-        var cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
-        
-        // Brief summaries
-        var irrsummary= '';
-        var cmvsummary = '';
-              
-        // Verbatim quotes from guidelines
-        var irrtext = '';
-        var cmvtext = '';
-        var flagclass = 'green-traffic-light';
-        
-        var flag = '<img src="green.png" alt="Green light" class="traffic-light"/>';
-        
-        switch (item.type) {
-          case 'irradiated-cmv':
-            irrcode = '<td data-value="1" class="required">Irradiation is required.</h4></td>';
-            cmvcode = '<td data-value="1" class="required">CMV-negative is required.</h4></td>';
-            flagclass = 'red-traffic-light';
-          break;
-          case 'irradiated':
-            irrcode = '<td data-value="1" class="required">Irradiation is required.</td>';
-            cmvcode = '<td data-value="-1" class="not-required">CMV-negative is not required.</td>';
-            flagclass = 'red-traffic-light';
-          break;
-          case 'cmv':
-            irrcode = '<td data-value="-1" class="not-required">Irradiated is not required.</td>';
-            cmvcode = '<td data-value="1" class="required">CMV-negative is required.</td>';
-            flagclass = 'red-traffic-light';
-          break;
-          case 'maybe':
-            irrcode = '<td data-value="0" class="maybe-required">Irradiation could be required.</td>';
-            cmvcode = '<td data-value="0" class="maybe-required">CMV-negative could be required.</td>';
-            flagclass = 'amber-traffic-light';
-          break;
+        if (recommendation.type == 'irradiated') {
+          if (recommendation.text) irrsummary += '<p>' + recommendation.text + '</p>';
+          if (recommendation.verbatim) irrtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
         }
         
-        $.each(item.recommendation, function(r, recommendation) {
-          
-          if (recommendation.type == 'irradiated') {
-            if (recommendation.text) irrsummary += '<p>' + recommendation.text + '</p>';
-            if (recommendation.verbatim) irrtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
-          }
-          
-          if (recommendation.type == 'cmv') {
-            if (recommendation.text) cmvsummary += '<p>' + recommendation.text + '</p>';
-            if (recommendation.verbatim) cmvtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
-          }
-  
-        });
-        
-        //var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
-        var titlecode = '<td data-searchable="1" class="indication-title">' + item.title  + '.</td>';
-        
-        var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
-        
-        var icons = {
-          component : '&#xf043;',
-          condition : '&#xf0f6;',
-          drug: '&#xf0c3;',
-          neonatology : '&#xf1ae;',
-          transplant: '&#xf0ec;'
-        };
-        
-        var labels = {
-          component : 'Blood Component',
-          condition : 'Medical History and Conditions',
-          drug: 'Immunosuppressive Drugs',
-          neonatology : 'Neonatology and Obstetrics',
-          transplant: 'Stem Cell and Bone Marrow'
-        };
-        
-        var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
-        
-        var details = '<td data-searchable="2" data-value="' + icons[item.category].substr(1,7) +'"><br/>';
-        
-        if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
-        if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
-        if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
-  
-        details += '<p><i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + ' category</p>';
-        
-        details += '<p style="font-size: 0.8em">Keywords: ' + item.tags + '</p>';
-        
-        details += '</td>';
-        
-        
-        var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
-        
-        $("#indicationstable tbody").append('<tr>'  + titlecode + flagcell + irrcode + cmvcode + details + '</tr>');
-        
+        if (recommendation.type == 'cmv') {
+          if (recommendation.text) cmvsummary += '<p>' + recommendation.text + '</p>';
+          if (recommendation.verbatim) cmvtext += '<p>' + (r+1) + '. "' + recommendation.verbatim + '" (' + recommendation.reference + ')</p>';
+        }
+
       });
       
-      //setTimeout(function() {
-        $('.footable').footable();
-        
-        $(document).on("pageshow", "#indications", function() {
-          $('table').trigger('footable_resize');
-          //var tableref = $('.footable').data('footable');
-          //tableref.trigger(footable_resize);
-        });
-        
-  
-      //}, 300);
-    //});
+      //var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
+      var titlecode = '<td data-searchable="1" class="indication-title">' + item.title  + '.</td>';
+      
+      var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
+      
+      var icons = {
+        component : '&#xf043;',
+        condition : '&#xf0f6;',
+        drug: '&#xf0c3;',
+        neonatology : '&#xf1ae;',
+        transplant: '&#xf0ec;'
+      };
+      
+      var labels = {
+        component : 'Blood Component',
+        condition : 'Medical History and Conditions',
+        drug: 'Immunosuppressive Drugs',
+        neonatology : 'Neonatology and Obstetrics',
+        transplant: 'Stem Cell and Bone Marrow'
+      };
+      
+      var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
+      
+      var details = '<td data-searchable="2" data-value="' + icons[item.category].substr(1,7) +'"><br/>';
+      
+      if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
+      if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
+      if (cmvtext) details += '<u>CMV-negative guidelines</u>' + cmvtext;
+
+      details += '<p><i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + ' category</p>';
+      
+      details += '<p style="font-size: 0.8em">Keywords: ' + item.tags + '</p>';
+      
+      details += '</td>';
+      
+      
+      var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
+      
+      $("#indicationstable tbody").append('<tr>'  + titlecode + flagcell + irrcode + cmvcode + details + '</tr>');
+      
+    });
     
+  
+    $('.footable').footable();
+    
+    $(document).on("pageshow", "#indications", function() {
+      $('table').trigger('footable_resize');
+    });
+      
+    $(document).on("pageshow", "#quickfind", function() {
+      $("#quickfind-input").focus();
+    });
+        
     $(".evidence").on("click", function() {
       var ref = $(this).attr("title");
       if (ref) {
@@ -624,26 +622,6 @@ var app = (function(global) {
     });
     
     
-    
-    /*
-    $(".jump").on("click", function() {
-      var ref = $(this).attr("title");
-      var page = ref.split(" ")[0];
-      var domid = ref.split(" ")[0];
-      if (ref) {
-        $.mobile.changePage('#' + page);
-        $('html, body').animate({scrollTop: $('#'+domid).offset().top});
-        $('#'+domid).css('background', '#FFC');
-        setTimeout(function() {$('#'+domid).css('background', 'none');},15000);
-      }
-    });
-    
-    function jump (elem) {
-      console.log (elem);
-    }
-    
-    */
-    
     $("#filterlist").on("change", function(val){
       $('#indicationstable').hide().trigger('footable_filter', {filter: $("#filterlist").val()}).fadeTo(700, 1);
     });
@@ -651,7 +629,7 @@ var app = (function(global) {
     
     $("#searchlist").on("filterablefilter", function (event, ui) {
       
-      var keyword = $("#quicksearch-input").val();
+      var keyword = $("#quickfind-input").val();
       
       $("#searchlist p .highlight").replaceWith(function() {
         return $(this).contents();
@@ -663,34 +641,16 @@ var app = (function(global) {
     });
     
     
-    // clone indications table for searching?!?!
+    // QuickFind
     
-    /*
-    $(".footable td, .footable p").each(function() {
-      var original = $(this);
-      var row = $(this).parents('tr');
-      var parent = $(this).parents('[data-role="page"]').attr("id");
-      var title = $(this).parents('[data-role="page"]').attr("data-title");
-      $(this).clone().prepend("<h4>" + title + ":</h4>").on("click", function () {
-        $.mobile.changePage('#' + parent);
-        $('table').trigger('footable_collapse_all');
-        $(row).trigger('footable_toggle_row');
-        $('html, body').animate({scrollTop: $(original).offset().top});
-        $(row).toggleClass('highlight');
-        setTimeout(function() {$(row).toggleClass('highlight');},15000);
-      }).appendTo("#searchlist")});
-      
-    */
-      
-    // clone paragraphs for searching?!?!
-    
-    $('[data-searchable="1"], td [data-searchable="2"], [data-searchable="3"] p').each(function() {
+    $('[data-searchable="1"], [data-searchable="2"] p, [data-searchable="3"] p').each(function() {
       var original = $(this);
       var parent = $(this).parents('[data-role="page"]').attr("id");
       var title = $(this).parents('[data-role="page"]').attr("data-title");
       var elem;
       
-      // wrap td cells in paragraph tags
+      // Indication labels
+      
       if($(this).parent("tr").find("td").length > 0) {
         var row = $(this).parents('tr');
         var label = $(this).parent("tr").find("td:first").text();
@@ -703,8 +663,29 @@ var app = (function(global) {
           $('html, body').animate({scrollTop: $(original).offset().top});
           $(row).toggleClass('highlight');
           setTimeout(function() {$(row).toggleClass('highlight');},15000);
+        }).prependTo("#searchlist");
+      }
+      
+      // Indication details
+      
+      else if($(this).parent("td").length > 0) {
+        
+        var detailrow = $(this).parents('tr');
+        
+        elem = $(this).clone().prepend("<strong>Indication detail</strong><br/>");
+      
+        $(elem).on("click", function () {
+          $.mobile.changePage('#' + parent);
+          $('table').trigger('footable_collapse_all');
+          $(detailrow).trigger('footable_toggle_row');
+          $('html, body').animate({scrollTop: $(detailrow).offset().top});
+          $(detailrow).toggleClass('highlight');
+          setTimeout(function() {$(detailrow).toggleClass('highlight');},15000);
         }).appendTo("#searchlist");
       }
+      
+      
+      // Other paragraphs
       
       else {
         elem = $(this).clone().prepend("<strong>" + title + "</strong><br/>");
