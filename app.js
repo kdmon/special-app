@@ -502,11 +502,8 @@ var app = (function(global) {
     /* jQuery Mobile panel setup */
     $("body>[data-role='panel']").panel().trigger('create');
     
-    /* Event handlers */
     
     // generate indications table
-    
-    $("#indications").on("pagecreate", function() {
       
       $.each(components.entries, function(i, item) {
         
@@ -562,7 +559,7 @@ var app = (function(global) {
         });
         
         //var titlecode = '<td class="indication-container" data-value="' + (i+1) + '">' + (i+1) + '. ' + item.title  + '.</td>';
-        var titlecode = '<td class="indication-container">' + item.title  + '.</td>';
+        var titlecode = '<td data-searchable="1" class="indication-title">' + item.title  + '.</td>';
         
         var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
         
@@ -584,7 +581,7 @@ var app = (function(global) {
         
         var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
         
-        var details = '<td data-value="' + icons[item.category].substr(1,7) +'"><br/>';
+        var details = '<td data-searchable="2" data-value="' + icons[item.category].substr(1,7) +'"><br/>';
         
         if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
         if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
@@ -603,7 +600,7 @@ var app = (function(global) {
         
       });
       
-      setTimeout(function() {
+      //setTimeout(function() {
         $('.footable').footable();
         
         $(document).on("pageshow", "#indications", function() {
@@ -613,8 +610,8 @@ var app = (function(global) {
         });
         
   
-      }, 300);
-    });
+      //}, 300);
+    //});
     
     $(".evidence").on("click", function() {
       var ref = $(this).attr("title");
@@ -660,32 +657,68 @@ var app = (function(global) {
         return $(this).contents();
       });
       
-      $("#searchlist p").each(function() {this.normalize();});
+      $("#searchlist p, td").each(function() {this.normalize();});
       
-      if (keyword.length > 0) $("#searchlist p").highlight(keyword, 'highlight');
+      if (keyword.length > 1) $("#searchlist p").highlight(keyword, 'highlight');
     });
     
+    
+    // clone indications table for searching?!?!
+    
+    /*
+    $(".footable td, .footable p").each(function() {
+      var original = $(this);
+      var row = $(this).parents('tr');
+      var parent = $(this).parents('[data-role="page"]').attr("id");
+      var title = $(this).parents('[data-role="page"]').attr("data-title");
+      $(this).clone().prepend("<h4>" + title + ":</h4>").on("click", function () {
+        $.mobile.changePage('#' + parent);
+        $('table').trigger('footable_collapse_all');
+        $(row).trigger('footable_toggle_row');
+        $('html, body').animate({scrollTop: $(original).offset().top});
+        $(row).toggleClass('highlight');
+        setTimeout(function() {$(row).toggleClass('highlight');},15000);
+      }).appendTo("#searchlist")});
+      
+    */
+      
+    // clone paragraphs for searching?!?!
+    
+    $('[data-searchable="1"], td [data-searchable="2"], [data-searchable="3"] p').each(function() {
+      var original = $(this);
+      var parent = $(this).parents('[data-role="page"]').attr("id");
+      var title = $(this).parents('[data-role="page"]').attr("data-title");
+      var elem;
+      
+      // wrap td cells in paragraph tags
+      if($(this).parent("tr").find("td").length > 0) {
+        var row = $(this).parents('tr');
+        var label = $(this).parent("tr").find("td:first").text();
+        elem = $('<p class="indication"><strong>Indication</strong><br/>' + label + '</p>');
+        
+        $(elem).on("click", function () {
+          $.mobile.changePage('#' + parent);
+          $('table').trigger('footable_collapse_all');
+          $(row).trigger('footable_toggle_row');
+          $('html, body').animate({scrollTop: $(original).offset().top});
+          $(row).toggleClass('highlight');
+          setTimeout(function() {$(row).toggleClass('highlight');},15000);
+        }).appendTo("#searchlist");
+      }
+      
+      else {
+        elem = $(this).clone().prepend("<strong>" + title + "</strong><br/>");
+      
+        $(elem).on("click", function () {
+          $.mobile.changePage('#' + parent);
+          $('html, body').animate({scrollTop: $(original).offset().top});
+          $(original).toggleClass('highlight');
+          setTimeout(function() {$(row).toggleClass('highlight');},15000);
+        }).appendTo("#searchlist");
+      }
+    });
   };
   
-  // searchable clone?!?!
-  
-  //var doms = $(".ui-content p").clone();
-  
-  //var pages = $(".ui-content p").parents('[data-role="page"]'); //closest('dom [data-role="page"]').attr("id");
-  
-  //console.log (pages);
-  
-  
-  $(".ui-content p, td").each(function() {
-    var original = $(this);
-    var parent = $(this).parents('[data-role="page"]').attr("id");
-    var title = $(this).parents('[data-role="page"]').attr("data-title");
-    $(this).clone().prepend("<h4>" + title + ":</h4>").on("click", function () {
-      $.mobile.changePage('#' + parent);
-      $('html, body').animate({scrollTop: $(original).offset().top});
-      $(original).css('background', '#FFC');
-      setTimeout(function() {$(original).css('background', 'none');},15000);
-    }).appendTo("#searchlist")});
   
   return global;
   
@@ -717,17 +750,4 @@ jQuery.fn.highlight = function(str, className) {
     });
   });
 };
-
-/*
-
-jQuery.fn.highlight = function (str, className) {
-    var regex = new RegExp(str, "gi");
-    return this.each(function () {
-        this.innerHTML = this.innerHTML.replace(regex, function(matched) {
-            return "<span class=\"" + className + "\">" + matched + "</span>";
-        });
-    });
-};
-*/
-
 
