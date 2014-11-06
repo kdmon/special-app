@@ -7,6 +7,18 @@
   background-color: #FFC;
 }
 
+#glossarylist h4 {
+  margin: 1em;
+  border-bottom: 1px solid #000;
+  font-size: 1.2em;
+}
+
+#glossarylist p {
+  padding-top: 0;
+  margin-top:0;
+  margin-left: 2em;
+}
+
 #searchlist p {
   border: 1px #aaa solid;
   border-radius: 5px;
@@ -17,7 +29,7 @@
 }
 
 #searchlist .indication {
-  background: #FFE;
+  background: #FEE;
   font-size: 1.1em !important;
 }
 
@@ -98,6 +110,11 @@
 }
 
 .evidence, .glossary {
+  border-bottom: 1px dotted #000;
+  cursor: pointer;
+}
+
+.evidence {
   font-size: 0.8em;
   vertical-align: top;
   border-bottom: 1px dotted #000;
