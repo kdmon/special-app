@@ -121,7 +121,7 @@
   	
     <div data-role="page" id="home" data-title="Special Blood Components">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active" style="font-size: 1.3em"><i class="fa fa-ln glow">&#xf043;</i> Special Blood Components
         </h3>
@@ -152,10 +152,16 @@
            Which patients require irradiated or CMV-negative blood components?
         </a>
         
-        <a data-role="button" href="#quickfind" class="infobox">
+        <a data-role="button" href="#quickfind" class="infobox small">
            <i class="fa fa-fw fa-2x button-icon">&#xf002;</i>
            <strong>QuickFind</strong><br/>
            Search across the app.
+        </a>
+
+        <a data-role="button" href="#about"  class="infobox small">
+           <i class="fa fa-2x button-icon">&#xf05a;</i>
+           <strong>About the app</strong><br/>
+           Find out more details about this app.
         </a>
         
         <a data-role="button" href="#glossary" class="infobox hidden">
@@ -168,12 +174,6 @@
            <i class="fa fa-fw fa-2x button-icon">&#xf02d;</i>
            <strong>References</strong><br/>
            Browse evidence cited in the app.
-        </a>
-        
-        <a data-role="button" href="#about"  class="infobox">
-           <i class="fa fa-2x button-icon">&#xf05a;</i>
-           <strong>About the app</strong><br/>
-           Find out more details about this app.
         </a>
         
       </div>
@@ -194,7 +194,7 @@
     
     
     <div data-role="page" id="indications" data-title="Indications for irradiated and CMV negative blood components">
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf0f1;</i> Indications for irradiated and CMV negative blood components
         </h3>
@@ -222,7 +222,7 @@
         </div>
     
         <div id="indicationsearch" class="hidden" style="background: #FFE; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
-          <a href="#" style="display: inline-block; margin: 0; float:right;" data-role="button" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Close <i class="fa fa-ln">&#xf00d;</i></a>
+          <a href="#" style="display: inline-block; margin: 0; float:right;" data-role="button" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Clear <i class="fa fa-ln">&#xf00d;</i></a>
           <p style="">
             <strong>Enter a search term. Results will show instantly.</strong>
           </p>
@@ -267,7 +267,7 @@
     
     <div data-role="page" id="glossary" data-title="Glossary">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i>Glossary </h3>
         <div class="submenu inactive">
@@ -479,7 +479,7 @@
     
     <div data-role="page" id="learn" data-title="Learn about Special Blood Components">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Learning objectives
         </h3>
@@ -495,17 +495,18 @@
         <h2>Learning objectives</h2>
         
         <p>
-          This section explains the rationale for the use of irradiated, leucodepleted and
-          CMV-negative blood components in preventing TA-GvHD and TT-CMV.
+          This section explains the rationale behind using irradiated, leucodepleted and
+          CMV-negative blood components in the prevention of TA-GvHD and TT-CMV.
         </p>
         
-        
-        <p>After reviewing the learning material you should be able to:
+        <p>
+          After reviewing the learning material you should be able to:
         </p>
+        
         <ul>
-          <li><p>List the risk factors for TA-GvHD and explain the role of leucodepletion and irradiation in mitigating them.</p></li>
-          <li><p>Describe the causes and consequences of TT-CMV infection, how it is prevented and identify patients who are at risk.</p></li>
-          <li><p>Consider mistakes involving patients who have special requirements and strategies to improve patient safety.</p></li>
+          <li><p>List the risk factors for TA-GvHD and explain the role of irradiation and leucodepletion in mitigating them.</p></li>
+          <li><p>Describe the causes and consequences of TT-CMV, identifying at risk patients who should received CMV-negative blood.</p></li>
+          <li><p>Consider the reasons behind mistakes involving patients with special requirements and strategies to improve patient safety.</p></li>
         </ul>
         
         <h3>Learning material outline</h3>
@@ -522,7 +523,6 @@
             <li><a href="#reference">References and Further Reading</a></li>
           </ul>
         </div>
-        
         
         <a href="#home" style="padding: 0.8em;" data-role="button" data-theme="b" data-inline="true" data-rel="back" class="active"><i class="fa fa-ln">&#xf053;</i> Back</a>
         <a href="#ta-gvhd" style="float:right; padding: 0.8em;" data-role="button" data-theme="b" data-inline="true" class="active">Next <i class="fa fa-ln">&#xf054;</i></a>
@@ -547,7 +547,7 @@
     
     <div data-role="page" id="objectives" data-title="Learning objectives">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.1 Learning objectives
         </h3>
@@ -656,7 +656,7 @@
     
     <div data-role="page" id="ta-gvhd" data-title="Transfusion-Associated Graft versus Host Disease (TA-GvHD)">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i>Transfusion-Associated Graft versus Host Disease (TA-GvHD)
         </h3>
@@ -678,43 +678,43 @@
           attack the recipient, causing skin rash, diarrhoea, liver disease,
           bone marrow failure and death from infection within two-three weeks of
           the transfusion <span class="evidence" title="htm2007">(HTM 2007, p.41)</span> <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
-        </p>
 
-        <h3>Risk factors and prevention</h3>
+        </p>
+          
+        <h3>Risk factors</h3>
 
         <p>
-          Normally a recipient's immune system will identify and destroy the
-          transfused lymphocytes, preventing TA-GvHD. The success of the immune
-          response depends on three factors <span class="evidence" title="bcsh2010">(BCSH 2010, p.37)</span>:
+          TA-GvHD has been reported in both immunosuppressed and immunocompetent
+          patients, and the risk of developing TA-GvHD depends on three factors
+          <span class="evidence" title="bcsh2010">(BCSH 2010, p.37)</span>:
         </p>
-        
+      
         <ul>
-          <li><p>The number and viability of lymphocytes transfused.</p></li>
-          <li><p>The susceptibility of the recipient's immune system to their engraftment.</p></li>
+          <li><p>The number and viability of lymphocytes transfused;</p></li>
+          <li><p>The susceptibility of the recipient's immune system to their engraftment and</p></li>
           <li><p>The degree of immunological (HLA) disparity between donor and patient.</p></li>
         </ul>
-
-        <h3>Irradiation inactivates viable donor lymphocytes</h3>
+      
         
+        <h3>Irradiation prevents TA-GvHD</h3>
+
         <p>
-          TA-GvHD can be prevented by exposing cellular blood components
-          to a dose of 25-50Gy Gamma or X-ray irradiation as this inactivates the
-          donor lymphocytes <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
-          
+          TA-GvHD is prevented by exposing cellular blood components
+          to a dose of 25-50 Gy of Gamma or X-ray irradiation <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
+          This inactives the lymphocytes that cause TA-GvHD.
         </p>
         
-        <h3>Reducing the number of lymphocytes through leucodepletion</h3>
+        
+        <h3>Patients at risk of TA-GvHD</h3>
         
         <p>
-          All platelets and red cells blood are leucodepleted in the UK, significantly
-          reducing the number of lymphocytes in these components. Only two cases of 
-          TA-GvHD have been reported in the UK following the introduction of universal
-          leucodepletion in 1999, despite many hundred reports of at risk patients failing to 
-          be provided with irradiated blood products. This suggest leucodepletion may be 
-          effective in preventing TA-GvHD, although it is not a replacement for irradiation.
-          <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
+          Because the immune system of most recipients detect and destroy foreign donor
+          lymphocytes, irradiated blood components is only required for patients
+          whose immune response may be ineffective, and who are at risk of TA-GvHD.
+          This includes immunosuppressed patients (severe T-lymphocyte), as well as
+          immunocompetent patients receiving blood from a relative or HLA-matched
+          donor.
         </p>
-
         
         <h3>Indications for irradiated blood components</h3>
         
@@ -747,20 +747,31 @@
 
         <a href="#" data-role="button" data-inline="true" onclick="$('#hla-figure').toggle('slow')">Figure: One way HLA match</a>
         
-        <div class="hidden" id="hla-figure">
-          
-          <p>Click image to change size.</p>
-          
+        <div class="figure hidden" id="hla-figure">
           <div style="overflow-x: scroll;">
             <img onclick="$(this).toggleClass('big-image').toggleClass('small-image')" class="small-image" src="hla-vertical.png"/>
           </div>
-          
-          <p style="line-height: 1.1em;">
+          <p>
             The blood donor is homozygous for an HLA haplotype (red) for which the 
-            recipient is heterozygous (red and blue).
+            recipient is heterozygous (red and blue). Click image to resize.
           </p>
         </div>
         
+        
+        <h3>Leucodepletion reduce the risk of TA-GvHD</h3>
+        
+        <p>
+          All platelets and red cells blood are leucodepleted in the UK, significantly
+          reducing the number of lymphocytes in these components. Only two cases of 
+          TA-GvHD have been reported in the UK following the introduction of universal
+          leucodepletion in 1999, despite several hundred of reports of patients at risk
+          of TA-GvHD failing to be provided with irradiated blood. 
+          <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
+          This suggest leucodepletion is effective in reducing the risk TA-GvHD.
+          However, leucodepletion is not a replacement for irradiation .
+        </p>
+
+
         <h3>Navigation</h3>
         
         <a href="#" style="padding: 0.8em;" data-role="button" data-theme="b" class="hidden active" onclick="$('.toc').toggle('slow');"><i class="fa fa-ln">&#xf0c9;</i> Table of contents</a>
@@ -800,7 +811,7 @@
     
     <div data-role="page" id="tt-cmv" data-title="Transfusion transmitted CMV infection">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Transfusion-Transmitted Cytomegalovirus (TT-CMV)
         </h3>
@@ -819,7 +830,7 @@
   
             Cytomegalovirus (CMV) is a herpes virus that cause a chiefly asymptomatic infection in
             healthy people. About half the UK population is CMV positive and many blood
-            donors carry the virus. The virus occur freely in blood plasma during active
+            donors carry the virus. The virus occurs freely in blood plasma during active
             infection and remains latent in monocytes following infection <span class="evidence" title="sabto2012b">(SaBTO 2012, p.5)</span>.
 
           </p>
@@ -938,7 +949,7 @@
     
     <div data-role="page" id="error" data-title="Mistakes involving special requirements">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Errors in the provision of special requirements
         </h3>
@@ -964,24 +975,23 @@
           and/or CMV negative to at-risk patients according to guidelines.
         </p>
         
-        <a href="#" data-role="button" data-inline="true" onclick="$('#errorgraph').toggle('slow')">Graph of mistakes reported to SHOT.</a>
+        <a href="#" data-role="button" data-inline="true" onclick="$('#errorgraph').toggle('slow')">Figure: Errors 2008-2012.</a>
         
-        <div class="hidden" id="errorgraph">
-          
-          <p>Click image to change size.</p>
-          
+        <div class="figure hidden" id="errorgraph">
+
           <div style="overflow-x: scroll;">
             <img onclick="$(this).toggleClass('big-image').toggleClass('small-image')" class="small-image" src="http://optimalblooduse.eu/app/graph.png"/>
           </div>
           
-          <p style="line-height: 1.1em;">
-            <b>Figure:</b> Specific Requirements Not Met (SRNM) reports by year and
+          <p>
+            Specific Requirements Not Met (SRNM) reports by year and
             source of error. Clinical errors include failure to communicate the need for
             special components to the lab. Lab errors are when the request was made but not
             acted upon <a href="javascript:%20showSource('shot2010');" class=
             "reference">SHOT 2010, p.27</a>. SHOT data used with permission and provided
-            courtesy of Dr. Paula Bolton-Maggs, Debbi Poles and Alison Watts.
+            courtesy of Dr. Paula Bolton-Maggs, Debbi Poles and Alison Watts. Click image to change size.
           </p>
+          
         </div>
         
         
@@ -1225,7 +1235,7 @@
     
     <div data-role="page" id="summary" data-title="Summary">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.5 Learning summary </h3>
         <div class="submenu inactive">
@@ -1294,7 +1304,7 @@
     
     <div data-role="page" id="reference" data-title="References">
       
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i>References </h3>
         <div class="submenu inactive">
@@ -1445,7 +1455,7 @@
     
     
     <div data-role="page" id="quickfind" data-title="QuickFind">
-      <div data-role="header" class="inactive" data-theme="b">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false" class="inactive" data-theme="b">
         
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf002;</i> QuickFind
         </h3>
