@@ -13,10 +13,10 @@
   padding: 5px;
   box-shadow: 1px 1px 10px #aaa;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.9em !important;
 }
 
-.indication {
+#searchlist .indication {
   background: #FFE;
   font-size: 1.1em !important;
 }
