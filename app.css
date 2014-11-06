@@ -450,11 +450,11 @@ li .ui-btn {
  .infobox {
   height: 7em;
   overflow: auto;
-  width: 45%;
+  width: 44%;
   display: inline-block;
   margin-left: 1%;
   padding: 0.5em !important;
-  font-size: 1.4em !important;
+  font-size: 0.9em !important;
  }
  
  .small {
