@@ -4,7 +4,21 @@
 /* Allow line wrapping on buttons and list items */
 
 .highlight {
-  background-color: #FFA;
+  background-color: #FFC;
+}
+
+#searchlist p {
+  border: 1px #aaa solid;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 1px 1px 10px #aaa;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.indication {
+  background: #FFE;
+  font-size: 1.1em !important;
 }
 
 .infobox {
@@ -39,6 +53,10 @@
 .ui-dialog-contain .ui-header .ui-title,
 .ui-popup .ui-header .ui-title  {
  font-family: 'FontAwesome', sans-serif;
+}
+
+.ui-header {
+  border: none !important;
 }
 
 .ui-li .ui-btn-text a.ui-link-inherit {
@@ -280,10 +298,6 @@
  border-right: none;
 }
 
-.indication-container {
- border-left: none !important;
-}
-
 .footable td h4 {
  margin: 0;
 }
@@ -310,7 +324,7 @@ input {
  margin: 1px !important;
  border-radius: 5px;
  padding: 0;
- font-size: 0.8em !important;
+ font-size: 0.9em !important;
 }
 
 .navtab i {
