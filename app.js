@@ -493,11 +493,31 @@ var app = (function(global) {
   global.init = function () {
     
     $.mobile.defaultPageTransition = 'none';
+    
     $.mobile.gradeA = function() {
       // return ( ( $.support.mediaquery && $.support.cssPseudoElement ) || $.mobile.browser.oldIE && $.mobile.browser.oldIE >= 8 ) && ( $.support.boundingRect || $.fn.jquery.match(/1\.[0-7+]\.[0-9+]?/) !== null );
       // hack to force ie7 support again
       return true;
     };
+    
+    $.mobile.filterable.prototype.options.filterCallback = function( index, searchValue ){
+      var text = $(this).find('.filterme').text();
+      return text.toLowerCase().indexOf( searchValue ) === -1;
+    };
+    
+		// In this function the keyword "this" refers to the element for which the
+		// code must decide whether it is to be filtered or not.
+		// A return value of true indicates that the element referred to by the
+		// keyword "this" is to be filtered.
+		// Returning false indicates that the item is to be displayed.
+		//
+		// your custom filtering logic goes here
+		
+    
+    function defaultSearch( text, searchValue ) {
+    //console.log("Text: "+ text, ", SearchValue: "+ searchValue);
+    return text.toLowerCase().indexOf( searchValue ) === -1;
+}
   
     /* jQuery Mobile panel setup */
     $("body>[data-role='panel']").panel().trigger('create');
@@ -581,7 +601,7 @@ var app = (function(global) {
       
       var categoryicon = '<td class="centered" data-value="' + item.category + i +'"><i class="fa fa-wd fa-3x">' + icons[item.category] + '</i></td>';
       
-      var details = '<td data-searchable="2" data-value="' + icons[item.category].substr(1,7) +'"><br/>';
+      var details = '<td data-value="' + icons[item.category].substr(1,7) +'"><br/>';
       
       if (irrsummary || cmvsummary) details += '<u>Summary</u>' + irrsummary + cmvsummary;
       if (irrtext) details += '<u>Irradiation guidelines</u>' + irrtext;
@@ -589,7 +609,7 @@ var app = (function(global) {
 
       details += '<p><i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + ' category</p>';
       
-      details += '<p style="font-size: 0.8em">Keywords: ' + item.tags + '</p>';
+      details += '<p data-searchable="2" style="font-size: 0.8em">Keywords: ' + item.tags + '</p>';
       
       details += '</td>';
       
@@ -631,19 +651,19 @@ var app = (function(global) {
       
       var keyword = $("#quickfind-input").val();
       
-      $("#searchlist p .highlight").replaceWith(function() {
+      $("#searchlist p span .highlight").replaceWith(function() {
         return $(this).contents();
       });
       
       $("#searchlist p, td").each(function() {this.normalize();});
       
-      if (keyword.length > 1) $("#searchlist p").highlight(keyword, 'highlight');
+      if (keyword.length > 1) $("#searchlist p span").highlight(keyword, 'highlight');
     });
     
     
     // QuickFind
     
-    $('[data-searchable="1"], [data-searchable="2"] p, [data-searchable="3"] p').each(function() {
+    $('[data-searchable="1"], [data-searchable="2"], [data-searchable="3"] p').each(function() {
       var original = $(this);
       var parent = $(this).parents('[data-role="page"]').attr("id");
       var title = $(this).parents('[data-role="page"]').attr("data-title");
@@ -654,7 +674,7 @@ var app = (function(global) {
       if($(this).parent("tr").find("td").length > 0) {
         var row = $(this).parents('tr');
         var label = $(this).parent("tr").find("td:first").text();
-        elem = $('<p class="indication"><strong>Indication</strong><br/>' + label + '</p>');
+        elem = $('<p class="indication"><strong>Indication</strong><br/><span class="filterme">' + label + '</span></p>');
         
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
@@ -669,10 +689,11 @@ var app = (function(global) {
       // Indication details
       
       else if($(this).parent("td").length > 0) {
-        
+
+        var details = $(this).text();
         var detailrow = $(this).parents('tr');
         
-        elem = $(this).clone().prepend("<strong>Indication detail</strong><br/>");
+        elem = $('<p><strong>Indication keyword match</strong><br/><span class="filterme">' + details + '</span></p>');
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
@@ -685,10 +706,14 @@ var app = (function(global) {
       }
       
       
-      // Other paragraphs
+      // learning materials
       
       else {
-        elem = $(this).clone().prepend("<strong>" + title + "</strong><br/>");
+        
+        var other = $(this).html();
+        
+        elem = $('<p><strong> ' + title +'</strong><br/><span class="filterme">' + other + '</span></p>');
+    
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
