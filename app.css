@@ -33,6 +33,11 @@
   font-size: 1.1em !important;
 }
 
+#searchlist .indication-details {
+  background: #FFE;
+  font-size: 0.9em !important;
+}
+
 .infobox {
  font-size: 1em !important;
  white-space: normal;
@@ -185,6 +190,31 @@
  margin: 0px;
 }
 
+.footable-row-detail-row {
+  margin: 0em;
+  padding: 5px;
+  line-height: 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px #fff;
+  background: #fff;
+  text-align: center;
+}
+
+
+.footable-row-detail-row p {
+  font-size: 1em;
+  text-align: left;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+
+.footable-row-detail-cell {
+  background: #eee;
+  padding: 1em;
+}
+
 .footable tr {
  font-size: 1.2em;
 }
@@ -212,7 +242,7 @@
 }
 
 .not-required {
- background: #dfd;
+ background: #fff;
  text-align: center !important;
  font-size: 0.7em;
 }
