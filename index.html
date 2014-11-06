@@ -123,7 +123,7 @@
       
       <div data-role="header" class="inactive" data-theme="b">
         
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf043;</i> Special Blood Components Home
+        <h3 class="headerlogo active" style="font-size: 1.3em"><i class="fa fa-ln glow">&#xf043;</i> Special Blood Components
         </h3>
         <div class="submenu inactive hidden">
           <p style="margin: 0;">
@@ -152,7 +152,7 @@
            Why should patients recieve irradiated or CMV-negative blood components?
         </a>
         
-        <a data-role="button" href="#searchpanel" class="infobox">
+        <a data-role="button" href="#quickfind" class="infobox">
            <i class="fa fa-fw fa-2x button-icon">&#xf002;</i>
            <strong>QuickFind</strong><br/>
            Search across the app.
@@ -192,6 +192,79 @@
     </div>
     
     
+    
+    <div data-role="page" id="indications" data-title="Indications for irradiated and CMV negative blood components">
+      <div data-role="header" class="inactive" data-theme="b">
+        
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf0f1;</i> Indications for irradiated and CMV negative blood components
+        </h3>
+        <div class="submenu inactive">
+          <a href="#" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+        </div>
+      </div>
+      
+      <div role="main" class="ui-content">
+        <h3>Which patients require irradiated or CMV-negative blood components?</h3>
+        <p>Press an indication to show details.</p>
+       
+        <div id="indications-filter">
+          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#filter-text').focus();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
+          <select id="filterlist" data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
+            <option value="">&#xf0b0; Filter</option>
+            <option value="">All indications</option>
+            <option value="#xf043">&#xf043; Blood Components</option>
+            <option value="#xf0c3">&#xf0c3; Immunosuppressive Drugs</option>
+            <option value="#xf0f6">&#xf0f6; Medical History & Conditions</option>
+            <option value="#xf1ae">&#xf1ae; Neonatology & Obstetrics</option>
+            <option value="#xf0ec">&#xf0ec; Stem Cell & Bone Marrow</option>
+          </select>
+        </div>
+    
+        <div id="indicationsearch" class="hidden" style="background: #FFE; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
+          <a href="#" style="display: inline-block; margin: 0; float:right;" data-role="button" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Close <i class="fa fa-ln">&#xf00d;</i></a>
+          <p style="">
+            <strong>Enter a search term. Results will show instantly.</strong>
+          </p>
+          <input id="filter-text" style="line-height: 1em;" type="text" />
+        </div>
+
+        <table class="footable" id="indicationstable" data-filter="#filter-text">
+          <thead>
+            <tr>
+              <th data-class="expand" class="centered">Indication
+              </th>
+              <th>
+              </th>
+              <th data-hide="phone" class="centered">Irradiation
+              </th>
+              <th data-hide="phone" class="centered">CMV-negative
+              </th>
+              <th data-hide="all" class="summary-guidance">
+              </th>
+              <th data-hide="all" class="referenced-guidance"></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <a href="#" data-role="button" data-theme="b" onclick="$(window).scrollTop(0);" class="active">Back to top <i class="fa fa-ln">&#xf0d8;</i></a>
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" class="navtab inactive"><i class="fa fa-2x">&#xf015;</i> Home</a>
+            </li>
+            <li><a href="#learn" class="navtab inactive"><i class="fa fa-2x">&#xf19d;</i>Learn</a>
+            </li>
+            <li><a href="#indications" class="navtab active"><i class="fa fa-2x glow">&#xf0f1;</i> Indications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
     <div data-role="page" id="learn" data-title="Learn about Special Blood Components">
       
       <div data-role="header" class="inactive" data-theme="b">
@@ -201,7 +274,7 @@
         <div class="submenu inactive">
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#ta-gvhd" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
@@ -219,8 +292,8 @@
         </p>
         <ul>
           <li><p>List the risk factors for TA-GvHD and explain the role of leucodepletion and irradiation in mitigating them.</p></li>
-          <li><p>Describe what causes TT-CMV infection, how it is prevented and identify patients who are at risk.</p></li>
-          <li><p>Critically reflect on mistakes involving patients who have special requirements and strategies to improve patient safety.</p></li>
+          <li><p>Describe the causes and consequences of TT-CMV infection, how it is prevented and identify patients who are at risk.</p></li>
+          <li><p>Consider mistakes involving patients who have special requirements and strategies to improve patient safety.</p></li>
         </ul>
         
         <h3>Learning material outline</h3>
@@ -269,7 +342,7 @@
         <div class="submenu inactive">
           <a href="#home" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#ta-gvhd" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
@@ -378,11 +451,11 @@
         <div class="submenu inactive">
           <a href="#learn" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#tt-cmv" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
+      <div role="main" class="ui-content" data-searchable="3">
         
         <h2>Transfusion-Associated Graft versus Host Disease (TA-GvHD)</h2>
         
@@ -522,11 +595,11 @@
         <div class="submenu inactive">
           <a href="#ta-gvhd" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#error" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
+      <div role="main" class="ui-content" data-searchable="3">
             
         <h2>Transfusion-Transmitted Cytomegalovirus (TT-CMV)</h2>
         
@@ -655,18 +728,18 @@
       
       <div data-role="header" class="inactive" data-theme="b">
         
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.4 Errors in the provision of special requirements
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> Errors in the provision of special requirements
         </h3>
         <div class="submenu inactive">
           <a href="#tt-cmv" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#summary" data-role="button">Next <i class="fa fa-ln">&#xf054;</i></a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
+      <div role="main" class="ui-content" data-searchable="3">
             
-        <h2>1.4 Errors in the provision of special requirements</h2>
+        <h2>Errors in the provision of special requirements</h2>
         
         <p>
           In the last five years, more than five hundred mistakes involving irradiated
@@ -945,11 +1018,11 @@
         <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.5 Learning summary </h3>
         <div class="submenu inactive">
           <a href="#summary" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
+      <div role="main" class="ui-content" data-searchable="3">
             
         <h3>
           1.5 Learning summary
@@ -1010,17 +1083,17 @@
       
       <div data-role="header" class="inactive" data-theme="b">
         
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i> 1.6 References </h3>
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf19d;</i>References </h3>
         <div class="submenu inactive">
           <a href="#summary" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
-      <div role="main" class="ui-content">
+      <div role="main" class="ui-content" data-searchable="3">
             
         <h3>
-          1.6 References
+          References
         </h3>
         <div style="margin-left: 1em;">
           <p id="sabto2012">
@@ -1164,7 +1237,7 @@
         <div class="submenu inactive">
           <a href="#learn4" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
           <a href="#learn6" data-role="button" class="float-left"><i class="fa fa-ln">&#xf054;</i> Next</a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
@@ -1409,7 +1482,7 @@
         </h3>
         <div class="submenu inactive">
           <a href="#learn5" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <a href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
         </div>
       </div>
 
@@ -1692,78 +1765,8 @@
       </div>
     </div>
     
-    <div data-role="page" id="indications" data-title="Indications for irradiated and CMV negative blood components">
-      <div data-role="header" class="inactive" data-theme="b">
-        
-        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf0f1;</i> Indications for irradiated and CMV negative blood components
-        </h3>
-        <div class="submenu inactive">
-          <a href="#" data-role="button" data-rel="back" class="float-left"><i class="fa fa-ln">&#xf053;</i> Back</a>
-          <a href="#searchpanel" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
-        </div>
-      </div>
-      
-      <div role="main" class="ui-content">
-        <h3>Which patients require irradiated or CMV-negative blood components?</h3>
-        <p>Press an indication to show details.</p>
-       
-        <div id="indications-filter">
-          <button data-inline="true" onclick="$('#filterlist').val('').selectmenu('refresh');$('table').trigger('footable_clear_filter');$('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('#filter-text').focus();"><i class="fa fa-ln">&#xf002;</i> Search table</button>
-          <select id="filterlist" data-inline="true" class="fa-select" data-overlay-theme="b" data-theme="a" data-icon="false" data-native-menu="false">
-            <option value="">&#xf0b0; Filter</option>
-            <option value="">All indications</option>
-            <option value="#xf043">&#xf043; Blood Components</option>
-            <option value="#xf0c3">&#xf0c3; Immunosuppressive Drugs</option>
-            <option value="#xf0f6">&#xf0f6; Medical History & Conditions</option>
-            <option value="#xf1ae">&#xf1ae; Neonatology & Obstetrics</option>
-            <option value="#xf0ec">&#xf0ec; Stem Cell & Bone Marrow</option>
-          </select>
-        </div>
     
-        <div id="indicationsearch" class="hidden" style="background: #FFE; border:1px solid #ccc; border-radius: 5px; padding: 4px; margin-bottom: 1em;">
-          <a href="#" style="display: inline-block; margin: 0; float:right;" data-role="button" id="close-indication-search" onclick="$('#filterlist').val('').selectmenu('refresh'); $('#indicationsearch').toggle(); $('#indications-filter').toggle(); $('table').trigger('footable_clear_filter');">Close <i class="fa fa-ln">&#xf00d;</i></a>
-          <p style="">
-            <strong>Enter a search term. Results will show instantly.</strong>
-          </p>
-          <input id="filter-text" style="line-height: 1em;" type="text" />
-        </div>
-
-        <table class="footable" id="indicationstable" data-filter="#filter-text">
-          <thead>
-            <tr>
-              <th data-class="expand" class="centered">Indication
-              </th>
-              <th>
-              </th>
-              <th data-hide="phone" class="centered" data-type="numeric">Irradiation
-              </th>
-              <th data-hide="phone" class="centered" data-type="numeric">CMV-negative
-              </th>
-              <th data-hide="all" class="summary-guidance">
-              </th>
-              <th data-hide="all" class="referenced-guidance"></th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-        <a href="#" data-role="button" data-theme="b" onclick="$(window).scrollTop(0);" class="active">Back to top <i class="fa fa-ln">&#xf0d8;</i></a>
-      </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#home" class="navtab inactive"><i class="fa fa-2x">&#xf015;</i> Home</a>
-            </li>
-            <li><a href="#learn" class="navtab inactive"><i class="fa fa-2x">&#xf19d;</i>Learn</a>
-            </li>
-            <li><a href="#indications" class="navtab active"><i class="fa fa-2x glow">&#xf0f1;</i> Indications</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <div data-title="Special Blood Components" data-role="panel" id="searchpanel" data-position="right" data-display="overlay" data-animate="false" data-theme="a">
+    <div data-title="Special Blood Components" data-role="quickfind" id="quickfind" data-position="right" data-display="overlay" data-animate="false" data-theme="a">
       <h3 style="margin: 0px;" class="centered">Search the app</h3>
       <label for="searchfield">Enter a search term or look up a word in the index:</label>
       <input data-theme="a" type="search" name="searchfield" id="searchfield" value="">
@@ -1786,42 +1789,41 @@
       </select> <a href="#" data-rel="close" data-icon="delete" data-role="button">Close</a>
     </div>
     
-    <div data-title="Special Blood Components" data-role="panel" id="learningmenu" data-position="left" data-display="overlay" data-animate="false" data-theme="a">
+    <div data-title="Special Blood Components" data-role="quickfind" id="learningmenu" data-position="left" data-display="overlay" data-animate="false" data-theme="a">
       <h3 style="margin: 0px;" class="centered">Learning outline</h3>
       <a href="#learn" data-role="button">1.1 Learning objectives</a>
       <a href="#learn1" data-role="button">1.2 Introduction</a>
     </div>
     
+    <div data-role="page" id="quickfind" data-title="QuickFind">
+      <div data-role="header" class="inactive" data-theme="b">
         
-    <div id="searchdialog" data-role="page">
-  
-  		<div data-role="header" class="active" data-theme="b">
-  		  <h1>Search</h1>
-  		</div>
+        <h3 class="headerlogo active"><i class="fa fa-ln glow">&#xf002;</i> QuickFind
+        </h3>
+        <div class="submenu inactive" style="text-align: left;">
+          <a href="#" data-role="button" data-rel="back"><i class="fa fa-ln">&#xf053;</i> Back</a>
+        </div>
+      </div>
   
   		<div role="main" class="ui-content">
-    		<h4>Search the app</h4>
-    		<form class="ui-filterable">
-          <input id="autocomplete-input" data-type="search" placeholder="Search for a term...">
+    		<h2>Search the app</h2>
+        
+        <form>
+          <input data-type="search" id="quicksearch-input">
         </form>
-        <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#autocomplete-input" data-inset="true">
-            <li><a href="#">Apple</a></li>
-            <li><a href="#">Banana</a></li>
-            <li><a href="#">Cherry</a></li>
-            <li><a href="#">Cranberry</a></li>
-            <li><a href="#">Grape</a></li>
-            <li><a href="#">Orange</a></li>
-        </ul>
-  			<a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
+        
+        <div id="searchlist" data-filter-reveal="true" data-filter="true" data-input="#quicksearch-input">
+        </div>
+
   		</div>
   		
   	</div>
     
     
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="footable.js" type="text/javascript"></script>
     <script src="app.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
-    <script src="footable.js" type="text/javascript"></script>
   </body>
 
 </html>
