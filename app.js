@@ -691,6 +691,7 @@ var app = (function(global) {
         
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
+          $('table').trigger('footable_clear_filter');
           $('table').trigger('footable_collapse_all');
           $(row).trigger('footable_toggle_row');
           $('html, body').animate({scrollTop: $(original).offset().top});
@@ -711,6 +712,7 @@ var app = (function(global) {
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
+          $('table').trigger('footable_clear_filter');
           $('table').trigger('footable_collapse_all');
           $(detailrow).trigger('footable_toggle_row');
           $('html, body').animate({scrollTop: $(detailrow).offset().top});
