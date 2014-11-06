@@ -584,7 +584,7 @@ var app = (function(global) {
       if (irrtext) details += irrtext;
       if (cmvtext) details += cmvtext;
 
-      details += '<hr/><p style="font-size: 0.8em">Category: <i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + '</p>';
+      details += '<p style="font-size: 0.8em">Category: <i class="fa fa-wd fa-ln">' + icons[item.category] + '</i> ' + labels[item.category]  + '</p>';
       console.log(item.definition);
       if (item.definition) details += '<p data-searchable="2" style="font-size: 0.8em">Definition: ' + item.definition + '</p>';
       
@@ -612,7 +612,7 @@ var app = (function(global) {
       var ref = $(this).attr("title");
       if (ref) {
         $.mobile.changePage('#reference');
-        $('html, body').animate({scrollTop: $('#'+ref).offset().top});
+        $('html, body').animate({scrollTop: $('#'+ref).offset().top - $('.ui-header').outerHeight()});
         $('#'+ref).css('background', '#FFC');
         setTimeout(function() {$('#'+ref).css('background', 'none');},15000);
       }
@@ -624,7 +624,7 @@ var app = (function(global) {
       var ref = $(this).attr("title");
       if (ref) {
         $.mobile.changePage('#reference');
-        $('html, body').animate({scrollTop: $('#'+ref).offset().top});
+        $('html, body').animate({scrollTop: $('#'+ref).offset().top - $('.ui-header').outerHeight()});
         $('#'+ref).css('background', '#FFC');
         setTimeout(function() {$('#'+ref).css('background', 'none');},15000);
       }
@@ -635,7 +635,7 @@ var app = (function(global) {
       var ref = $(this).attr("title");
       if (ref) {
         $.mobile.changePage('#glossary');
-        $('html, body').animate({scrollTop: $('#'+ref).offset().top});
+        $('html, body').animate({scrollTop: $('#'+ref).offset().top - $('.ui-header').outerHeight()});
         $('#'+ref).css('background', '#FFC');
         setTimeout(function() {$('#'+ref).css('background', 'none');},15000);
       }
@@ -647,7 +647,7 @@ var app = (function(global) {
       var ref = $(this).attr("title");
       if (ref) {
         $.mobile.changePage('#glossary');
-        $('html, body').animate({scrollTop: $('#'+ref).offset().top});
+        $('html, body').animate({scrollTop: $('#'+ref).offset().top - $('.ui-header').outerHeight()});
         $('#'+ref).css('background', '#FFC');
         setTimeout(function() {$('#'+ref).css('background', 'none');},15000);
       }
@@ -694,7 +694,7 @@ var app = (function(global) {
           $('table').trigger('footable_clear_filter');
           $('table').trigger('footable_collapse_all');
           $(row).trigger('footable_toggle_row');
-          $('html, body').animate({scrollTop: $(original).offset().top});
+          $('html, body').animate({scrollTop: $(row).offset().top - $('.ui-header').outerHeight()});
           $(row).toggleClass('highlight');
           setTimeout(function() {$(row).toggleClass('highlight');},15000);
         }).prependTo("#searchlist");
@@ -715,7 +715,7 @@ var app = (function(global) {
           $('table').trigger('footable_clear_filter');
           $('table').trigger('footable_collapse_all');
           $(detailrow).trigger('footable_toggle_row');
-          $('html, body').animate({scrollTop: $(detailrow).offset().top});
+          $('html, body').animate({scrollTop: $(detailrow).offset().top  - $('.ui-header').outerHeight()});
           $(detailrow).toggleClass('highlight');
           setTimeout(function() {$(detailrow).toggleClass('highlight');},15000);
         }).appendTo("#searchlist");
@@ -733,7 +733,7 @@ var app = (function(global) {
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
-          $('html, body').animate({scrollTop: $(original).offset().top});
+          $('html, body').animate({scrollTop: $(row).offset().top - $('.ui-header').outerHeight()});
           $(original).toggleClass('highlight');
           setTimeout(function() {$(row).toggleClass('highlight');},15000);
         }).appendTo("#searchlist");
