@@ -65,6 +65,11 @@
   line-height: 1em;
 }
 
+.ui-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .fa-select,
 .ui-selectmenu-list li a,
 .ui-dialog-contain .ui-header .ui-title,
@@ -162,7 +167,7 @@
 }
 
 .ui-footer {
- background: #000;
+ background: #fff;
  border: none;
 }
 
@@ -368,8 +373,7 @@ input {
 .navtab {
  border: none !important;
  text-shadow: none !important;
- margin: 1px !important;
- border-radius: 5px;
+ margin-right: 1px !important;
  padding: 0;
  font-size: 0.9em !important;
 }
@@ -401,7 +405,11 @@ li .ui-btn {
 
 @media (min-width: 780px) {
  .ui-page {
-  font-size: 1.1em !important;
+  font-size: 1.3em !important;
+ }
+ 
+ .headerlogo {
+   font-size: 1.4em !important;
  }
 
  .searchicon {
@@ -435,17 +443,22 @@ li .ui-btn {
   }
   
   .submenu .ui-btn {
-     margin: 0.4em !important;
+     margin: 0.1em !important;
+     padding: 0.5em !important;
    }
   
  .infobox {
-  min-height: 5em;
+  height: 7em;
   overflow: auto;
   width: 45%;
   display: inline-block;
   margin-left: 1%;
   padding: 0.5em !important;
   font-size: 1.4em !important;
+ }
+ 
+ .small {
+    height: 5em;
  }
 
 }
