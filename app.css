@@ -4,6 +4,8 @@
 /* Allow line wrapping on buttons and list items */
 
 .highlight {
+  color: #000;
+  text-shadow: none;
   background-color: #FFC;
 }
 
@@ -29,7 +31,9 @@
 }
 
 #searchlist .indication {
-  background: #FEE;
+  background: #0aa;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
   font-size: 1.1em !important;
 }
 
@@ -107,7 +111,7 @@
  clear: both;
  padding: 0.5em !important;
  color: #fff;
- text-shadow: none;
+ text-shadow: 1px 1px 2px #055 !important;
  font-weight: normal;
  text-align: left !important;
  padding-left: 0.5em !important;
@@ -195,55 +199,103 @@
  margin: 0px;
 }
 
+
+
+/* start of default styles */
+
+.footable {
+  border-spacing: 0;
+  width: 100%;
+  border: solid #ccc 1px;
+  color: #444;
+}
+
+.footable > thead > tr > th {
+  padding: 20px;
+  text-align: left;
+  background: #eee;
+  border-bottom: 5px solid #055;
+}
+
+.footable tbody tr td {
+  border-bottom: 2px solid #ddd;
+}
+
+.footable.breakpoint > tbody > tr > td.expand {
+  background: url('plus.png') no-repeat 5px center;
+  padding-left: 40px;
+}
+
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand {
+  background: url('minus.png') no-repeat 5px center;
+}
+
+/*
+.footable.breakpoint > tbody > tr.footable-row-detail {
+  background: #eee;
+}
+
+.footable > tbody > tr:hover:not(.footable-row-detail) {
+  background: #fbf8e9;
+}
+
+.footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
+  cursor: pointer;
+}
+
+*/
+
+
+/*End of default */
+
+
+.footable-detail-show {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background: #0aa;
+}
+.footable-detail-show td {
+  border: none !important;
+}
+
+.footable-row-detail-cell {
+  background: #0aa;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.footable-row-detail-inner {
+  box-shadow: 1px 1px 10px #000;
+  background: #fff;
+}
+
 .footable-row-detail-row {
-  margin: 0em;
+  margin: 0;
   padding: 5px;
   line-height: 1.5em;
-  font-size: 1em;
   font-weight: bold;
-  box-shadow: 1px 1px 10px #fff;
-  background: #fff;
   text-align: center;
 }
 
-
 .footable-row-detail-row p {
-  font-size: 1em;
   text-align: left;
   font-weight: normal;
   line-height: 1.4em;
 }
 
 
-.footable-row-detail-cell {
-  background: #eee;
-  padding: 1em;
-}
-
-.footable tr {
- font-size: 1.2em;
-}
-
-.footable td {
- padding-top: 0px !important;
- padding-bottom: 0px !important;
-}
 
 /* Indications classes */
 
 .required {
- background: #fdd;
  text-align: center !important;
- font-weight: bold;
+ white-space: nowrap !important;
 }
 
 .maybe-required {
- background: #ffd;
  text-align: center !important;
-}
-
-.maybe-required h4 {
- font-weight: normal;
+ font-size: 0.9em !important;
+ white-space: nowrap !important;
 }
 
 .not-required {
@@ -347,11 +399,7 @@
  border-right: none;
 }
 
-.footable td h4 {
- margin: 0;
-}
-
-.footable th {
+.footable th, .footable tr {
  -moz-user-select: none;
  -webkit-user-select: none;
  -ms-user-select: none;
@@ -370,6 +418,7 @@ input {
 .navtab {
  border: none !important;
  text-shadow: none !important;
+ margin-top: 1px !important;
  margin-right: 1px !important;
  padding: 0;
  font-size: 0.9em !important;
@@ -413,11 +462,6 @@ li .ui-btn {
   font-size: 22px !important;
  }
 
- .footable tr {
-  font-size: 1.4em;
- }
-
-
  input {
   font-size: 1.4em !important;
  }
@@ -441,7 +485,7 @@ li .ui-btn {
   
   .submenu .ui-btn {
      margin: 0.1em !important;
-     padding: 0.5em !important;
+     padding: 0.5em !importa;
    }
   
  .infobox {
@@ -451,7 +495,7 @@ li .ui-btn {
   display: inline-block;
   margin-left: 1%;
   padding: 0.5em !important;
-  font-size: 0.9em !important;
+  font-size: 1em !important;
  }
  
  .small {
