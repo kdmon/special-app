@@ -530,8 +530,8 @@ var app = (function(global) {
           flagclass = 'red-traffic-light';
         break;
         case 'maybe':
-          irrcode = '<td data-value="0" class="maybe-required">Irradiation could be required.</td>';
-          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative could be required.</td>';
+          irrcode = '<td data-value="0" class="maybe-required">Irradiation may be required.</td>';
+          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative may be required.</td>';
           flagclass = 'amber-traffic-light';
         break;
       }
@@ -695,8 +695,6 @@ var app = (function(global) {
           $('table').trigger('footable_collapse_all');
           $(row).trigger('footable_toggle_row');
           $('html, body').animate({scrollTop: $(row).offset().top - $('.ui-header').outerHeight()});
-          $(row).toggleClass('highlight');
-          setTimeout(function() {$(row).toggleClass('highlight');},15000);
         }).prependTo("#searchlist");
       }
       
@@ -716,8 +714,8 @@ var app = (function(global) {
           $('table').trigger('footable_collapse_all');
           $(detailrow).trigger('footable_toggle_row');
           $('html, body').animate({scrollTop: $(detailrow).offset().top  - $('.ui-header').outerHeight()});
-          $(detailrow).toggleClass('highlight');
-          setTimeout(function() {$(detailrow).toggleClass('highlight');},15000);
+          $(details).toggleClass('highlight');
+          setTimeout(function() {$(details).toggleClass('highlight');},15000);
         }).appendTo("#searchlist");
       }
       
