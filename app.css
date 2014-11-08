@@ -251,6 +251,7 @@
 
 
 .footable-detail-show {
+  font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   background: #0aa;
@@ -346,7 +347,7 @@
 .overlay-container {
  display: none;
  padding: 0.5em;
- margin: 1em auto;
+ margin: 0 auto;
  border-radius: 5px;
  width: 90%;
  max-width: 500px;
@@ -356,7 +357,7 @@
  background: #fff;
  padding: 0.5em;
  overflow-y: scroll;
- max-height: 250px;
+ max-height: 200px;
  margin: 0.2em;
  border-radius: 5px;
 }
@@ -440,12 +441,27 @@ li .ui-btn {
  padding-bottom: 1.3em !important;
 }
 
+
+/* Above iPhone landscape  */
+
+@media (min-height: 420px) {
+.infobox {
+ font-size: 1.2em !important;
+ }
+ 
+ .textbox {
+ max-height: 280px;
+ }
+}
+
+
 /* iPad portrait */
 
 @media (min-width: 600px) {
 .infobox {
  font-size: 1.2em !important;
  }
+ 
 }
 
 /* Desktop */
