@@ -124,10 +124,11 @@
         
         <h3 class="headerlogo active" style="font-size: 1.3em"><i class="fa fa-ln glow">&#xf043;</i> Special Blood Components
         </h3>
-        <div class="submenu inactive hidden">
-          <p style="margin: 0;">
-          v.0.2. Updated 5/11/2015
-            <a href="#searchdialog" data-rel="dialog" data-transition="slidedown" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+        <div class="submenu inactive">
+          <a style="float: right;" href="#quickfind" data-role="button">QuickFind <i class="fa fa-ln">&#xf002;</i></a>
+          <p style="margin: 0; padding: 0.5em; font-weight: normal; text-align: left;">
+            v.0.2 (last mod. Nov 2014)
+            
           </p>
         </div>
       </div>
@@ -235,9 +236,9 @@
               </th>
               <th>
               </th>
-              <th data-hide="all">Irradiation
+              <th data-hide="phone">Irradiation
               </th>
-              <th data-hide="all">CMV-negative
+              <th data-hide="phone">CMV-negative
               </th>
               <th data-hide="all" class="summary-guidance">
               </th>
@@ -589,66 +590,43 @@
           recipient, causing skin rash, diarrhoea, liver disease, bone marrow failure 
           and death from infection often within two-three weeks of the transfusion
           <span class="evidence" title="htm2007">(HTM 2007, p.41)</span> 
-          <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
-          Clinical picture may be longer in neonates.
-          
+          <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>,
+          although the clinical picture may be longer in neonates.
         </p>
-          
-        <h3>Risk factors</h3>
+        
+        <h3>Prevention and risk factors</h3>
 
         <p>
-          TA-GvHD has been reported in both immunosuppressed and immunocompetent 
-          patients, and the risk of developing TA-GvHD depends on three factors
+          TA-GvHD is prevented by inactiving the donor lymphocytes that give rise 
+          to TA-GvHD by exposing cellular blood components to a dose 
+          of 25-50 Gy of Gamma or X-ray irradiation <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
+          Irradiated cellular blood components are only required for patients 
+          who are at risk of TA-GvHD (refer to the indications page for
+          a comprehensive list). The risk of developing TA-GvHD depends on three factors
           <span class="evidence" title="bcsh2010">(BCSH 2010, p.37)</span>:
         </p>
       
         <ul>
           <li><p>The number and viability of lymphocytes transfused;</p></li>
-          <li><p>The susceptibility of the recipient's immune system to their engraftment and</p></li>
+          <li><p>The susceptibility of the recipient's immune system to their engraftment and;</p></li>
           <li><p>The degree of immunological (HLA) disparity between donor and recipient.</p></li>
         </ul>
-      
         
-        <h3>Irradiation prevents TA-GvHD</h3>
+        <h3>Patients at risk of TA-GvHD</h3>
 
-        <p>
-          TA-GvHD is prevented by exposing cellular blood components to a dose 
-          of 25-50 Gy of Gamma or X-ray irradiation <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
-          This inactives the lymphocytes that give rise to TA-GvHD. Irradiated 
-          cellular blood components are only required for patients who are at risk
-          of TA-GvHD. Please refer to the indications page for a full list.
-        </p>
-      
-        <h3>Cellular blood components for immunosuppressed patients must be irradiated</h3>
-        
         <p>
           In most cases, the recipient's immune system is capable of detecting and
-          destroying foreign donor lymphocytes before they engraft. This requires a
-          competent immune system and immunosuppressed patients (whether congenital
-          or as a result of immunosuppressive treatment) must receive irradiated
-          cellular blood components.
+          destroying the donor lymphocytes before they engraft. This requires 
+          a competent immune system. Immunodeficient patients (whether congenital
+          or as a result of immunosuppressive treatment) are therefore at 
+          risk of TA-GvHD and must receive irradiated cellular blood components.
         </p>
         
-        <h3>Cellular blood components from relatives and HLA-selected donors must be irradiated</h3>
-        
-        <p>
-          In immunocompetent recipients TA-GvHD can occur if the donor and recipient share
-          an HLA type, as this prevents the immune system from distinguishing foreign cells
-          from the body's own cells (see figure below). Shared HLA haplotypes are much more
-          likely to occur in the setting of directed donations from relatives than between
-          random donors and recipients. Shared HLA types will also necessarily be present
-          in the setting of HLA-matched transfusions. In both situations (directed
-          donations from relatives and HLA-matched transfusions) TA-GvHD can
-          occur in immunocompetent patients, and irradiation is therefore required.
-          Granulocytes contain a large amount of viable lymphocytes and must be irradiated
-          prior to transfusion even if a patient is immunocompetent.
-        </p>
-
-        <a href="#" data-role="button" data-inline="true" onclick="$('#hla-figure').toggle('slow')">Figure: A one-way HLA match</a>
+        <a href="#" data-role="button" data-inline="true" onclick="$('#hla-figure').toggle('slow')">Figure: Shared HLA between donor and recipient</a>
         
         <div class="figure hidden" id="hla-figure">
           <div style="overflow-x: scroll;">
-            <img onclick="$(this).toggleClass('big-image').toggleClass('small-image')" class="small-image" src="hla-vertical.png"/>
+            <img onclick="$(this).toggleClass('big-image').toggleClass('small-image')" class="small-image" src="hla-notext.png"/>
           </div>
           <p>
             Figure: The donor is homozygous for an HLA haplotype (red) present in the 
@@ -658,26 +636,50 @@
             leading to TA-GvHD. Click image to resize. 
           </p>
         </div>
+
+        <p>
+          TA-GvHD can also occur in immunocompetent recipients. If the donor and
+          recipient share an HLA type, the recipient's immune system could fail to
+          distinguish the donor lymphocytes from the body's own cells, allowing the donor 
+          lymphocytes to engraft (see figure above). Shared HLA haplotypes are 
+          much more likely to occur in the setting of directed donations from 
+          relatives than between random donors and recipients. Shared
+          HLA types will also necessarily be present in the setting of 
+          HLA-matched transfusions. In these circumstances cellular blood components
+          must be irradiated, even if the patient is immunocompetent.
+        </p>
+
+        <p>
+          Additionally, all granulocyte transfusions must be irradiated as they contain a 
+          high concentration of lymphocytes, cannot be leucodepleted and are often given
+          to immunodeficient patients <span class="evidence" title="ukbts2012">UKBTS 2012</span>.
+        </p>
         
-        
-        <h3>Leucodepletion reduce the risk of TA-GvHD</h3>
+        <h3>Leucodepletion reduces the risk of TA-GvHD</h3>
         
         <p>
           All platelets and red cells units are leucodepleted in the UK, significantly
           reducing the number of lymphocytes in these components.  Leucodepletion was
-          introduced as a vCJD risk reduction measure.  It has also had unintended
-          other beneficial effects including reducing the risk of TA-GvHD by reducing,
-          and in some cases removing, viable lymphocytes from cellular blood components.
+          introduced as a vCJD (Variant Creutzfeldt-Jakob disease) risk reduction measure.
+          It has also had unintended other beneficial effects including reducing the 
+          risk of TA-GvHD by reducing, and in some cases removing, viable lymphocytes
+          from cellular blood components.
+        </p>
+        
+        <p>
           Only two cases of TA-GvHD have been reported in the UK following the introduction
-          of universal leucodepletion in 1999, despite several hundred reports of patients
+          of universal leucodepletion in 1999, despite many hundred reports of patients
           at risk of TA-GvHD being transfused with non-irradiated cellular blood components
           <span class="evidence" title="bcsh2010">(BCSH 2010, p.41)</span>.
           This suggests that leucodepletion is effective in reducing the risk TA-GvHD. 
+        </p>
+        
+        <p>
           However, leucodepletion is not a replacement for irradiation as it may not remove
           all viable lymphocytes and may occasionally fail (only a selection of all cellular
           components are tested for the efficacy of the leucodepletion).
         </p>
-
+      
         
         <h3>Topic outline</h3>
         
