@@ -769,6 +769,14 @@ window.onload = function() {
 
 $(document).on("mobileinit", function() {
   app.init();
+  
+  // record page change in analytics
+  $( document ).on("pageshow", "[data-role='page']", function() {
+    console.log("change");
+     var page = "#" + $( this ).attr( "id" );
+     ga('send', 'pageview', '/app/' + page);
+  });
+
 });
 
 
