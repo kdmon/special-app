@@ -364,7 +364,7 @@
 
 .mainlogo {
  margin: 0 auto;
- width: 200px;
+ width: 225px;
  background: #3aa;
  padding: 25px;
  border-radius: 10px;
@@ -502,7 +502,7 @@ li .ui-btn {
   
   .submenu .ui-btn {
      margin: 0.1em !important;
-     padding: 0.5em !importa;
+     padding: 0.5em !important;
    }
   
  .infobox {
