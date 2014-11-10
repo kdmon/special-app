@@ -227,9 +227,14 @@
   padding-left: 40px;
 }
 
-.footable.breakpoint > tbody > tr.footable-detail-show > td.expand {
-  background: url('minus.png') no-repeat 5px center;
+.footable.breakpoint > tbody > tr.footable-detail-show > td {
+  background-color: #0aa;
 }
+
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand {
+  background: #0aa url('minus.png') no-repeat 5px center;
+}
+
 
 .footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
   cursor: pointer;
@@ -380,10 +385,6 @@
 
 .green-traffic-light {
  background: url("green.png");
-}
-
-.red-traffic-light {
- height: 48px;
 }
 
 .amber-traffic-light {
