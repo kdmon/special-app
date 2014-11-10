@@ -599,6 +599,13 @@ var app = (function(global) {
   
     $('.footable').footable();
     
+    
+    $('.footable').footable().on('footable_row_expanded', function(e) {
+      $('.footable tbody tr.footable-detail-show').not(e.row).each(function() {
+        $('.footable').data('footable').toggleDetail(this);
+      });
+    });
+
     $(document).on("pageshow", "#indications", function() {
       $('table').trigger('footable_resize');
     });
@@ -608,7 +615,7 @@ var app = (function(global) {
     });
     
     $('table').on('footable_row_expanded', function () {
-      $('html, body').animate({scrollTop: $(this).offset().top - 110});
+      $('html, body').animate({scrollTop: $('.footable-detail-show').offset().top - 110});
     });
     
     
@@ -710,7 +717,7 @@ var app = (function(global) {
         var detailrow = $(this).parents('tr');
         var section = $(this).parents("tr").find("td:first").text();
         
-        elem = $('<p class="indication-details"><strong>Matching indications details for <em>' + section + '</em></strong><i style="float:right;" class="fa fa-2x">&#xf0f1;</i><br/><span class="filterme">' + details + '</span></p>');
+        elem = $('<p class="indication-details">Matching indication: <strong>' + section + '</em></strong><i style="float:right;" class="fa fa-2x">&#xf0f1;</i><br/><span class="filterme">' + details + '</span></p>');
       
         $(elem).on("click", function () {
           $.mobile.changePage('#' + parent);
@@ -719,7 +726,7 @@ var app = (function(global) {
           $(detailrow).trigger('footable_toggle_row');
           $('html, body').animate({scrollTop: $(detailrow).offset().top - 110});
           $(details).toggleClass('highlight');
-          setTimeout(function() {$(details).toggleClass('highlight');},15000);
+          setTimeout(function() {$(details).removeClass('highlight');},15000);
         }).appendTo("#searchlist");
       }
       
@@ -738,7 +745,7 @@ var app = (function(global) {
           $.mobile.changePage('#' + parent);
           $('html, body').animate({scrollTop: $(glossaryitem).offset().top - 110});
           $(original).toggleClass('highlight');
-          setTimeout(function() {$(glossaryitem).toggleClass('highlight');},15000);
+          setTimeout(function() {$(glossaryitem).removeClass('highlight');},15000);
         }).appendTo("#searchlist");
       }
     });
