@@ -209,17 +209,27 @@
   border: solid #ccc 1px;
   color: #444;
 }
+.footable-sort-indicator {
+  width: 16px !important;
+  display: inline-block !important;
+  float: none  !important;
+  white-space: normal !important;
+}
 
 .footable > thead > tr > th {
-  padding: 20px;
-  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: #eee;
   border-bottom: 5px solid #055;
   text-align: center;
+  white-space: nowrap !important;
 }
 
 .footable tbody tr td {
   border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5em !important;
+  padding-top: 0.5em !important;
+  height: 4em !important;
 }
 
 .footable.breakpoint > tbody > tr > td.expand {
@@ -293,19 +303,29 @@
 
 
 /* Indications classes */
-
-.required {
- text-align: center !important;
- white-space: nowrap !important;
+.rounded {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0.8em;
+  width: 2.5em;
+  height: 2.5em;
+  max-width: 2.5em;
+  max-height: 2.5em;
+  border-radius: 100%;
+  border: 1px solid #aaa;
+  display: inherit;
 }
 
-.maybe-required {
- text-align: center !important;
- font-size: 0.9em !important;
- white-space: nowrap !important;
-}
+.half {line-height: 2.5em;}
 
-.not-required {
+.red {background: #fcc;}
+
+.amber {background: #ffc;}
+
+.green {background: #cfc;}
+
+.indication-icon {
+  margin: 0.5em;
 }
 
 .greencell,
