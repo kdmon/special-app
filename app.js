@@ -593,10 +593,10 @@ var app = (function(global) {
           irrcode = '<td data-value="4"><p class="red rounded">Irrad-<br/>iated</p></td>';
         break;
         case 'maybe':
-          irrcode = '<td data-value="3"><p class="amber rounded half">Check</p></td>';
+          irrcode = '<td data-value="3"><p class="amber rounded">Check<br/>irrad.</p></td>';
         break;
         case 'no':
-          irrcode = '<td data-value="2"><p class="green rounded half">N/A</p></td>';
+          irrcode = '<td data-value="2"><p class="green rounded">Irrad.<br/>N/A</p></td>';
         break;
         case 'na':
           irrcode = '<td data-value="1"></td>';
@@ -608,10 +608,10 @@ var app = (function(global) {
           cmvcode = '<td data-value="4"><p class="red rounded">CMV-<br/>neg.</p></td>';
         break;
         case 'maybe':
-          cmvcode = '<td data-value="3"><p class="amber rounded half">Check</p></td>';
+          cmvcode = '<td data-value="3"><p class="amber rounded">Check<br/>CMV</p></td>';
         break;
         case 'no':
-          cmvcode = '<td data-value="2"><p class="green rounded half">N/A</p></td>';
+          cmvcode = '<td data-value="2"><p class="green rounded">CMV<br/>N/A</p></td>';
         break;
         case 'na':
           cmvcode = '<td data-value="1"></td>';
