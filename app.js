@@ -74,6 +74,8 @@ var app = (function(global) {
       "key": "relative",
       "definition": "A person's first degree relative is a parent, sibling, or child. [---] A second degree relative of a person is an uncle, aunt, nephew, niece, grandparent, grandchild or half- sibling. <span class='evidence' title='nhsgenetics'>(NHS NGGEC no year)</span>",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "component",
       "tags": "directed donation, maternal blood, relative, aunt, uncle, nephew, sister, brother, family, mother, father, child, blood relation",
       "recommendation": [{
@@ -86,6 +88,8 @@ var app = (function(global) {
       "key": "granulocytes",
       "definition": "Some clinicians believe that some patients with very low neutrophil counts and intractable sepsis can benefit from infusion of granulocyte concentrates. These may be prepared either by apheresis collections or derived from whole blood. [...] Clinical trials have not so far established effectiveness of the treatment <span class='evidence' title='htm2007'>(HTM 2007, p. 12)</span>.",
       "type": "irradiated-cmv",
+      "irradiated": "yes",
+      "cmv": "yes",
       "category": "component",
       "tags": "leukocytes, leucocytes, white cells, leucopenia, leukopenia, leukocytopenia, leucocytopenia, neutrophil, neutropaenia, neutropoenia, neutropenia",
       "recommendation": [{
@@ -107,6 +111,8 @@ var app = (function(global) {
       "type": "irradiated",
       "category": "component",
       "tags": "refractory, Refractoriness, hla-matched, antigen, hla-compatible, homozygous, hla-selected, haplotype, immunology, immunological, genetic, loci, chromosome",
+      "irradiated": "yes",
+      "cmv": "na",
       "recommendation": [{
         "type": "irradiated",
         "verbatim": "All human leucocyte antigen (HLA)-selected components should be irradiated, even if the patient is immunocompetent (2C).",
@@ -116,6 +122,8 @@ var app = (function(global) {
       "title": "Fresh frozen plasma, cryoprecipitate or plasma derivative",
       "key": "plasma",
       "type": "normal",
+      "irradiated": "no",
+      "cmv": "no",
       "category": "component",
       "tags": "ffp, cryoprecipitate, non-cellular, fractionated plasma, immunoglobulin, albumin, coagulation factors, clotting factors, fresh plasma, blood plasma",
       "recommendation": [{
@@ -134,6 +142,8 @@ var app = (function(global) {
       "key": "redcellsplatelets",
       "definition-ignore": "Red cell transfusion is indicated to increase the oxygen delivering capacity of the blood when acute or chronic anaemia contributes to inadequate oxygen delivery to tissues <span class='evidence' title='htm2007'>(HTM 2007, p. 7)</span>. Platelet transfusions are indicated for the prevention and treatment of haemorrhage in patients with thrombocytopenia or platelet function defects <span class='evidence' title='htm2007'>(HTM 2007, p.8)</span>.",
       "type": "maybe",
+      "irradiated": "maybe",
+      "cmv": "maybe",
       "category": "component",
       "tags-ignore": "haemoglobin, platelets, anaemia, anemia, thrombocytopenia, haemorrhage, bleeding, cryopreserved red cells, deglycerolization, concentrate",
       "recommendation": [{
@@ -163,6 +173,8 @@ var app = (function(global) {
       "key": "purineanalogues",
       "definition": "Purine analogues includes drugs such as fludarabine, cladribine, bendamustine, clofarabine, deoxycoformycin, thioguanine, pentastatin and cladribine. This list is not exhaustive and may change as new drugs become available.",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "drug",
       "tags": "chemotherapy, fludarabine, cladribine, deoxycoformycin, thioguanine, pentastatin and cladribine, drug, immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient, alemtuzumab, campath, anti-cd52, pharmacology, cancer",
       "recommendation": [{
@@ -183,6 +195,8 @@ var app = (function(global) {
       "title": "Campath (Alemtuzumab)",
       "key": "campath",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "drug",
       "tags": "drug, immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient, alemtuzumab, campath, anti-cd52, pharmacology, cancer",
       "recommendation": [{
@@ -195,6 +209,8 @@ var app = (function(global) {
       "title": "Anti-thymocyte globulin (ATG)",
       "key": "atg",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "drug",
       "tags": "drug, immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient, cancer, Anti-thymocyte globulin, ATG, horse, rabbit, pharmacology",
       "recommendation": [{
@@ -207,6 +223,8 @@ var app = (function(global) {
       "definition": "A malignant disease characterized by progressive enlargement of the lymph nodes, spleen, and general lymphoid tissue. In the classical variant, giant usually multinucleate Hodgkin's and reed-sternberg cells are present; in the nodular lymphocyte predominant variant, lymphocytic and histiocytic cells are seen <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "key": "hodgin",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "condition",
       "tags": "Hodgkin, hodkin, Hodgekin lymphoma, Hodgekin disease, immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient, cancer",
       "recommendation": [{
@@ -219,6 +237,8 @@ var app = (function(global) {
       "definition": "Many rare primary congenital or secondary acquired immunodeficiencies are indications for irradiation, including SCID, Di George syndrome, Wiskott Aldrich syndrome, reticular dysgnesis, ADA deficiency, chronic mucosal candidiasis, MHC class 1 or 2 deficiency. Seek expert immunologist advice.",
       "key": "immunodeficiency",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "no",
       "category": "condition",
       "tags": "congenital, hereditary, acquired, cell-mediated, SCID, severe combined immunodeficiency, DiGeorge, Di George syndrome, Wiskott Aldrich syndrome, reticular dysgnesis, ADA deficiency, chronic mucosal candidiasis, MHC class 1 or 2 deficiency,  immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient",
       "recommendation": [{
@@ -234,6 +254,7 @@ var app = (function(global) {
         "verbatim": "A clinical immunologist should be consulted for advice in cases where there is uncertainty (1A).",
         "reference": "bcsh2010"
       }, {
+        "type": "cmv",
         "text": "Leucodepletion is considered adequate CMV risk reduction for immunodeficient patients and there is no requirement for CMV negative components in addition.",
         "verbatim": "No relevant literature was found that supported the use of CMV seronegative blood for immunodeficient patients. These patients should receive leucodepleted blood. All blood components (other than granulocytes) in the UK now undergo leucodepletion, which provides a significant degree of CMV risk reduction. This measure is considered adequate risk reduction for all other patients requiring transfusion (haemopoetic stem cell transplant patients, organ transplant patients, and immune deficient patients, including those with HIV) without the requirement for CMV seronegative components in addition.",
         "reference": "sabto2012"
@@ -243,6 +264,8 @@ var app = (function(global) {
       "defintion": "A form of anemia in which the bone marrow fails to produce adequate numbers of peripheral blood elements <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "key": "aplastic",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "condition",
       "tags": "aplastic anaemia, anemia, haemoglobinopathy, anti-thymocyte globulin, alemtuzumab, pharmacology, drug",
       "recommendation": [{
@@ -255,6 +278,8 @@ var app = (function(global) {
       "title": "HIV, AIDS or other common viral infection",
       "key": "hiv",
       "type": "normal",
+      "irradiated": "no",
+      "cmv": "no",
       "category": "condition",
       "tags": "virus, lentivirus, retrovirus, acquired immunodeficiency syndrome, human, immunosuppressive, immune system, immunocompromised, immunodeficiency, immunodeficient",
       "recommendation": [{
@@ -273,6 +298,8 @@ var app = (function(global) {
       "id": "leukaemia",
       "definition": "A progressive, malignant disease of the blood-forming organs, characterized by distorted proliferation and development of leukocytes and their precursors in the blood and bone marrow. <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "type": "normal",
+      "irradiated": "no",
+      "cmv": "no",
       "category": "condition",
       "tags": "leukaemia, leucaemia, leucemia, leukemia, cancer, malignancy, malignant, leukocyte, leucocyte",
       "recommendation": [{
@@ -288,6 +315,8 @@ var app = (function(global) {
       "title": "Pregnancy, elective transfusion during",
       "key": "pregnancy",
       "type": "cmv",
+      "irradiated": "na",
+      "cmv": "yes",
       "category": "neonatology",
       "tags": "neonatal, neonatology, obstetrics, pregnancy, fetus, neonate, fetal, infant, birth, delivery, intrauterine transfusion, exchange transfusion, uterine, mother, maternal",
       "recommendation": [{
@@ -304,6 +333,8 @@ var app = (function(global) {
       "id": "neonate",
       "definition": "A condition in newborns caused by immunity of the mother to platelet alloantigens on the fetal platelets. The platelets, coated with maternal antibodies, are destroyed and removed by the fetal mononuclear phagocyte system. Affected infants may have intracranial haemorrhages <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "type": "irradiated-cmv",
+      "irradiated": "yes",
+      "cmv": "yes",
       "category": "neonatology",
       "tags": "neonatal, neonatology, obstetrics, alloimmune thrombocytopenia, thrombocyte, newborn, platelets, fetal, infants, haemorrhage, baby, NAIP",
       "recommendation": [{
@@ -330,6 +361,8 @@ var app = (function(global) {
       "definition": "In utero transfusion of blood into the fetus for the treatment of fetal diseases, such as fetal erythroblastosis <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "key": "iut",
       "type": "irradiated-cmv",
+      "irradiated": "yes",
+      "cmv": "yes",
       "category": "neonatology",
       "tags": "HDN, haemolytic disease of the newborn, NAITP , neonatal alloimmune thrombocytopenia, neonatal, neonatology, obstetrics, pregnancy, fetus, neonate, fetal, infant, birth, delivery, in utero, intra uterine, intra-uterine, intrauterine transfusion, exchange transfusion, uterine",
       "recommendation": [{
@@ -351,6 +384,8 @@ var app = (function(global) {
       "key": "exchange",
       "definition": "Repetitive withdrawal of small amounts of blood and replacement with donor blood until a large proportion of the blood volume has been exchanged <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "type": "irradiated-cmv",
+      "irradiated": "yes",
+      "cmv": "yes",
       "category": "neonatology",
       "tags": "neonatal, neonatology, obstetrics, pregnancy, neonate, infant, birth, delivery, exchange transfusion",
       "recommendation": [{
@@ -376,6 +411,8 @@ var app = (function(global) {
       "definition": "An infant is defined as a child between 1 and 23 months of age <span class='evidence' title='mesh2013'>(MESH 2013)</span>",
       "key": "top-up",
       "type": "maybe",
+      "irradiated": "maybe",
+      "cmv": "na",
       "category": "neonatology",
       "tags": "age, months, old, obstetrics, paediatrics, pediatrics, neonatology, neonatology, top up, transfusion, routine",
       "recommendation": [{
@@ -388,6 +425,8 @@ var app = (function(global) {
       "key": "surgery",
       "definition": "An infant is defined as a child between 1 and 23 months of age <span class='evidence' title='mesh2013'>(MESH 2013)</span>.",
       "type": "maybe",
+      "irradiated": "maybe",
+      "cmv": "na",
       "category": "neonatology",
       "tags": "cardiac, heart, operation, surgery, obstetrics, paediatrics, pediatrics, neonatology",
       "recommendation": [{
@@ -400,6 +439,8 @@ var app = (function(global) {
       "definition": "Recipient of stem cells donated by a genetically non-identical donor.",
       "key": "stemcell",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "no",
       "category": "transplant",
       "tags": "HSC, stem cells, HSCT, transplant, allogeneic, haemopoietic, oncology",
       "recommendation": [{
@@ -430,6 +471,8 @@ var app = (function(global) {
       "definition": "In autologous stem cell transplantation stem cells are removed, stored, and later given back to the same person.",
       "key": "harvest",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "na",
       "category": "transplant",
       "tags": "Autologous, harvest, transplant, stem cell, bone marrow, PBSC, peripheral blood stem cell",
       "recommendation": [{
@@ -442,6 +485,8 @@ var app = (function(global) {
       "definition": "In autologous stem cell transplantation stem cells are removed, stored, and later given back to the same person.",
       "key": "transplant",
       "type": "irradiated",
+      "irradiated": "yes",
+      "cmv": "no",
       "category": "transplant",
       "tags": "Autologous, transplant, stem cell, bone marrow, PBSC, peripheral blood stem cell",
       "recommendation": [{
@@ -513,31 +558,6 @@ var app = (function(global) {
       
       var flag = '<img src="green.png" alt="Green light" class="traffic-light"/>';
       
-      switch (item.type) {
-        case 'irradiated-cmv':
-          irrcode = '<td data-value="1" class="required">Irradiation is required.</h4></td>';
-          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</h4></td>';
-          flagclass = 'red-traffic-light';
-        break;
-        case 'irradiated':
-          irrcode = '<td data-value="1" class="required">Irradiation is required.</td>';
-          cmvcode = '<td data-value="-1" class="not-required"></td>';
-          flagclass = 'red-traffic-light';
-        break;
-        case 'cmv':
-          irrcode = '<td data-value="-1" class="not-required"></td>';
-          cmvcode = '<td data-value="1" class="required">CMV-negative is required.</td>';
-          flagclass = 'red-traffic-light';
-        break;
-        case 'maybe':
-          irrcode = '<td data-value="0" class="maybe-required">Irradiation may be required.</td>';
-          cmvcode = '<td data-value="0" class="maybe-required">CMV-negative may be required.</td>';
-          flagclass = 'amber-traffic-light';
-        break;
-      }
-      
-      
-      
       var icons = {
         component : '&#xf043;',
         condition : '&#xf0f6;',
@@ -554,7 +574,6 @@ var app = (function(global) {
         transplant: 'Stem Cell and Bone Marrow'
       };
       
-      
       $.each(item.recommendation, function(r, recommendation) {
         
         if (recommendation.type == 'irradiated') {
@@ -569,8 +588,43 @@ var app = (function(global) {
 
       });
       
-      var titlecode = '<td data-searchable="1" class="indication-title">' + item.title  + '.</td>';
+      switch (item.irradiated) {
+        case 'yes':
+          irrcode = '<td data-value="4"><p class="red rounded">Irrad-<br/>iated</p></td>';
+        break;
+        case 'maybe':
+          irrcode = '<td data-value="3"><p class="amber rounded half">Check</p></td>';
+        break;
+        case 'no':
+          irrcode = '<td data-value="2"><p class="green rounded half">N/A</p></td>';
+        break;
+        case 'na':
+          irrcode = '<td data-value="1"></td>';
+        break;
+      }
       
+      switch (item.cmv) {
+        case 'yes':
+          cmvcode = '<td data-value="4"><p class="red rounded">CMV-<br/>neg.</p></td>';
+        break;
+        case 'maybe':
+          cmvcode = '<td data-value="3"><p class="amber rounded half">Check</p></td>';
+        break;
+        case 'no':
+          cmvcode = '<td data-value="2"><p class="green rounded half">N/A</p></td>';
+        break;
+        case 'na':
+          cmvcode = '<td data-value="1"></td>';
+        break;
+      }
+      
+      
+  
+      var titlecode = '<td data-searchable="1" data-value="' + (i+1) +
+        '" class="indication-title">' +
+        '<ul class="fa-ul"><li><i class="fa-li fa">' + icons[item.category] +
+        '</i>' + (i+1) + '. ' +  item.title + '</li></ul></td>';
+
       var flagvalue = (flagclass == "green-traffic-light" ? "0" : flagclass);
       
       var flagcell = '<td data-value="' + flagvalue + '" class="' + flagclass + ' traffic-light-container"></td>';
@@ -592,7 +646,7 @@ var app = (function(global) {
       
       details += '</td>';
       
-      $("#indicationstable tbody").append('<tr>'  + titlecode + irrcode + cmvcode + flagcell + details + '</tr>');
+      $("#indicationstable tbody").append('<tr>'  + titlecode + irrcode + cmvcode + details + '</tr>');
       
     });
     
